@@ -27,19 +27,19 @@
                                 <div class="panel-body mudanca-panel-body">
                                     <div class="col-xs-6 text-center">
                                         <ul class="nav nav-tabs tabs-left">
-                                            <li><a href="#humanos" data-toggle="tab">Humanos</a></li>
-                                            <li><a href="#elanos" data-toggle="tab">Elanos</a></li>
-                                            <li><a href="#orquinos" data-toggle="tab">Orquinos</a></li>
-                                            <li><a href="#elfos" data-toggle="tab">Elfos</a></li>
-                                            <li><a href="#anoes" data-toggle="tab">Anões</a></li>
-                                            <li><a href="#halfling" data-toggle="tab">Halfling</a></li>
-                                            <li><a href="#poes" data-toggle="tab">Poés</a></li>
-                                            <li><a href="#thrii-krek" data-toggle="tab">Thrii-Krek</a></li>
-                                            <li><a href="#krin-krek" data-toggle="tab">Krin-Krek</a></li>
-                                            <li><a href="#thruk-krek" data-toggle="tab">Thruk-Krek</a></li>
-                                            <li><a href="#arachas" data-toggle="tab">Arachas</a></li>
-                                            <li><a href="#dyn-o-bren" data-toggle="tab">Dyn-o-Bren</a></li>
-                                            <li><a href="#dragoes" data-toggle="tab">Dragoes</a></li>
+                                            <li><a href="#humanos" data-toggle="tab" data-raca="humanos" class="escolha-raca">Humanos</a></li>
+                                            <li><a href="#elanos" data-toggle="tab" data-raca="elanos" class="escolha-raca">Elanos</a></li>
+                                            <li><a href="#orquinos" data-toggle="tab" data-raca="orquinos" class="escolha-raca">Orquinos</a></li>
+                                            <li><a href="#elfos" data-toggle="tab" data-raca="elfos" class="escolha-raca">Elfos</a></li>
+                                            <li><a href="#anoes" data-toggle="tab" data-raca="anoes" class="escolha-raca">Anões</a></li>
+                                            <li><a href="#halfling" data-toggle="tab" data-raca="halfling" class="escolha-raca">Halfling</a></li>
+                                            <li><a href="#poes" data-toggle="tab" data-raca="poes" class="escolha-raca">Poés</a></li>
+                                            <li><a href="#thrii-krek" data-toggle="tab" data-raca="thrii" class="escolha-raca">Thrii-Krek</a></li>
+                                            <li><a href="#krin-krek" data-toggle="tab" data-raca="krin" class="escolha-raca">Krin-Krek</a></li>
+                                            <li><a href="#thruk-krek" data-toggle="tab" data-raca="thruk" class="escolha-raca">Thruk-Krek</a></li>
+                                            <li><a href="#arachas" data-toggle="tab" data-raca="arachas" class="escolha-raca">Arachas</a></li>
+                                            <li><a href="#dyn-o-bren" data-toggle="tab" data-raca="dyn" class="escolha-raca">Dyn-o-Bren</a></li>
+                                            <li><a href="#dragoes" data-toggle="tab" data-raca="dragoes" class="escolha-raca">Dragões</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-xs-6">
@@ -198,11 +198,10 @@
                                                 <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
                                                  <ul class="list-unstyled lista-margem">
                                                     <li class="descricao-popover">
-                                                        <span data-toggle="popover" data-placement="right" data-container="body" class="texto-azul"> Estigma social</span>
-                                                        <div class="del-pop"><p>Elfos são universalmente odiados por humanos e anões. Elfos banidos são vistos com estranheza e desconfiança.</p></div>
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Nenhuma</span>
+                                                        <div class="del-pop"></div>
                                                     </li>
                                                 </ul>
-                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4><span>  Nenhuma. </span></div>
                                             </div>
                                             <!-- Caracteristicas halfling-->
                                             <div class="tab-pane" id="halfling">
@@ -923,7 +922,35 @@
                         </div>
 
                     </div>
-                </div>    
+                </div>
+                <div class="col-sm-2 col-sm-offset-1">
+                    <table class="table table-striped table-bordered">
+                        <tr>
+                            <td><h4 class="singularidades"></h4>PP</td>
+                            <td id="pp">100</td>
+                        </tr>
+                        <tr>
+                            <td><h4 class="singularidades"></h4>PhF</td>
+                            <td id="phf">0</td>
+                        </tr>
+                        <tr>
+                            <td><h4 class="singularidades"></h4>PhA</td>
+                            <td id="pha">0</td>
+                        </tr><tr>
+                            <td><h4 class="singularidades"></h4>PhC</td>
+                            <td id="phc">0</td>
+                        </tr><tr>
+                            <td><h4 class="singularidades"></h4>PhI</td>
+                            <td id="phi">0</td>
+                        </tr><tr>
+                            <td><h4 class="singularidades"></h4>PhL</td>
+                            <td id="phl">0</td>
+                        </tr><tr>
+                            <td><h4 class="singularidades"></h4>Pc</td>
+                            <td id="pc">10000</td>
+                        </tr>
+                    </table>
+                </div>
             </div>    
 
                     <script src="jquery-3.1.1.js"></script>

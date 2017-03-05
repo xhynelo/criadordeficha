@@ -44,6 +44,7 @@
                                     </div>
                                     <div class="col-xs-6">
                                         <div class="tab-content">
+                                            <!-- Caracteristicas Humano-->
                                             <div class="tab-pane" id="humanos">
                                                 <p>
                                                     A raça mais comumente encontrada em todo mundo e também a mais numerosa, humanos estão em todos os lugares.
@@ -54,15 +55,16 @@
                                                 <p>
                                                     Os humanos são muitas vezes considerados como uma raça ‘jovem’ pelos anões e elfos, mesmo estando presentes desde o começo da memória, assim como as raças mais velhas.
                                                 </p>
-                                                <p> <h4 class="singularidades">Custo de pontos:</h4> 0 </p>
-                                                <p> <h4 class="singularidades">Tipo:</h4> Vertebrado, Humanoide.</p>
-                                                <p> <h4 class="singularidades">Dons:</h4> todos zero.</p>
-                                                <p> <h4 class="singularidades">Velocidade:</h4> 5m</p>
-                                                <p> <h4 class="singularidades">Riqueza:</h4> normal</p>
-                                                <p> <h4 class="singularidades">Aparência:</h4> normal</p>
-                                                <p> <h4 class="singularidades">Vantagens:</h4> Talento (15 pontos)</p>
-                                                <p> <h4 class="singularidades">Desvantagens:</h4> Nenhuma</p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span> 0 </span></div> 
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Vertebrado, Humanoide. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>  todos zero. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  5m </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  normal </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  normal </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4><span>  Talento (15 pontos) </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4><span>  Nenhuma </span></div>
                                              </div>
+                                            <!-- Caracteristicas elanos-->
                                             <div class="tab-pane" id="elanos">
                                                 <p>
                                                     Mesmo com o ódio comum entre humanos e elfos, ainda existem alguns híbridos meios elfos, chamados de elanos. Eles estão concentrados no sul de Irona e Arrakan, região com grande número de elfos. 
@@ -70,40 +72,667 @@
                                                 <p>
                                                     Nem todo Elano é híbrido de 1ª geração, as características élficas e humanas que os definem ficam por um longo tempo em sua linhagem. Um filho de um elano será sempre um elano, até que a linhagem se dilua tanto que se tornem indistinguíveis de elfos ou humanos.
                                                 </p>
-                                                <p> <h4 class="singularidades">Custo de pontos:</h4> 15</p>
-                                                <p> <h4 class="singularidades">Tipo:</h4> Vertebrado, Humanoide</p>
-                                                <p> <h4 class="singularidades">Dons:</h4> +2 agilidade</p>
-                                                <p> <h4 class="singularidades">Velocidade:</h4> a velocidade base é 6m, elanos são mais ágeis e rápidos que humanos</p>
-                                                <p> <h4 class="singularidades">Riqueza:</h4> normal</p>
-                                                <p> <h4 class="singularidades">Aparência:</h4> uma acima do normal</p>
-                                                <p> <h4 class="singularidades">Vantagens:</h4> Sangue misto: elanos contam tanto como humanos quanto como elfos para itens mágicos e magias.</p>
-                                                <p>Audição: elanos não possuem a mesma acuidade auditiva que elfos, mas sua audição ainda é sobre-humana. +5 para audição.</p>
-                                                <p>Visão: A visão de elanos é sensível o suficiente para que possam ver em ambientes de baixa iluminação, conseguindo ver com apenas a luz das estrelas. Eles, porém, não conseguem ver em uma noite nebulosa ou em uma floresta densa.</p>
-                                                <p> <h4 class="singularidades">Desvantagens:</h4> Estigma social: elanos são vistos com maus olhos em muitos lugares, e por várias pessoas.</p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  15 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Vertebrado, Humanoide </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>  +2 agilidade </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 6m, elanos são mais ágeis e rápidos que humanos </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  normal </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  uma acima do normal </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Sangue misto</span>
+                                                        <div class="del-pop"><p>Elanos contam tanto como humanos quanto como elfos para itens mágicos e magias.</p></div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Audição</span>
+                                                        <div class="del-pop"><p>Elanos não possuem a mesma acuidade auditiva que elfos, mas sua audição ainda é sobre-humana. +5 para audição.</p></div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Visão</span>
+                                                        <div class="del-pop"><p>A visão de elanos é sensível o suficiente para que possam ver em ambientes de baixa iluminação, conseguindo ver com apenas a luz das estrelas. Eles, porém, não conseguem ver em uma noite nebulosa ou em uma floresta densa.</p></div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body">Estigma social</span>
+                                                        <div class="del-pop"><p>Elanos são vistos com maus olhos em muitos lugares, e por várias pessoas.</p></div>
+                                                    </li>
+                                                </ul>
                                             </div>
+                                            <!-- Caracteristicas orquinos-->
                                             <div class="tab-pane" id="orquinos">
                                                 <p>Orquinos são normalmente descendentes indiretos das pilhagens das tribos selvagens que assolaram Irona após a queda do Império dos Ossos, a um milênio, até o Massacre das Tribos, a 5 séculos.</p>
                                                 <p>Orquinos são híbridos entre os extintos orcs da era passada, com os humanos que viviam nas terras que hoje em dia pertencem ao Sacro reino. Devido à perseguições e êxodos, orquinos podem ser encontrados em todos os territórios fora do Sacro reino, quase sempre em pequenos números.</p>
-                                                <p> <h4 class="singularidades">Custo:</h4> 25</p>
-                                                <p> <h4 class="singularidades">Tipo:</h4> Vertebrado, Humanoide.</p>
-                                                <p> <h4 class="singularidades">Dons:</h4> +5 força, -1 carisma</p>
-                                                <p> <h4 class="singularidades">Velocidade:</h4> a velocidade base é 5m</p>
-                                                <p> <h4 class="singularidades">Riqueza:</h4>: uma abaixo.</p>
-                                                <p> <h4 class="singularidades">Aparência:</h4>: uma abaixo.</p>
-                                                <p> <h4 class="singularidades">Vantagens:</h4> Farejar: Meio orcs possuem o sentido de farejar,e tem +5 para ele</p>
-                                                <p>Sangue misto: meio orcs contam como humanos e orcs para itens mágicos e magias </p>
-                                                <p> <h4 class="singularidades">Desvantagens:</h4> Estigma social: orquinos são mal vistos econsiderados simplórios e brutos.</p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo:</h4><span>  25 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Vertebrado, Humanoide. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>  +5 força, -1 carisma </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 5m </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span> : uma abaixo. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span> : uma abaixo. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Farejar</span>
+                                                        <div class="del-pop"><p>Meio orcs possuem o sentido de farejar,e tem +5 para ele</p></div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Sangue misto</span>
+                                                        <div class="del-pop"><p>meio orcs contam como humanos e orcs para itens mágicos e magias </p></div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Estigma social</span>
+                                                        <div class="del-pop"><p>orquinos são mal vistos econsiderados simplórios e brutos.</p></div>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <div class="tab-pane" id="elfos">Settings Tab.</div>
-                                            <div class="tab-pane" id="anoes">Settings Tab.</div>
-                                            <div class="tab-pane" id="halfling">Settings Tab.</div>
-                                            <div class="tab-pane" id="poes">Settings Tab.</div>
-                                            <div class="tab-pane" id="thrii-krek">Settings Tab.</div>
-                                            <div class="tab-pane" id="krin-krek">Settings Tab.</div>
-                                            <div class="tab-pane" id="thruk-krek">Settings Tab.</div>
-                                            <div class="tab-pane" id="arachas">Settings Tab.</div>
-                                            <div class="tab-pane" id="dyn-o-bren">Settings Tab.</div>
-                                            <div class="tab-pane" id="dragoes">Settings Tab.</div>
+                                            <!-- Caracteristicas elfos-->
+                                            <div class="tab-pane" id="elfos">
+                                                <p>A raça anciã, como se autodenominam, os elfos são o povo mais crucial da história antiga de Baluerde, tendo formado inúmeros poderosos impérios e reinos, frequentemente subjugando continentes e outras raças inteiras.</p>
+                                                <p>Os elfos são uma das raças mais numerosas de Baluerde, atrás apenas dos humanos. Há cerca de 40 milhões de elfos em Irona, e metade disso em Arrakan.</p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  30 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Vertebrado, Humanoide. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>   -1 força, +4 agilidade, +1 intuição. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 7m </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  normal </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  uma acima. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4><span>  </span></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Sonar</span>
+                                                        <div class="del-pop"><p>+10 ouvir. Um elfo pode ‘ver’ usando o som a até 10m. Esse sonar é preciso o suficiente para dar informações básicas sobre o material que o elfo escuta, como do que ele é feito (carne, madeira, pedra, metal).</p></div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Visão noturna</span>
+                                                        <div class="del-pop"><p>elfos enxergam tão bem sob a iluminação baixa de uma noite clara quanto de dia. Eles não conseguem, porém, ver bem em uma noite escura, e não veem nada na completa escuridão.</p></div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4><span>  </span></div>
+                                                 <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Estigma social</span>
+                                                        <div class="del-pop"><p>Elfos são universalmente odiados por humanos e anões. Elfos banidos são vistos com estranheza e desconfiança.</p></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- Caracteristicas anoes-->
+                                            <div class="tab-pane" id="anoes">
+                                                <p>Anões são uma raça pouco numerosa, existindo apenas 25 milhões deles em toda Baluerde, mesmo possuindo países grandes e poderosos.</p>
+                                                <p>Anões são grandes construtores, apesar de não serem muito inovadores. Anões utilizam as mesmas tecnologias que os humanos, e possuem a reputação de construírem as mais resistentes e duráveis armas e máquinas.</p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  20 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Vertebrado, Humanoide.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>    +2 força, -1 agilidade, +1 intuição.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 4m </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  padrão. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  média </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Visão hiperespectral</span>
+                                                        <div class="del-pop">
+                                                            <p>Anões enxergam 4 cores a mais do que humanos, 3 no infravermelho e 1 em ultravioleta. Anões veem o mundo de forma completamente diferente, e possuem nomes para várias ‘cores’ de temperatura diferente, assim como para a ‘cor do sol’.</p>
+                                                            <p>Essa capacidade dá a todos os anões que precisem trabalhar com temperaturas uma enorme vantagem, lhes dando um bônus de 2 em qualquer teste que parte essencial dele esteja ligada a observar uma temperatura, como testes de criar itens de metal ou observar um ser vivo em um ambiente frio. </p>
+                                                            <p>Também permite que anões se guiem na escuridão, mas nesse caso a visão é pouco detalhada e não os deixam ver as cores como outras raças as entendem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                 <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Estigma social</span>
+                                                        <div class="del-pop"><p>Elfos são universalmente odiados por humanos e anões. Elfos banidos são vistos com estranheza e desconfiança.</p></div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4><span>  Nenhuma. </span></div>
+                                            </div>
+                                            <!-- Caracteristicas halfling-->
+                                            <div class="tab-pane" id="halfling">
+                                                <p>Pilantrinhas, ladrões de galinhas. Halflings não são exatamente bem vistos por outros povos, em especial por sua tendência a se apropriar de objetos que não são seus. Ou ao menos, a tendência que os outros acreditam que eles têm.</p>
+                                                <p>Halflings são uma raça pouco numerosa, porém quase onipresente, com cerca de 6 milhões de Halflings bem espalhados por todos os continentes conhecidos.  </p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  0 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Vertebrado, Humanoide. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>   -4 força, +5 agilidade, +3 carisma. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 5m. Halflings correm rápido para seu tamanho.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  uma abaixo. Halflings são geralmente marginalizados.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  média. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Força de halfling</span>
+                                                        <div class="del-pop">
+                                                            <p>halflings são proporcionalmente muito fortes, tendo a vantagem de Talento em acrobacia e atletismo.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>                                                
+                                                <p></p>
+                                                <p></p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Tamanho </span>
+                                                        <div class="del-pop">
+                                                            <p>Halflings são muito pequenos, leves e fracos, sendo facilmente imobilizados ou até mesmo arremessados por todas as outras raças. É praticamente impossível até para o mais forte dos Halflings lutar em pé de igualdade em um corpo-a-corpo, tendo uma penalidade de -2 para testes de Luta.</p>
+                                                            <p>No geral, Halflings deveriam ficar longe de um combate corporal com outras raças. Ou ao menos um combate justo. Um lado positivo a ser pequeno e leve é que seu tamanho lhes dá uma vantagem de 2 pontos para testes de surdina. </p>
+
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Estigma social </span>
+                                                        <div class="del-pop">
+                                                            <p>Halflings são malvistos por todas as raças, sendo considerados infantis e manipuladores.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- Caracteristicas poes-->
+                                            <div class="tab-pane" id="poes">
+                                                <p>Imponentes e animalescos, os Poés são a raça mais distinta entre os humanoides. A semelhança com outras raças humanoides é superficial, se aparentando mais com animais do que com outros humanoides. </p>
+                                                <p>Existe cerca de 10 milhões de Poés nas ilhas do arquipélago da passagem, a grande maioria destes da etnia Pés na Terra. Também há por volta de meio milhão em outros locais do mundo.</p>
+                                                <p></p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  35 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Vertebrado, Humanoide. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>   +6 força, +2 agilidade, -2 lógica, -2 intuição, -2 carisma. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 5m andando ereto, 8m andando com as 4. Poés conseguem escalar qualquer superfície natural sem dificuldade, se movendo com velocidade base de 4m. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  uma abaixo. Poés são normalmente mais pobres do que outras raças. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  média. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Corpo Primata </span>
+                                                        <div class="del-pop">
+                                                            <p>Poés possuem braços longos e pernas curtas, ambos com mãos fortes e polegares capazes de agarrar. Poés podem escalar em qualquer superfície natural não lisa com sua velocidade de escalada. Para outros testes de escalada, eles recebem +5.</p>
+                                                            <p>Também são capazes de se mover utilizando a velocidade de escalada pelas copas das árvores em uma região com vegetação densa. Eles devem estar com os braços livres para isso.</p>
+                                                            <p>Há desvantagens para esse corpo arbóreo, especialmente em viagens de longa distância. Um Poé pode viajar apenas 2 horas por dia sem se cansar, e andar mais que isso causa ferimentos leves em seus pés. Poés recebem -2 para testes para receber dano em fôlego em testes de longa duração.</p>
+                                                            <p>O corpo e rosto de Poés não são nada atraentes para outras raças, e eles sempre contam como se fossem feios para outras raças, independente da sua beleza para outros Poés. A exceção é se forem horrendos. Nesse caso, continuam sendo horrendos para todos.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Corpo Primata </span>
+                                                        <div class="del-pop">
+                                                            <p>ver acima</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- Caracteristicas thrii-krek-->
+                                            <div class="tab-pane" id="thrii-krek">
+                                                <p>Os maiores e mais numerosos Kreks, Thrii-Kreks são os mais fisicamente capazes dos Krek. Biologicamente são os Kreks machos, sendo cerca de 85% do tamanho de uma colmeia.</p>
+                                                <p>Fisicamente, Thrii-Kreks são bastante imponentes, com altura média de 2m e peso médio de 140 kg. Suas cabeças são proporcionalmente pequenas para seus corpos, mas isso não afeta sua inteligência.</p>
+                                                <p></p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  75 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>   Irawoide, Krek </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>   +5 força, +2 agilidade, -2 carisma, +10 Fôlego.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>   a velocidade base é 10m. Kreks são incrivelmente rápidos, especialmente os Thrii. Thrii-Kreks conseguem escalar qualquer superfície natural com facilidade, se movendo com velocidade base de 5m.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  duas abaixo. Kreks não possuem nada de valor quando chegam a terras humanoides. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  média. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Armas naturais </span>
+                                                        <div class="del-pop">
+                                                            <p>Garras 1d6 + força/2 cortante</p>
+                                                        </div>
+                                                    </li>
+                                                        <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Alpinismo </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks conseguem escalar muito bem com seus 6 membros, escalando automaticamente boa parte dos terrenos e recebendo +5 para todos outros testes de escalada.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Aprendizagem rápida </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks aprendem muito mais rápido que outras raças, reduzindo o tempo para aprender novas habilidades por estudo ou treino pela metade.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Exoesqueleto </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks possuem placas grossas feitas de osso e quitina cobrindo seu corpo, os dando uma armadura natural considerável. A armadura natural tem RD 12/6/8. Essa armadura não pode reduzir o dano a menos de 1 ponto.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Maratonista nato </span>
+                                                        <div class="del-pop">
+                                                            <p>Thrii-Kreks não se cansam ao correr carregando uma carga leve, mas começam a se cansar com carga confortável, e falham automaticamente testes de Fôlego com carga máxima assim como outras raças.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Muitos braços </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks possuem um par de braços extras com a mesma força e agilidade dos superiores. Cada braço extra usado em uma arma aumenta efetivamente sua força em 1/4.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Resistência à fome e sede </span>
+                                                        <div class="del-pop">
+                                                            <p>Um Krek bem alimentado e hidratado consegue ficar 3 semanas sem ingerir líquidos ou comida, sem nenhuma penalidade. Após esse período, o Krek morre por inanição em apenas 2 dias. Kreks mais gordos podem sobreviver um jejum de meses.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Aquafobia </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks não conseguem flutuar, são péssimos nadadores e tem pavor de ficarem submersos. Tem penalidade de -2 para testes de natação</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Insectóide </span>
+                                                        <div class="del-pop">
+                                                            Não é possível realizarem qualquer teste relacionado a sexualidade e a aparência deles é automaticamente alvo de curiosidade ou desprezo. Conte como se fossem horrendos para alvos que não estiverem curiosos com sua aparência.
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Metabolismo </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks possuem um metabolismo muito acelerado em comparação a humanoides, precisando do quádruplo de comida do que o normal para um humanoide do mesmo tamanho. Também estão sempre alertas e não dormem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- Caracteristicas krin-krek-->
+                                            <div class="tab-pane" id="krin-krek">
+                                                <p>Os menos numerosos e menos fisicamente imponentes dos Kreks, Krin-Kreks não possuem gênero biológico e compõem cerca de 5% do tamanho de uma colmeia.</p>
+                                                <p>Os Krin-Krek são baixos e fracos comparados com outros Kreks, medindo em média 1.40m. Seus músculos densos lhes dão uma força similar à humana, e uma boa agilidade. O peso médio é 55 kg.</p>
+                                                <p></p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  55 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Irawoide, Krek.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>   +2 agilidade, +4 lógica, +4 intuição, +5 Fôlego.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 7m. Kreks são incrivelmente rápidos, até mesmo os Krin. Krin-Kreks conseguem escalar qualquer superfície natural com facilidade, se movendo com velocidade base de 3m.   </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  duas abaixo. Kreks não possuem nada de valor quando chegam a terras humanoides.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  média. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Alpinismo </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks conseguem escalar muito bem com seus 6 membros, escalando automaticamente boa parte dos terrenos e recebendo +5 para todos outros testes de escalada.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Arcanista nato </span>
+                                                        <div class="del-pop">
+                                                            <p>Krin-Kreks possuem uma aptidão única e extraordinária para a magia, sendo  sempre magicamente ativos.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Armas naturais </span>
+                                                        <div class="del-pop">
+                                                            <p>garras 1d4 + força/2 cortante</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Aprendizagem rápida </span>
+                                                        <div class="del-pop">
+                                                            <p>Krin Kreks aprendem muito mais rápido que outras raças e seus irmãos, reduzindo o tempo para aprender novas habilidades por estudo ou treino em 1/3.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Exoesqueleto </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks possuem placas grossas feitas de osso e quitina cobrindo seu corpo, os dando uma armadura natural considerável. As placas de Krin-Kreks são pouco espessas, mas ainda bastante resistentes. A armadura natural tem RD 8/4/4. Essa armadura não pode reduzir o dano a menos de 1 ponto.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Maratonista nato </span>
+                                                        <div class="del-pop">
+                                                            <p>Um Krin-Krek possui uma capacidade nata para corrida à distância, não se cansando em boas condições climáticas. KrinKreks não se cansam ao correr carregando uma carga leve em um clima agradável, mas começam a se cansar com carga confortável ou em um clima adverso, e falham automaticamente testes de Fôlego com carga máxima assim como outras raças.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Muitos braços </span>
+                                                        <div class="del-pop">
+                                                            <p>Krin-Kreks possuem um par de braços mais fracos e curtos, porém igualmente ágeis aos superiores. Considerem que esses braços possuem 5 pontos a menos de força para todos os propósitos. Cada braço extra usado em uma arma aumenta efetivamente sua força em 1/8.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Resistência à fome e sede </span>
+                                                        <div class="del-pop">
+                                                            <p>Um Krek bem alimentado e hidratado consegue ficar 3 semanas sem ingerir líquidos ou comida, sem nenhuma penalidade. Após esse período, o Krek morre por inanição em apenas 2 dias. Kreks mais gordos podem sobreviver um jejum de meses.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Aquafobia </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks não conseguem flutuar, são péssimos nadadores e tem pavor de ficarem submersos. Tem penalidade de -2 para testes de natação</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Insectóide </span>
+                                                        <div class="del-pop">
+                                                            <p>Não é possível realizarem qualquer teste relacionado a sexualidade e a aparência deles é automaticamente alvo de curiosidade ou desprezo. Conte como se fossem horrendos para alvos que não estiverem curiosos com sua aparência.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Metabolismo </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks possuem um metabolismo muito acelerado em comparação a humanoides, precisando do triplo de comida do que o normal para um humanoide do mesmo tamanho. Também estão sempre alertas e não dormem.</p>
+                                                        </div>
+                                                    </li>
+                                            </div>
+                                            <!-- Caracteristicas thruk-krek-->
+                                            <div class="tab-pane" id="thruk-krek">
+                                                <p>As aladas Thruk-Kreks, elas são as líderes e possíveis futuras rainhas da colmeia. Biologicamente são as Kreks fêmeas, sendo cerca de 10% do tamanho de uma colmeia.</p>
+                                                <p>As diferenças externas de Thrii para Thruks são pequenas, especialmente para olhos de outras raças. A diferença óbvia é que Thruks possuem dois grandes pares de asas insectóides. Essas asas são razoavelmente frágeis, tendo a consistência de couro macio, mas se reparam rapidamente. Elas conseguem voar com uma asa a menos, se for necessário.</p>
+                                                <p></p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  75 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>   Irawoide, Krek. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>   +3 força, +2 agilidade, +10 Fôlego.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 9m. Kreks são incrivelmente rápidos. Thruk-Kreks conseguem escalar qualquer superfície natural com facilidade, se movendo com velocidade base de 4m. Thruk-Kreks conseguem voar velocidade 10m e manobrabilidade perfeita, flutuando com facilidade e fazendo mudanças bruscas de direção.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  duas abaixo. Kreks não possuem nada de valor quando chegam a terras humanoides.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  média. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Armas naturais </span>
+                                                        <div class="del-pop">
+                                                            <p>garras 1d6 + força/2 cortante</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Alpinismo </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks conseguem escalar muito bem com seus 6 membros, escalando automaticamente boa parte dos terrenos e recebendo +5 para todos outros testes de escalada.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Aprendizagem rápida </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks aprendem muito mais rápido que outras raças, reduzindo o tempo para aprender novas habilidades por estudo ou treino pela metade.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Exoesqueleto </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks possuem placas grossas feitas de osso e quitina cobrindo seu corpo, os dando uma armadura natural considerável. A armadura natural tem RD 12/6/8. Essa armadura não pode reduzir o dano a menos de 1 ponto.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Maratonista nato </span>
+                                                        <div class="del-pop">
+                                                            <p>Uma Thruk-Krek possui uma capacidade nata para corrida à distância, não se cansando mesmo em condições horrivelmente adversas. Thruk-Kreks não se cansam ao correr carregando uma carga leve, mas começam a se cansar com carga confortável, e falham automaticamente testes de Fôlego com carga máxima assim como outras raças.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Muitos braços </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks possuem um par de braços extras com a mesma força e agilidade dos superiores. Cada braço extra usado em uma  arma aumenta efetivamente sua força em 1/4.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Resistência à fome e sede </span>
+                                                        <div class="del-pop">
+                                                            <p>Um Krek bem alimentado e hidratado consegue ficar 3 semanas sem ingerir líquidos ou comida, sem nenhuma penalidade. Após esse período, o Krek morre por inanição em apenas 2 dias. Kreks mais gordos podem sobreviver um jejum de meses.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                   <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Aquafobia </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks não conseguem flutuar, são péssimos nadadores e tem pavor de ficarem submersos. Tem penalidade de -2 para testes de natação</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Insectóide </span>
+                                                        <div class="del-pop">
+                                                            <p>Não é possível realizarem qualquer teste relacionado a sexualidade e a aparência deles é automaticamente alvo de curiosidade ou desprezo. Conte como se fossem horrendos para alvos que não estiverem curiosos com sua aparência.</p>
+                                                        </div>
+                                                    </li>
+                                                     <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Metabolismo </span>
+                                                        <div class="del-pop">
+                                                            <p>Kreks possuem um metabolismo muito acelerado em comparação a humanoides, precisando do quádruplo de comida do que o normal para um humanoide do mesmo tamanho. Também estão sempre alertas e não dormem.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- Caracteristicas arachas-->
+                                            <div class="tab-pane" id="arachas">
+                                                <p>As “Anãs aranha de Arrakan”, como são popularmente descritas, são um povo muito estranho, tanto em forma quanto em mente. Como diz a sua fama, as Arachas vivem nas regiões montanhosas de Arrakan, na fronteira com o grande deserto.  </p>
+                                                <p>Elas são exímias arquitetas, mineradoras e escultoras, suas obras de engenharia subterrânea rivalizam e muitas vezes superam as dos anões de Irona.  </p>
+                                                <p>Arachas quase sempre vivem suas vidas todas embaixo da terra, saindo apenas para comercializar com outras raças ou fugir da cultura de seu povo. Até mesmo os anões acham estranho o fato da maioria arachas nunca saírem debaixo da terra.  </p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  0 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>   Irawoide, Aracha.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>   +5 agilidade -2 carisma </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  a velocidade base é 7m. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  duas abaixo. Arachas não possuem nada de valor quando fogem de seu povo.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  média. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Aderência </span>
+                                                        <div class="del-pop">
+                                                            <p>Arachas possuem patas adesivas, que as permitem andar em qualquer superfície como se fosse o chão. Elas também conseguem controlar o quão aderente são suas patas, podendo andar sem aderir ao chão ou grudar terra em seus pés.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Audição </span>
+                                                        <div class="del-pop">
+                                                            <p>Arachas possuem uma audição apurada, mesmo sem ouvidos. +5 para testes de audição. Elas não ficam ensurdecidas por disparos de armas de fogo, mas ficam surdas quando utilizam roupas.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Centaurídeo </span>
+                                                        <div class="del-pop">
+                                                            <p>Arachas possuem um par a mais de pernas, que aumenta a sua capacidade de carregar peso. Considere que uma aracha possui 5 a mais de força para propósitos de carga.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Exoesqueleto </span>
+                                                        <div class="del-pop">
+                                                            <p>Arachas possuem algumas placas finas de quitina cobrindo seu corpo, as dando um pouco de resistência natural. A armadura natural tem RD 6/2/2. Essa armadura não pode anular o dano.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Flexível </span>
+                                                        <div class="del-pop">
+                                                            <p>Uma aracha pode contorcer seu corpo de tal forma que pode passa-lo inteiramente por um espaço levemente maior que sua cabeça. Seus ossos também são praticamente impossíveis de serem deslocados, sendo imunes a ataques que tenham finalidade de deslocar seus membros.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Vibrações </span>
+                                                        <div class="del-pop">
+                                                            <p>Arachas sentem as vibrações que seres vivos fazem no solo quando se movem, conseguindo perceber suas posições a até 5m, e a posição aproximada a até 50m. Em terrenos que conduzam vibrações melhor, como pedra, quadruplique as distâncias. Paredes não afetam esse sentido.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4><span>  Cega: Arachas não possuem olhos ou visão complexa, sendo apenas capazes de distinguir escuridão da claridade. Uma aracha é capaz de lutar com armas corporais e aparar normalmente, já que consegue prever ataques com sua audição e tato apurado.  </span></div>
+                                                <p>Estranho e medonho: Não é possível realizarem qualquer teste relacionado a sexualidade com outras raças, e sua aparência é sempre alvo de medo ou desprezo. Conte sempre como se fossem horrendas. </p>
+                                                <p></p>
+                                            </div>
+                                            <!-- Caracteristicas dyn-o-bren-->
+                                            <div class="tab-pane" id="dyn-o-bren">
+                                                <p>Os Dyn-o-Bren foram os primeiros Golens com capacidade de inteligência e raciocínio similares ao dos humanoides. Um grande número foi criado pelo Império dos Ossos para serem usados como escravos ‘leais e incansáveis’, um dos erros fatais do velho império.  </p>
+                                                <p>Atualmente os Dyn-o-Bren são uma raça em lenta extinção, existindo pouco mais de cem mil deles. Menos de uma centena é criada por ano, a maioria por outros Dyn-o-Bren que se preocupam com a perpetuação da raça.  </p>
+                                                <p>A maioria dos Dyn-o-Bren vivos são sobreviventes do Império dos ossos, tendo vivido reclusos da civilização ou hibernando por muito tempo. </p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  45 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span>  Arqueogolem, Dyn-o-Bren.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>   força, agilidade, saúde funcionam de forma especial, conforme detalhado na vantagem Corpo Fabricado, não podendo ser adquiridos com PP. Dons mentais funcionam como normal, mas não podem ser maiores que 5. Dyns não possuem fôlego.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  7m. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span>  média </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  especial, ver aparência artificial. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Corpo Fabricado </span>
+                                                        <div class="del-pop">
+                                                            <p>Dyns são criaturas fabricadas e devido a sua construção inorgânica, tem um processo de criação e aumento de dons físicos diferente de outras raças.</p>
+                                                            <p>Na criação de personagens, ao invés de adquirir dons de força, agilidade e saúde com PP, ele pode aumentar esses dons um total de 10 vezes além de seus valores iniciais (-3 para força, 2 para agilidade e 8 para saúde), não podendo aumentar o mesmo dom mais de 5 vezes ou reduzi-los.</p>
+                                                            <p>Um Dyn também pode pagar por modificações em seu corpo, como dons maiores, sentidos mais aguçados, maior velocidade, armas naturais, etc., devendo obedecer às regras para um golem de tamanho médio, como dito na página XXX.</p>
+                                                            <p>Um Dyn não pode trocar de corpo, sua mente é ligada permanentemente ao seu corpo de criação e não pode ser transferida para um outro. Devido a isso, Dyns não podem adquirir membros adicionais ou mudar para uma forma nãohumanoide.</p>
+                                                            <p>Dyns não podem aumentar seus dons físicos com PP, sendo obrigados a comprar ou fabricar modificações para seus corpos. Toda vantagem que aumente ou diminua dons físicos não muda esses dons e custa 5 pontos a menos (ou dá 5 pontos a menos) ao ser adquirida.</p>
+                                                            <p>O máximo racial para os dons físicos de Dyns funciona de forma diferente de outras raças, seguindo as regras para golens.</p>
+                                                            <p>Dyns também não podem mudar seus dons mentais após a criação de personagens, tendo sempre a mesma mente que tinham ao serem criados. Também não podem ser programados ou adquirirem habilidades através de códigos, mesmo sendo mentes artificiais.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Dom arcano </span>
+                                                        <div class="del-pop">
+                                                            <p>devido a energia fluindo pelo corpo de Dyns e sua construção arcana, Dyns são bons arcanistas, mesmo não tendo a mesma inteligência que grandes magos. Dyns contam como se possuíssem 5 pontos a mais de lógica para a conjuração de magia arcana e possuem a vantagem Talentoso em todas as escolas arcanas.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Incansáveis: </span>
+                                                        <div class="del-pop">
+                                                            <p>Dyns não possuem fôlego, sendo completamente imunes a cansaço.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Resistência a frio e fogo 10 </span>
+                                                        <div class="del-pop">
+                                                            <p>a madeira alquímica dos Dyn é bastante resistente aos elementos, e os Dyn não sentem dor.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Sonar </span>
+                                                        <div class="del-pop">
+                                                            <p>+10 ouvir. Um Dyn pode ‘ver’ usando o som a até 10m. Esse sonar é preciso o suficiente para dar informações básicas sobre o material que ele escuta, como do que ele é feito (carne, madeira, pedra, metal).</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Vida inorgânica </span>
+                                                        <div class="del-pop">
+                                                            <p>Dyns não sentem dor e não possuem sangue, não sendo afetados por nenhum efeito que os envolvam, tendo sucesso automático em testes de saúde para resistir à dor. Também não são afetados por venenos ou doenças.</p>
+                                                            <p>Apesar de não serem seres orgânicos, Dyns comem, bebem e respiram, apesar de poderem segurar a respiração por horas.</p>
+                                                            <p>Caso recebam ao menos um ferimento fatal, Dyns ficam inconscientes e inertes até serem reparados. Da mesma forma, Dyns não conseguem se regenerar, tendo que reparar todo ferimento que receberem.</p>
+                                                            <p>Dyns são muito difíceis de serem destruídos, suas mentes são muito protegidas em seus crânios. Um Dyn morre permanentemente apenas se intencionalmente destruídos por alguém que tenha acesso a sua mente, ou por dano extremo a ela, como um disparo direto de canhão ou uma explosão enorme.</p>
+                                                            <p>Dyns não são capazes de usar poções ou serem afetados por Biomancia, Transmutação e toda a escola de Mentalismo (eles não sofrem efeitos e não percebem efeitos ilusórios, mas podem usar ilusões em si próprios, como se tornarem Invisíveis).</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Visão noturna </span>
+                                                        <div class="del-pop">
+                                                            <p>Dyns enxergam tão bem sob a iluminação baixa de uma noite clara ou até mesmo de uma noite nublada quanto de dia.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Aparência artificial </span>
+                                                        <div class="del-pop">
+                                                            <p>Dyns são claramente criados e artificiais, não podendo adquirir características de aparência.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Estigma social </span>
+                                                        <div class="del-pop">
+                                                            <p>Dyn-o-Bren caíram no esquecimento por um longo tempo, mas a sua aparência artificial tende a faze-los serem considerados objetos, não pessoas.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Fraqueza a eletricidade </span>
+                                                        <div class="del-pop">
+                                                            <p>Os Dyn possuem uma grande vulnerabilidade a eletricidade, dobrando o dano que recebem (após qualquer redução).</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- Caracteristicas dragoes-->
+                                            <div class="tab-pane" id="dragoes">
+                                                <p></p>
+                                                <p></p>
+                                                <p></p>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Custo de pontos:</h4><span>  115 </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Tipo:</h4><span> Dragão  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Dons:</h4><span>  +6 força, +3 agilidade, +3 intuição, +2 lógica  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Velocidade:</h4><span>  8m, voar 25m. </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Riqueza:</h4><span> duas abaixo. Dragões jovens saem de seus lares com apenas comida suficiente para chegar na cidade mais próxima.  </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Aparência:</h4><span>  normal </span></div>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Vantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Couraça draconiana </span>
+                                                        <div class="del-pop">
+                                                            <p>RD 20/10/5. A couraça de dragões jovens é formidável, sendo quase impossível de cortar e muito difícil de furar, mas não consegue impedir armas de fogo poderosas ou proteger contra contusões. Também dá RD 15 contra dano de fogo.</p>
+                                                            <p>Também dá RD 15 contra dano de fogo.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Sentidos aguçados </span>
+                                                        <div class="del-pop">
+                                                            <p>Visão +5, Olfato +5. Os sentidos de dragões são bastante aguçados, tendo uma visão e olfato invejáveis.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Visão noturna </span>
+                                                        <div class="del-pop">
+                                                            <p>Dragões enxergam tão bem sob a iluminação baixa de uma noite clara ou até mesmo de uma noite nublada quanto de dia.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Fase de crescimento </span>
+                                                        <div class="del-pop">
+                                                            <p>Diferente de outras raças, o máximo de força para um dragão jovem é 15 pontos além da média, não 10.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Ataques naturais </span>
+                                                        <div class="del-pop">
+                                                            <p>Um dragão possui garras afiadas, mandíbulas poderosas, uma cauda longa e leve que pode ser usada como chicote e claro, seu sopro de chamas.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Garras </span>
+                                                        <div class="del-pop">
+                                                            <p>1d8 dano cortante + força/2 Mordida: 2d6 dano cortante + força Golpe de cauda: 1d6 dano esmagador + força</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Sopro </span>
+                                                        <div class="del-pop">
+                                                            <p>4d6 de dano de fogo, queima por 40 turnos. É muito difícil de remover ou apagar. Um dragão pode cuspir fogo em um alvo específico em até forçax2m ou então gerar um cone de forçax1m. Um dragão jovem pode soprar um cone 3 vezes antes de precisar ingerir combustível novamente, e cuspir em um oponente 6 vezes.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="margem-singularidade"><h4 class="singularidades">Desvantagens:</h4></div>
+                                                <ul class="list-unstyled lista-margem">
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Cheiro característico </span>
+                                                        <div class="del-pop">
+                                                            <p>dragões cheiram a queimado, sendo facilmente detectados por olfato. O seu cheiro é indistinguível de um objeto queimando, tendendo a alertar pessoas para a possibilidade de um incêndio e tornando furtividade ainda mais difícil para um dragão ou seus companheiros.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Fornalha viva </span>
+                                                        <div class="del-pop">
+                                                            <p>quando um dragão entra em qualquer local, a primeira reação de humanoides é respeito. A segunda é apagar as lareiras e abrir as janelas. De preferência também ligar um refrigerador arcano.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Ganância </span>
+                                                        <div class="del-pop">
+                                                            <p>todo dragão tem a desvantagem de Ganância</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Quadrupede grande </span>
+                                                        <div class="del-pop">
+                                                            <p>Dragões andam sob 4 patas, tem um formato muito diferente de outros seres e são maiores que um cavalo. Dragões tem uma tendência incomoda de não caber em locais desenhados para humanoides. Ou em armaduras. Ou armas. Ou veículos. Ou....</p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="descricao-popover">
+                                                        <span data-toggle="popover" data-placement="right" data-container="body"> Sorrisos afiados </span>
+                                                        <div class="del-pop">
+                                                            <p>dragões não muito bonitos para outras raças, não recebendo as vantagens em testes de carisma recebidas por aparência.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -284,6 +913,6 @@
 
                     <script src="jquery-3.1.1.js"></script>
                 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-               
+                <script src="Criador_de_ficha.js"></script>
         </body>
 </html>

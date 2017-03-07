@@ -55,3 +55,29 @@
 .texto-azul {
     color: blue;
 }
+
+.imput-invisivel {
+    visibility: hidden;
+    display: none;
+}
+
+.botao-riquezas {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.renda-divida {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.tppd {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 5px 0 5px 0;
+}
+
+#riqueza span {
+    word-break: break-all;
+}

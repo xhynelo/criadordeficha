@@ -7,7 +7,8 @@ BASE ={
   i: 0,
   l: 0,
   folego: 0,
-  riqueza: 3
+  riqueza: 3,
+  pc: 10000
 };
 
 RACAS = {
@@ -143,9 +144,19 @@ RACAS = {
   }
 }
 
+RIQUEZA_PP = [-40, -20, -10, 0, 10, 30, 60, 120, 180]
+
 RIQUEZA = [100, 2000, 5000, 10000, 20000, 50000, 200000, 1000000, 10000000]
 
-RACA = ""
+RACA = "humanos"
+
+PC_I = 3
+
+PC_P_PP = 0
+
+RENDA_I = 0
+
+DIVIDA = 0
 
 $(function () {
   var descrcoes = $(".descricao-popover");
@@ -156,14 +167,40 @@ $(function () {
 	  title.data("content", delpop.html());
   	
   });
-  $('[data-toggle="popover"]').popover({trigger: "hover click", html: true});
+  $('[data-toggle="popover"]').popover({trigger: "hover", html: true});
   $(".descricao-popover .del-pop").remove();
+
   $(".escolha-raca").click(function(){
     RACA = ($(this).data("raca"));
-    var atributos = RACAS[RACA];
-    $("#pp").text(BASE.pp - atributos.pp);
-    var riqueza = BASE.riqueza + atributos.riqueza
-    $("#pc").text(RIQUEZA[riqueza]);
+    mundanca();
   })
+  $(".escolha-riqueza").on("click", function () {
+    PC_I = parseInt($(this).data("riqueza"));
+    mundanca();
+  })
+  $("#trocar_pontos_por_dinheiro").on("change", function(){
+    PC_P_PP = $(this).val();
+    mundanca();
+  })
+  $("#renda-independente").on("change", function(){
+    RENDA_I = $(this).val();
+    mundanca();
+  })
+  $("#divida").on("change", function(){
+    DIVIDA = $(this).val();
+    mundanca();
+  })
+
+  function mundanca(){
+    var atributos = RACAS[RACA];
+    var riquezapp = RIQUEZA_PP[PC_I];
+    var pcpp = PC_P_PP * 5;
+    var rendapp = RENDA_I * 5;
+    var dividapp = DIVIDA * 5;
+    $("#pp").text(BASE.pp - atributos.pp - riquezapp - pcpp - rendapp - dividapp);
+    var riqueza = atributos.riqueza + PC_I;
+    var aumento = PC_P_PP * 0.25;
+    $("#pc").text(RIQUEZA[riqueza] + RIQUEZA[riqueza] * aumento);
+  }
 })
 

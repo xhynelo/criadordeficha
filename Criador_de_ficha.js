@@ -10,8 +10,8 @@ CHAR ={
   renda: 0,
   divida: 0,
   pc_aumentdo: 0,
-  aparencia: mediano,
-  idade: medio,
+  aparencia: "mediano",
+  idade: "medio",
   derivados: {
     forca: 0,
     agilidade: 0,
@@ -215,6 +215,249 @@ APARENCIA = {
   nanismo: {
     pp: -10,
     forca: -4
+  },
+  horrendo: {
+    pp: -20,
+    carisma: -2,
+    diplomacia: -2,
+    intimidar: 2
+  },
+  feio: {
+    pp: -10,
+    carisma: -1
+  },
+  pouco_atraente: {
+    pp: -5,
+    carisma: -1
+  },
+  mediano: {
+    pp: 0
+  },
+  atraente: {
+    pp: 5,
+    carisma: 1
+  },
+  bonito: {
+    pp: 10,
+    carisma: 1,
+    adestrar: 1,
+    blefar: 1,
+    diplomacia: 1,
+    disfarce: 1,
+    lideranca: 1,
+    performance: 1,
+    sentir_motivacao: 1
+  },
+  esbelto: {
+    pp: 15,
+    carisma: 2,
+    adestrar: 2,
+    adestrar: 2,
+    blefar: 2,
+    diplomacia: 2,
+    disfarce: 2,
+    lideranca: 2,
+    performance: 2,
+    sentir_motivacao: 2
+  }
+}
+
+IDADE = {
+  adolescente: {
+    forca: -2,
+    intuicao: -1,
+    phf: 1,
+    pha: 1,
+    phc: 1,
+    phi: 1,
+    phl: 1,
+    num_habilidade_max: 3,
+    num_max_hab_max: 1
+  },
+  adulto: {
+    phf: 5,
+    pha: 5,
+    phc: 5,
+    phi: 5,
+    phl: 5,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
+  },
+  anciao: {
+    forca: -6,
+    agilidade: -6,
+    saude: -6,
+    folego: -8,
+    velocidade: -0.4,
+    phf: 11,
+    pha: 11,
+    phc: 11,
+    phi: 11,
+    phl: 11,
+    num_habilidade_max: 4,
+    num_max_hab_max: 2
+  },
+  idoso: {
+    forca: -3,
+    agilidade: -3,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: -3,
+    folego: -6,
+    sanidade: 0,
+    velocidade: -0.2,
+    phf: 9,
+    pha: 9,
+    phc: 9,
+    phi: 9,
+    phl: 9,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
+  },
+  jovem_adulto: {
+    forca: 0,
+    agilidade: 0,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: 0,
+    folego: 0,
+    sanidade: 0,
+    velocidade: 0,
+    phf: 3,
+    pha: 3,
+    phc: 3,
+    phi: 3,
+    phl: 3,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
+  },
+  meia_idade: {
+    forca: -1,
+    agilidade:-1,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: -2,
+    folego: -2,
+    sanidade: 0,
+    velocidade: 0,
+    phf: 7,
+    pha: 7,
+    phc: 7,
+    phi: 7,
+    phl: 7,
+    num_habilidade_max: 4,
+    num_max_hab_max: 2
+  },
+  primeiro_seculo: {
+    forca: 0,
+    agilidade: 0,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: 0,
+    folego: 0,
+    sanidade: 0,
+    velocidade: 0,
+    phf: 5,
+    pha: 5,
+    phc: 5,
+    phi: 5,
+    phl: 5,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
+  },
+  quinto_e_sexto_seculo: {
+    forca: 0,
+    agilidade: 0,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: 0,
+    folego: 0,
+    sanidade: 0,
+    velocidade: 0,
+    phf: 3,
+    pha: 3,
+    phc: 3,
+    phi: 3,
+    phl: 3,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
+  },
+  seculos_incontaveis: {
+    forca: 0,
+    agilidade: 0,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: 0,
+    folego: 0,
+    sanidade: 0,
+    velocidade: 0,
+    phf: 3,
+    pha: 3,
+    phc: 3,
+    phi: 3,
+    phl: 3,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
+  },
+  segundo_a_quarto_seculo: {
+    forca: 0,
+    agilidade: 0,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: 0,
+    folego: 0,
+    sanidade: 0,
+    velocidade: 0,
+    phf: 3,
+    pha: 3,
+    phc: 3,
+    phi: 3,
+    phl: 3,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
+  },
+  setimo_e_oitavo_seculo: {
+    forca: 0,
+    agilidade: 0,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: 0,
+    folego: 0,
+    sanidade: 0,
+    velocidade: 0,
+    phf: 3,
+    pha: 3,
+    phc: 3,
+    phi: 3,
+    phl: 3,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
+  },
+  ultimos_seculos: {
+    forca: 0,
+    agilidade: 0,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0,
+    saude: 0,
+    folego: 0,
+    sanidade: 0,
+    velocidade: 0,
+    phf: 3,
+    pha: 3,
+    phc: 3,
+    phi: 3,
+    phl: 3,
+    num_habilidade_max: 4,
+    num_max_hab_max: 1
   }
 }
 
@@ -224,7 +467,7 @@ RIQUEZA = [100, 2000, 5000, 10000, 20000, 50000, 200000, 1000000, 10000000]
 
 
 function calcula_pp(){
-  var pp = (RACAS[CHAR.raca].pp + RIQUEZA_PP[CHAR.riqueza] + (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5)
+  var pp = (RACAS[CHAR.raca].pp + RIQUEZA_PP[CHAR.riqueza] + (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp)
   return BASE.pp - pp;
 }
 
@@ -282,6 +525,10 @@ $(function () {
   })
   $("#divida").on("change", function(){
     CHAR.divida = parseInt($(this).val());
+    mundanca();
+  })
+  $(".escolha-aparencia").on("click", function(){
+    CHAR.aparencia = ($(this).data("aparencia"));
     mundanca();
   })
 

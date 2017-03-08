@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criador de ficha</title>
+  <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap.vertical-tabs.css">
+  <link rel="stylesheet" type="text/css" href="Criador_de_ficha.css">
+</head>
+<body>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 panel-group" id="accordion">
+
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Raças</a></h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in mudanca-colapse panel-body mudanca-panel-body">
+          <!-- PARTE DE Racas-->
+          {% include2 "racas.html" %}
+        </div>
+      </div>
+
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Características</a></h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          <!-- PARTE DE Características-->
+          {% include2 "caracteristicas.html" %}
+        </div>
+      </div>
+      
+      <!-- PARTE DE Vantagens-->
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Vantagens</a></h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+      <!-- PARTE DE Desvantagens-->
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Desvantagens</a></h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+      <!-- PARTE DE Historia de vida-->
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Historia de vida</a></h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+      <!-- PARTE DE Habilidades-->
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Habilidades</a></h4>
+        </div>
+        <div id="collapse6" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+      <!-- PARTE DE Equipamentos-->
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Equipamentos</a></h4>
+        </div>
+        <div id="collapse7" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+      <!-- PARTE DE Itens mágicos-->
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Itens mágicos</a></h4>
+        </div>
+        <div id="collapse8" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+      <!-- PARTE DE Itens tecnomágicos-->
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Itens tecnomágicos</a></h4>
+        </div>
+        <div id="collapse9" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+
+      <!-- PARTE DE Autômatos e Automotores-->
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Autômatos e Automotores</a></h4>
+        </div>
+        <div id="collapse10" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-2 col-sm-offset-1">
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th class="pontos">PP</th>
+          <td id="pp">100</td>
+        </tr>
+        <tr>
+          <th class="pontos">PhF</th>
+          <td id="phf">0</td>
+        </tr>
+        <tr>
+          <th class="pontos">PhA</th>
+          <td id="pha">0</td>
+        </tr>
+        <tr>
+          <th class="pontos">PhC</th>
+          <td id="phc">0</td>
+        </tr>
+        <tr>
+          <th class="pontos">PhI</th>
+          <td id="phi">0</td>
+        </tr>
+        <tr>
+          <th class="pontos">PhL</th>
+          <td id="phl">0</td>
+        </tr>
+        <tr>
+          <th class="pontos">Pc</th>
+          <td id="pc">10000</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="jquery-3.1.1.js"></script> 
+  <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="Criador_de_ficha.js"></script>
+</body>
+</html>

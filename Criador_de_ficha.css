@@ -64,6 +64,7 @@
 .botao-riquezas {
     margin-top: 5px;
     margin-bottom: 5px;
+    white-space: normal;
 }
 
 .renda-divida {
@@ -80,4 +81,8 @@
 
 #riqueza span {
     word-break: break-all;
+}
+
+#riqueza .col-xs-4 {
+    padding: 0;
 }

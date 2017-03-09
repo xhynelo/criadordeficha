@@ -11,7 +11,7 @@ CHAR ={
   divida: 0,
   pc_aumentdo: 0,
   aparencia: "mediano",
-  idade: "medio",
+  idade: "jovem_adulto",
   derivados: {
     forca: 0,
     agilidade: 0,
@@ -22,6 +22,11 @@ CHAR ={
     saude: 10,
     sanidade: 10,
     riqueza: 0,
+    phf: 0,
+    pha: 0,
+    phc: 0,
+    phi: 0,
+    phl: 0,
   }
 }
 
@@ -264,200 +269,180 @@ APARENCIA = {
 
 IDADE = {
   adolescente: {
-    forca: -2,
-    intuicao: -1,
-    phf: 1,
-    pha: 1,
-    phc: 1,
-    phi: 1,
-    phl: 1,
-    num_habilidade_max: 3,
-    num_max_hab_max: 1
+    pp: -50,
+    forca: -2, 
+    agilidade: 0,
+    saude: 0,
+    folego: 0,
+    velocidade: 0,
+    ph: 1,
+    hab_1_mais: 1,
+    hab_2_mais: 0
+  },
+  jovem_adulto: {
+    pp: 0,
+    forca: 0,
+    agilidade: 0,
+    saude: 0,
+    folego: 0,
+    velocidade: 0,
+    ph: 3,
+    hab_1_mais: 1,
+    hab_2_mais: 0
   },
   adulto: {
-    phf: 5,
-    pha: 5,
-    phc: 5,
-    phi: 5,
-    phl: 5,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
+    pp: 25,
+    forca: 0,
+    agilidade: 0,
+    saude: 0,
+    folego: 0,
+    velocidade: 0,
+    ph: 5,
+    hab_1_mais: 1,
+    hab_2_mais: 0
+  },
+  meia_idade: {
+    pp: 25,
+    forca: -1,
+    agilidade:-1,
+    saude: -2,
+    folego: -2,
+    velocidade: 0,
+    ph: 7,
+    hab_1_mais: 1,
+    hab_2_mais: 0
+  },
+  idoso: {
+    pp: 10,
+    forca: -3,
+    agilidade: -3,
+    saude: -3,
+    folego: -6,
+    velocidade: -0.2,
+    ph: 9,
+    hab_1_mais: 2,
+    hab_2_mais: 0
   },
   anciao: {
+    pp: -15,
     forca: -6,
     agilidade: -6,
     saude: -6,
     folego: -8,
     velocidade: -0.4,
-    phf: 11,
-    pha: 11,
-    phc: 11,
-    phi: 11,
-    phl: 11,
-    num_habilidade_max: 4,
-    num_max_hab_max: 2
-  },
-  idoso: {
-    forca: -3,
-    agilidade: -3,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
-    saude: -3,
-    folego: -6,
-    sanidade: 0,
-    velocidade: -0.2,
-    phf: 9,
-    pha: 9,
-    phc: 9,
-    phi: 9,
-    phl: 9,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
-  },
-  jovem_adulto: {
-    forca: 0,
-    agilidade: 0,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
-    saude: 0,
-    folego: 0,
-    sanidade: 0,
-    velocidade: 0,
-    phf: 3,
-    pha: 3,
-    phc: 3,
-    phi: 3,
-    phl: 3,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
-  },
-  meia_idade: {
-    forca: -1,
-    agilidade:-1,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
-    saude: -2,
-    folego: -2,
-    sanidade: 0,
-    velocidade: 0,
-    phf: 7,
-    pha: 7,
-    phc: 7,
-    phi: 7,
-    phl: 7,
-    num_habilidade_max: 4,
-    num_max_hab_max: 2
+    ph: 11,
+    hab_1_mais: 3,
+    hab_2_mais: 0
   },
   primeiro_seculo: {
+    pp: 25,
     forca: 0,
     agilidade: 0,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
     saude: 0,
     folego: 0,
-    sanidade: 0,
     velocidade: 0,
-    phf: 5,
-    pha: 5,
-    phc: 5,
-    phi: 5,
-    phl: 5,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
+    ph: 5,
+    hab_1_mais: 1,
+    hab_2_mais: 0
   },
-  quinto_e_sexto_seculo: {
+  segundo_seculo: {
+    pp: 60,
     forca: 0,
     agilidade: 0,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
     saude: 0,
     folego: 0,
-    sanidade: 0,
     velocidade: 0,
-    phf: 3,
-    pha: 3,
-    phc: 3,
-    phi: 3,
-    phl: 3,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
+    ph: 7,
+    hab_1_mais: 2,
+    hab_2_mais: 0
   },
-  seculos_incontaveis: {
+  terceiro_seculo: {
+    pp: 85,
     forca: 0,
     agilidade: 0,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
     saude: 0,
     folego: 0,
-    sanidade: 0,
     velocidade: 0,
-    phf: 3,
-    pha: 3,
-    phc: 3,
-    phi: 3,
-    phl: 3,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
+    ph: 9,
+    hab_1_mais: 2,
+    hab_2_mais: 0
   },
-  segundo_a_quarto_seculo: {
+  quarto_seculo: {
+    pp: 110,
     forca: 0,
     agilidade: 0,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
     saude: 0,
     folego: 0,
-    sanidade: 0,
     velocidade: 0,
-    phf: 3,
-    pha: 3,
-    phc: 3,
-    phi: 3,
-    phl: 3,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
+    ph: 11,
+    hab_1_mais: 2,
+    hab_2_mais: 0
   },
-  setimo_e_oitavo_seculo: {
-    forca: 0,
-    agilidade: 0,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
-    saude: 0,
-    folego: 0,
-    sanidade: 0,
+  quinto_seculo: {
+    pp: 120,
+    forca: -1,
+    agilidade: -1,
+    saude: -2,
+    folego: -2,
     velocidade: 0,
-    phf: 3,
-    pha: 3,
-    phc: 3,
-    phi: 3,
-    phl: 3,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
+    ph: 13,
+    hab_1_mais: 3,
+    hab_2_mais: 0
+  },
+  sexto_seculo: {
+    pp: 145,
+    forca: -1,
+    agilidade: -1,
+    saude: -2,
+    folego: -2,
+    velocidade: 0,
+    ph: 15,
+    hab_1_mais: 3,
+    hab_2_mais: 0
+  },
+  setimo_seculo: {
+    pp: 160,
+    forca: -3,
+    agilidade: -3,
+    saude: -3,
+    folego: -6,
+    velocidade: -0.2,
+    ph: 17,
+    hab_1_mais: 4,
+    hab_2_mais: 1
+  },
+  oitavo_seculo: {
+    pp: 185,
+    forca: -3,
+    agilidade: -3,
+    saude: -3,
+    folego: -6,
+    velocidade: -0.2,
+    ph: 19,
+    hab_1_mais: 4,
+    hab_2_mais: 1
   },
   ultimos_seculos: {
+    pp: 180,
+    forca: -6,
+    agilidade: -6,
+    saude: -6,
+    folego: -8,
+    velocidade: -0.4,
+    ph: 21,
+    hab_1_mais: 4,
+    hab_2_mais: 2
+  },
+  seculos_incontaveis: {
+    pp: 145,
     forca: 0,
     agilidade: 0,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0,
     saude: 0,
     folego: 0,
-    sanidade: 0,
     velocidade: 0,
-    phf: 3,
-    pha: 3,
-    phc: 3,
-    phi: 3,
-    phl: 3,
-    num_habilidade_max: 4,
-    num_max_hab_max: 1
+    ph: 13,
+    hab_1_mais: 1,
+    hab_2_mais: 0
   }
 }
 
@@ -467,7 +452,7 @@ RIQUEZA = [100, 2000, 5000, 10000, 20000, 50000, 200000, 1000000, 10000000]
 
 
 function calcula_pp(){
-  var pp = (RACAS[CHAR.raca].pp + RIQUEZA_PP[CHAR.riqueza] + (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp)
+  var pp = RACAS[CHAR.raca].pp + RIQUEZA_PP[CHAR.riqueza] + (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp + IDADE[CHAR.idade].pp
   return BASE.pp - pp;
 }
 
@@ -481,6 +466,11 @@ function calcula_derivados (){
   CHAR.derivados.saude = RACAS[CHAR.raca].saude;
   CHAR.derivados.sanidade = RACAS[CHAR.raca].sanidade;
   CHAR.derivados.riqueza = RACAS[CHAR.raca].riqueza;
+  CHAR.derivados.phf = IDADE[CHAR.idade].ph;
+  CHAR.derivados.pha = IDADE[CHAR.idade].ph;
+  CHAR.derivados.phc = IDADE[CHAR.idade].ph;
+  CHAR.derivados.phi = IDADE[CHAR.idade].ph;
+  CHAR.derivados.phl = IDADE[CHAR.idade].ph;
 }
 
 function calcula_pc(){
@@ -489,9 +479,14 @@ function calcula_pc(){
 }
 
 function mundanca(){
-  calcula_derivados ();
+  calcula_derivados();
   $("#pp").text(calcula_pp());
   $("#pc").text(calcula_pc());
+  $("#phf").text(CHAR.derivados.phf);
+  $("#pha").text(CHAR.derivados.pha);
+  $("#phc").text(CHAR.derivados.phc);
+  $("#phi").text(CHAR.derivados.phi);
+  $("#phl").text(CHAR.derivados.phl);
 }
 
 
@@ -531,6 +526,9 @@ $(function () {
     CHAR.aparencia = ($(this).data("aparencia"));
     mundanca();
   })
-
+  $(".escolha-idade").on("click", function(){
+    CHAR.idade = ($(this).data("idade"));
+    mundanca();
+  })
 })
 

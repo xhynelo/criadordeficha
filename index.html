@@ -11,7 +11,18 @@
 </head>
 <body>
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3 panel-group" id="accordion">
+
+
+    <div class="col-sm-2">
+      <table class="table table-striped table-bordered">
+<tr>
+	<th class="pontos">raças</th>
+	<td></td>
+</tr>
+</table>
+    </div>
+
+    <div class="col-sm-6 col-sm-offset-1 panel-group" id="accordion">
 
       <div class="panel panel-default mudanca-panel-default mudanca-panel">
         <div class="panel-heading mudanca-panel-heading text-center">
@@ -1352,7 +1363,7 @@
   <div class="col-xs-4">
     <!-- Idade adolescente -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Adolescente" data-riqueza="adolescente"> 
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Adolescente" data-idade="adolescente"> 
     <input type="radio" name="options" id="adolescente" class="imput-invisivel"> 
     <span>
       Adolescente 
@@ -1372,7 +1383,7 @@
 </div>  
     <!-- Idade jovem_adulto -->
     <div class="descricao-popover">
-  <label class="btn btn-default active col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Jovem adulto" data-riqueza="1">
+  <label class="btn btn-default active col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Jovem adulto" data-idade="jovem_adulto">
     <input type="radio" name="options" id="jovem_adulto" class="imput-invisivel"> 
     <span>
       Jovem adulto 
@@ -1386,7 +1397,7 @@
 </div>
     <!-- Idade adulto -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Adulto" data-riqueza="2">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Adulto" data-idade="adulto">
     <input type="radio" name="options" id="adulto" class="imput-invisivel"> 
     <span>
       Adulto 
@@ -1405,7 +1416,7 @@
 </div>
     <!-- Idade meia_idade -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Meia idade" data-riqueza="2">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Meia idade" data-idade="meia_idade">
     <input type="radio" name="options" id="meia_idade" class="imput-invisivel"> 
     <span>
       Meia idade 
@@ -1420,7 +1431,7 @@
 </div>
     <!-- Idade idoso -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Idoso" data-riqueza="3">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Idoso" data-idade="idoso">
     <input type="radio" name="options" id="idoso" class="imput-invisivel"> 
     <span>
       Idoso 
@@ -1434,7 +1445,7 @@
 </div>
     <!-- Idade anciao -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Ancião" data-riqueza="4">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Ancião" data-idade="anciao">
     <input type="radio" name="options" id="anciao" class="imput-invisivel"> 
     <span>
       Ancião 
@@ -1456,7 +1467,7 @@
   <div class="col-xs-4">
     <!-- Idade primeiro_seculo -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Primeiro século" data-riqueza="5">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Primeiro século" data-idade="primeiro_seculo">
     <input type="radio" name="options" id="primeiro_seculo" class="imput-invisivel"> 
     <span>
       Primeiro século 
@@ -1471,7 +1482,7 @@
 </div>
     <!-- Idade segundo_seculo -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Segundo século" data-riqueza="segundo_seculo">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Segundo século" data-idade="segundo_seculo">
     <input type="radio" name="options" id="segundo_seculo" class="imput-invisivel"> 
     <span>
       Segundo século 
@@ -1487,7 +1498,7 @@
 </div>
     <!-- Idade terceiro_seculo -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Terceiro século" data-riqueza="terceiro_seculo">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Terceiro século" data-idade="terceiro_seculo">
     <input type="radio" name="options" id="terceiro_seculo" class="imput-invisivel"> 
     <span>
       Terceiro século 
@@ -1501,7 +1512,7 @@
 </div>
     <!-- Idade quarto_seculo -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Quarto século" data-riqueza="quarto_seculo">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Quarto século" data-idade="quarto_seculo">
     <input type="radio" name="options" id="quarto_seculo" class="imput-invisivel"> 
     <span>
       Quarto século 
@@ -1515,7 +1526,7 @@
 </div>
     <!-- Idade quinto_seculo -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Quinto século" data-riqueza="quinto_seculo">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Quinto século" data-idade="quinto_seculo">
     <input type="radio" name="options" id="quinto_seculo" class="imput-invisivel"> 
     <span>
       Quinto século 
@@ -1531,7 +1542,7 @@
 </div>
     <!-- Idade sexto_seculo -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Sexto século" data-riqueza="sexto_seculo">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Sexto século" data-idade="sexto_seculo">
     <input type="radio" name="options" id="sexto_seculo" class="imput-invisivel"> 
     <span>
       Sexto século 
@@ -1547,7 +1558,7 @@
   <div class="col-xs-4">
     <!-- Idade setimo_seculo -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Sétimo século" data-riqueza="setimo_seculo">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Sétimo século" data-idade="setimo_seculo">
     <input type="radio" name="options" id="setimo_seculo" class="imput-invisivel"> 
     <span>
       Sétimo século 
@@ -1563,7 +1574,7 @@
 </div>
     <!-- Idade oitavo_seculo -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Oitavo século" data-riqueza="oitavo_seculo">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Oitavo século" data-idade="oitavo_seculo">
     <input type="radio" name="options" id="oitavo_seculo" class="imput-invisivel"> 
     <span>
       Oitavo século 
@@ -1577,7 +1588,7 @@
 </div>
     <!-- Idade ultimos_seculos -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Últimos séculos" data-riqueza="8">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Últimos séculos" data-idade="ultimos_seculos">
     <input type="radio" name="options" id="ultimos_seculos" class="imput-invisivel"> 
     <span>
       Últimos séculos 
@@ -1591,7 +1602,7 @@
 </div>
     <!-- Idade seculos_incontaveis -->
     <div class="descricao-popover">
-  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Séculos incontáveis" data-riqueza="8">
+  <label class="btn btn-default col-xs-10 col-xs-offset-1 botao-riquezas escolha-idade" data-toggle="popover" data-placement="right" data-container="body" title="Séculos incontáveis" data-idade="seculos_incontaveis">
     <input type="radio" name="options" id="seculos_incontaveis" class="imput-invisivel"> 
     <span>
       Séculos incontáveis 
@@ -1692,35 +1703,36 @@
 
     <div class="col-sm-2 col-sm-offset-1">
       <table class="table table-striped table-bordered">
-        <tr>
-          <th class="pontos">PP</th>
-          <td id="pp">100</td>
-        </tr>
-        <tr>
-          <th class="pontos">PhF</th>
-          <td id="phf">0</td>
-        </tr>
-        <tr>
-          <th class="pontos">PhA</th>
-          <td id="pha">0</td>
-        </tr>
-        <tr>
-          <th class="pontos">PhC</th>
-          <td id="phc">0</td>
-        </tr>
-        <tr>
-          <th class="pontos">PhI</th>
-          <td id="phi">0</td>
-        </tr>
-        <tr>
-          <th class="pontos">PhL</th>
-          <td id="phl">0</td>
-        </tr>
-        <tr>
-          <th class="pontos">Pc</th>
-          <td id="pc">10000</td>
-        </tr>
-      </table>
+  <tr>
+    <th class="pontos">PP</th>
+    <td id="pp">100</td>
+  </tr>
+  <tr>
+    <th class="pontos">PhF</th>
+    <td id="phf">0</td>
+  </tr>
+  <tr>
+    <th class="pontos">PhA</th>
+    <td id="pha">0</td>
+  </tr>
+  <tr>
+    <th class="pontos">PhC</th>
+    <td id="phc">0</td>
+  </tr>
+  <tr>
+    <th class="pontos">PhI</th>
+    <td id="phi">0</td>
+  </tr>
+  <tr>
+    <th class="pontos">PhL</th>
+    <td id="phl">0</td>
+  </tr>
+  <tr>
+    <th class="pontos">Pc</th>
+    <td id="pc">10000</td>
+  </tr>
+</table>
+
     </div>
   </div>
   <script src="jquery-3.1.1.js"></script> 

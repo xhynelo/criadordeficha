@@ -65,6 +65,7 @@
     margin-top: 5px;
     margin-bottom: 5px;
     white-space: normal;
+    word-wrap: break-word;
 }
 
 .renda-divida {
@@ -85,4 +86,14 @@
 
 #riqueza .col-xs-4 {
     padding: 0;
+}
+
+.distancia_input {
+    margin: 9px;
+    margin-left: 11px;
+    display: inline-block;
+}
+
+.escondido {
+    display: none;
 }

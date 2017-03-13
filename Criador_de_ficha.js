@@ -193,6 +193,7 @@ VANTAGEM = {
   vampirismo: cria_vantagem([50], false),
   voz_magnifica: cria_vantagem([10], false),
   visao_periferica: cria_vantagem([5], false),
+
   altruista: cria_vantagem([-5], false),
   baixa_autoestima: cria_vantagem([-10, -15], true),
   babaca: cria_vantagem([-5], false),
@@ -225,11 +226,27 @@ VANTAGEM = {
   voto: cria_vantagem([-5, -10], true)
 }
 
-function cria_desvantagem(pp, p_nv){
+function cria_desvantagem(pp1, pp2, p_nv){
   return {
-    pp: pp,
+    pp1: pp1,
+    pp2: pp2,
     p_nv: p_nv
   }
+}
+
+DESVANTAGEM = {
+  vicio: cria_desvantagem([0, 0, -5, -10], [0, -5, -5], false),
+  obrigacao: cria_desvantagem([0, -15, -10, -5], [0, -5, -5, 5], false)
+}
+
+function calcula_pp_desvantagens(){
+  var pp = 0;
+  for( desvantagem in CHAR.desvantagem){
+    if(CHAR.desvantagem.hasOwnProperty(desvantagem)){
+      pp = pp + DESVANTAGEM[desvantagem].pp1[CHAR.desvantagem[desvantagem][0]] + DESVANTAGEM[desvantagem].pp2[CHAR.desvantagem[desvantagem][1]];
+    }
+  }
+  return pp;
 }
 
 function calcula_pp_vantagens(){
@@ -251,7 +268,9 @@ function calcula_pp(){
   /*
   var pp = RACAS[CHAR.raca].pp + RIQUEZA_PP[CHAR.riqueza] + (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp + IDADE[CHAR.idade].pp
   */
-  var pp = RACAS[CHAR.raca].pp + RIQUEZA[CHAR.riqueza].pp + (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp + IDADE[CHAR.idade].pp + calcula_pp_vantagens()
+  var pp = RACAS[CHAR.raca].pp + RIQUEZA[CHAR.riqueza].pp + 
+  (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp + 
+  IDADE[CHAR.idade].pp + calcula_pp_vantagens() + calcula_pp_desvantagens();
   return BASE.pp - pp;
 }
 
@@ -353,14 +372,25 @@ $(function () {
   $(".escondido").on("change", function(){
     var num = parseInt($(this).val());
     CHAR.vantagem[$(this).attr('id')] = num;
-    console.log(num);
     mundanca();
   })
+  $(".escolha-desvantagem").on("click", function(){
+    var pai = $(this).parent();
+    var div = $(pai).children('div');
+    var num0 = $($(div).children('input')[0]).val();
+    var num1 = $($(div).children('input')[1]).val();
+    CHAR.desvantagem[$(this).data('desvantagem')] =[num0, num1];
+    if($(this).hasClass("active")){
+      delete CHAR.desvantagem[$(this).data('desvantagem')];
+    }
+    mundanca();
+  })
+
   $(".escondido_des").on("change", function(){
-    var num1 = parseInt($($(this).children('input')[0]).val());
-    var num2 = parseInt($($(this).children('input')[1]).val());
-    console.log($(this).children('[input]')[1]);
-    console.log(num);
+    var num0 = parseInt($($(this).children('input')[0]).val());
+    var num1 = parseInt($($(this).children('input')[1]).val());
+    CHAR.desvantagem[$(this).attr('id')] = [num0, num1];
+    mundanca();
   })
 })
 

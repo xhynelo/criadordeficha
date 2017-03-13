@@ -97,3 +97,11 @@
 .escondido {
     display: none;
 }
+
+.escondido_des {
+    display: none;
+}
+
+.cor_vermelho {
+    color: red;
+}

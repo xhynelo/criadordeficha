@@ -2720,65 +2720,83 @@
 <!-- Definicao habilidades -->
 <div  class="tab-content col-xs-8">
 <!-- habilidade habilidades_fisicas -->
-<div class="tab-pane" id="habilidades_fisicas">
-  <!-- habilidade acrobacia -->
-  <div class="descricao-popover">
+<div class="tab-pane active row" id="habilidades_fisicas">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho"> Habilidades físicas (Força ou agilidade) </h3>
+  </div>
+  <div class="col-xs-6">
+    <!-- habilidade acrobacia -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Acrobacia">
-    <h3 class="cor_vermelho">
-        Acrobacia (Agilidade)
-    </h3>
+    <h4 class="cor_vermelho">
+        Acrobacia
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_acrobacia" class="escolha_habilidade espaco_input" data-habilidade="acrobacia">
+  <div class="row">
+      <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_acrobacia" class="escolha_habilidade espaco_input" data-habilidade="acrobacia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade atletismo -->
-  <div class="descricao-popover">
+    <!-- habilidade atletismo -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
-    <h3 class="cor_vermelho">
-        Atletismo (Força ou agilidade)
-    </h3>
+    <h4 class="cor_vermelho">
+        Atletismo
+    </h4>
   </div>
-  <div>
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_atletismo" class="escolha_habilidade espaco_input" data-habilidade="atletismo">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_atletismo" class="escolha_habilidade espaco_input" data-habilidade="atletismo">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_atletismo" class="escolha_habilidade espaco_input" data-habilidade="atletismo">
+    </div>
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_atletismo" class="escolha_habilidade espaco_input" data-habilidade="atletismo">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade cavalgar -->
-  <div class="descricao-popover">
+    <!-- habilidade cavalgar -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Cavalgar">
-    <h3 class="cor_vermelho">
-        Cavalgar (Agilidade)
-    </h3>
+    <h4 class="cor_vermelho">
+        Cavalgar
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_cavalgar" class="escolha_habilidade espaco_input" data-habilidade="cavalgar">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_cavalgar" class="escolha_habilidade espaco_input" data-habilidade="cavalgar">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
 </div>
 <!-- habilidade habilidades_de_pilotagem -->
 <div class="tab-pane row" id="habilidades_de_pilotagem">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Habilidades de pilotagem (Agilidade ou intuição)</h3>
+  </div>
   <div class="col-xs-6">
     <!-- habilidade artilheiro -->
     <div class="descricao-popover espaco_pilotagem">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Misticismo">
-    <h3 class="cor_vermelho">
-        Misticismo <br/>(Lógica)
-    </h3>
+    <h4 class="cor_vermelho">
+        Misticismo
+    </h4>
   </div>
-  <div>
-    <span> logica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_misticismo" class="escolha_habilidade espaco_input" data-habilidade="misticismo">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> logica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_misticismo" class="escolha_habilidade espaco_input" data-habilidade="misticismo">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2786,15 +2804,19 @@
     <!-- habilidade combate_corporal -->
     <div class="descricao-popover espaco_pilotagem">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Combate corporal">
-    <h3 class="cor_vermelho">
-        Combate corporal <br/>(Agilidade ou intuição)
-    </h3>
+    <h4 class="cor_vermelho">
+        Combate corporal
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_combate_corporal" class="escolha_habilidade espaco_input" data-habilidade="combate_corporal">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_combate_corporal" class="escolha_habilidade espaco_input" data-habilidade="combate_corporal">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_combate_corporal" class="escolha_habilidade espaco_input" data-habilidade="combate_corporal">
+    </div>
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_combate_corporal" class="escolha_habilidade espaco_input" data-habilidade="combate_corporal">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2802,15 +2824,19 @@
     <!-- habilidade pilotar -->
     <div class="descricao-popover espaco_pilotagem">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Pilotar">
-    <h3 class="cor_vermelho">
-        Pilotar <br/>(Agilidade ou intuição)
-    </h3>
+    <h4 class="cor_vermelho">
+        Pilotar
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_pilotar" class="escolha_habilidade espaco_input" data-habilidade="pilotar">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_pilotar" class="escolha_habilidade espaco_input" data-habilidade="pilotar">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_pilotar" class="escolha_habilidade espaco_input" data-habilidade="pilotar">
+    </div>
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_pilotar" class="escolha_habilidade espaco_input" data-habilidade="pilotar">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2819,17 +2845,22 @@
 </div>
 <!-- habilidade habilidades_de_precisao -->
 <div class="tab-pane row" id="habilidades_de_precisao">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Habilidades de precisão (agilidade ou intuição)</h3>
+  </div>
   <div class="col-xs-6">
     <!-- habilidade abrir_fechadura -->
     <div class="descricao-popover espaco_precisao">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Abrir fechadura">
-    <h3 class="cor_vermelho">
-        Abrir fechadura (Agilidade)
-    </h3>
+    <h4 class="cor_vermelho">
+        Abrir fechadura
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_abrir_fechadura" class="escolha_habilidade espaco_input" data-habilidade="abrir_fechadura">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_abrir_fechadura" class="escolha_habilidade espaco_input" data-habilidade="abrir_fechadura">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2837,13 +2868,15 @@
     <!-- habilidade escapismo -->
     <div class="descricao-popover espaco_precisao">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Escapismo">
-    <h3 class="cor_vermelho">
-        Escapismo (Agilidade)
-    </h3>
+    <h4 class="cor_vermelho">
+        Escapismo
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_escapismo" class="escolha_habilidade espaco_input" data-habilidade="escapismo">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_escapismo" class="escolha_habilidade espaco_input" data-habilidade="escapismo">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2851,15 +2884,19 @@
     <!-- habilidade pilotar -->
     <div class="descricao-popover espaco_precisao">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Pilotar">
-    <h3 class="cor_vermelho">
-        Pilotar (Agilidade ou intuição)
-    </h3>
+    <h4 class="cor_vermelho">
+        Pilotar
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_pilotar" class="escolha_habilidade espaco_input" data-habilidade="pilotar">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_pilotar" class="escolha_habilidade espaco_input" data-habilidade="pilotar">
+  <div class="row text-center">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_pilotar" class="escolha_habilidade espaco_input" data-habilidade="pilotar">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_pilotar" class="escolha_habilidade espaco_input" data-habilidade="pilotar">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2869,13 +2906,15 @@
     <!-- habilidade prestidigitacao -->
     <div class="descricao-popover espaco_precisao">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Prestidigitação">
-    <h3 class="cor_vermelho">
-        Prestidigitação (Agilidade)
-    </h3>
+    <h4 class="cor_vermelho">
+        Prestidigitação
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_prestidigitacao" class="escolha_habilidade espaco_input" data-habilidade="prestidigitacao">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_prestidigitacao" class="escolha_habilidade espaco_input" data-habilidade="prestidigitacao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2883,13 +2922,15 @@
     <!-- habilidade surdina -->
     <div class="descricao-popover espaco_precisao">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Surdina">
-    <h3 class="cor_vermelho">
-        Surdina (Agilidade)
-    </h3>
+    <h4 class="cor_vermelho">
+        Surdina
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_surdina" class="escolha_habilidade espaco_input" data-habilidade="surdina">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_surdina" class="escolha_habilidade espaco_input" data-habilidade="surdina">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2897,17 +2938,23 @@
     <!-- habilidade usar_armadilhas -->
     <div class="descricao-popover espaco_precisao">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Usar armadilhas">
-    <h3 class="cor_vermelho">
-        Usar armadilhas (Agilidade, lógica ou intuição)
-    </h3>
+    <h4 class="cor_vermelho">
+        Usar armadilhas
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_usar_armadilhas" class="escolha_habilidade espaco_input" data-habilidade="usar_armadilhas">
-    <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_usar_armadilhas" class="escolha_habilidade espaco_input" data-habilidade="usar_armadilhas">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_usar_armadilhas" class="escolha_habilidade espaco_input" data-habilidade="usar_armadilhas">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_usar_armadilhas" class="escolha_habilidade espaco_input" data-habilidade="usar_armadilhas">
+    </div>
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_usar_armadilhas" class="escolha_habilidade espaco_input" data-habilidade="usar_armadilhas">
+    </div>
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_usar_armadilhas" class="escolha_habilidade espaco_input" data-habilidade="usar_armadilhas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -2915,240 +2962,300 @@
   </div>
 </div>
 <!-- habilidade habilidades_perceptivas -->
-<div class="tab-pane" id="habilidades_perceptivas">
-  <!-- habilidade audicao -->
-  <div class="descricao-popover">
+<div class="tab-pane row" id="habilidades_perceptivas">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Habilidades perceptivas (intuição)</h3>
+  </div>
+  <div class="col-xs-6">
+    <!-- habilidade audicao -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
     <h4 class="cor_vermelho">
-        Audição  (intuição)
+        Audição
     </h4>
   </div>
-  <div>
-  	<span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_audicao" class="escolha_habilidade espaco_input" data-habilidade="audicao">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_audicao" class="escolha_habilidade espaco_input" data-habilidade="audicao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade farejar -->
-  <div class="descricao-popover">
+    <!-- habilidade farejar -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
     <h4 class="cor_vermelho">
-        Farejar  (intuição)
+        Farejar
     </h4>
   </div>
-  <div>
-  	<span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_farejar" class="escolha_habilidade espaco_input" data-habilidade="farejar">
-  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_farejar" class="escolha_habilidade espaco_input" data-habilidade="farejar">
+    </div>  </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade investigar -->
-  <div class="descricao-popover">
+    <!-- habilidade investigar -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
     <h4 class="cor_vermelho">
-        Investigar  (intuição)
+        Investigar
     </h4>
   </div>
-  <div>
-  	<span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_investigar" class="escolha_habilidade espaco_input" data-habilidade="investigar">
-  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_investigar" class="escolha_habilidade espaco_input" data-habilidade="investigar">
+    </div>  </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade rastrear -->
-  <div class="descricao-popover">
+  </div>
+  <div class="col-xs-6">
+    <!-- habilidade rastrear -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
     <h4 class="cor_vermelho">
-        Rastrear  (intuição)
+        Rastrear
     </h4>
   </div>
-  <div>
-  	<span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_rastrear" class="escolha_habilidade espaco_input" data-habilidade="rastrear">
-  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_rastrear" class="escolha_habilidade espaco_input" data-habilidade="rastrear">
+    </div>  </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade visao -->
-  <div class="descricao-popover">
+    <!-- habilidade visao -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
     <h4 class="cor_vermelho">
-        Visão  (intuição)
+        Visão
     </h4>
   </div>
-  <div>
-  	<span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_visao" class="escolha_habilidade espaco_input" data-habilidade="visao">
-  </div>
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_visao" class="escolha_habilidade espaco_input" data-habilidade="visao">
+    </div>  </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
 </div>
 <!-- habilidade habilidades_mentais -->
-<div class="tab-pane" id="habilidades_mentais">
-  <!-- habilidade aprender_lingua -->
-  <div class="descricao-popover">
+<div class="tab-pane row" id="habilidades_mentais">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Habilidades mentais (carisma, lógica ou intuição)</h3>
+  </div>
+  <div class="col-xs-6">
+    <!-- habilidade aprender_lingua -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Aprender língua">
-    <h3 class="cor_vermelho">
-        Aprender língua (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Aprender língua
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_aprender_lingua" class="escolha_habilidade espaco_input" data-habilidade="aprender_lingua">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_aprender_lingua" class="escolha_habilidade espaco_input" data-habilidade="aprender_lingua">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_aprender_lingua" class="escolha_habilidade espaco_input" data-habilidade="aprender_lingua">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_aprender_lingua" class="escolha_habilidade espaco_input" data-habilidade="aprender_lingua">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade banimento -->
-  <div class="descricao-popover">
+    <!-- habilidade banimento -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Banimento">
-    <h3 class="cor_vermelho">
-        Banimento (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Banimento
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_banimento" class="escolha_habilidade espaco_input" data-habilidade="banimento">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_banimento" class="escolha_habilidade espaco_input" data-habilidade="banimento">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_banimento" class="escolha_habilidade espaco_input" data-habilidade="banimento">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_banimento" class="escolha_habilidade espaco_input" data-habilidade="banimento">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade concentracao -->
-  <div class="descricao-popover">
+    <!-- habilidade concentracao -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Concentração">
-    <h3 class="cor_vermelho">
-        Concentração (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Concentração
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_concentracao" class="escolha_habilidade espaco_input" data-habilidade="concentracao">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_concentracao" class="escolha_habilidade espaco_input" data-habilidade="concentracao">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_concentracao" class="escolha_habilidade espaco_input" data-habilidade="concentracao">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_concentracao" class="escolha_habilidade espaco_input" data-habilidade="concentracao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade contrabandear -->
-  <div class="descricao-popover">
+    <!-- habilidade contrabandear -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Contrabandear">
-    <h3 class="cor_vermelho">
-        Contrabandear (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Contrabandear
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_contrabandear" class="escolha_habilidade espaco_input" data-habilidade="contrabandear">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_contrabandear" class="escolha_habilidade espaco_input" data-habilidade="contrabandear">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_contrabandear" class="escolha_habilidade espaco_input" data-habilidade="contrabandear">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_contrabandear" class="escolha_habilidade espaco_input" data-habilidade="contrabandear">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade forca_de_vontade -->
-  <div class="descricao-popover">
+    <!-- habilidade forca_de_vontade -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Força de Vontade">
-    <h3 class="cor_vermelho">
-        Força de Vontade (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Força de Vontade
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_forca_de_vontade" class="escolha_habilidade espaco_input" data-habilidade="forca_de_vontade">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_forca_de_vontade" class="escolha_habilidade espaco_input" data-habilidade="forca_de_vontade">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_forca_de_vontade" class="escolha_habilidade espaco_input" data-habilidade="forca_de_vontade">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_forca_de_vontade" class="escolha_habilidade espaco_input" data-habilidade="forca_de_vontade">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade mecanico -->
-  <div class="descricao-popover">
+  </div>
+  <div class="col-xs-6">
+    <!-- habilidade mecanico -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Mecânico">
-    <h3 class="cor_vermelho">
-        Mecânico (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Mecânico
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_mecanico" class="escolha_habilidade espaco_input" data-habilidade="mecanico">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_mecanico" class="escolha_habilidade espaco_input" data-habilidade="mecanico">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_mecanico" class="escolha_habilidade espaco_input" data-habilidade="mecanico">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_mecanico" class="escolha_habilidade espaco_input" data-habilidade="mecanico">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade navegar -->
-  <div class="descricao-popover">
+    <!-- habilidade navegar -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Navegar">
-    <h3 class="cor_vermelho">
-        Navegar (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Navegar
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_navegar" class="escolha_habilidade espaco_input" data-habilidade="navegar">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_navegar" class="escolha_habilidade espaco_input" data-habilidade="navegar">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_navegar" class="escolha_habilidade espaco_input" data-habilidade="navegar">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_navegar" class="escolha_habilidade espaco_input" data-habilidade="navegar">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade operar_maquina -->
-  <div class="descricao-popover">
+    <!-- habilidade operar_maquina -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Operar máquina">
-    <h3 class="cor_vermelho">
-        Operar máquina (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Operar máquina
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_operar_maquina" class="escolha_habilidade espaco_input" data-habilidade="operar_maquina">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_operar_maquina" class="escolha_habilidade espaco_input" data-habilidade="operar_maquina">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_operar_maquina" class="escolha_habilidade espaco_input" data-habilidade="operar_maquina">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_operar_maquina" class="escolha_habilidade espaco_input" data-habilidade="operar_maquina">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade sobrevivencia -->
-  <div class="descricao-popover">
+    <!-- habilidade sobrevivencia -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Sobrevivência">
-    <h3 class="cor_vermelho">
-        Sobrevivência (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Sobrevivência
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_sobrevivencia" class="escolha_habilidade espaco_input" data-habilidade="sobrevivencia">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_sobrevivencia" class="escolha_habilidade espaco_input" data-habilidade="sobrevivencia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_sobrevivencia" class="escolha_habilidade espaco_input" data-habilidade="sobrevivencia">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_sobrevivencia" class="escolha_habilidade espaco_input" data-habilidade="sobrevivencia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade uso_de_explosivos -->
-  <div class="descricao-popover">
+    <!-- habilidade uso_de_explosivos -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Uso de explosivos">
-    <h3 class="cor_vermelho">
-        Uso de explosivos (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Uso de explosivos
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_uso_de_explosivos" class="escolha_habilidade espaco_input" data-habilidade="uso_de_explosivos">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_uso_de_explosivos" class="escolha_habilidade espaco_input" data-habilidade="uso_de_explosivos">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_uso_de_explosivos" class="escolha_habilidade espaco_input" data-habilidade="uso_de_explosivos">
+    </div>    
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_uso_de_explosivos" class="escolha_habilidade espaco_input" data-habilidade="uso_de_explosivos">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
 </div>
 <!-- habilidade habilidades_de_conhecimento_e_fabricacao -->
 <div class="tab-pane" id="habilidades_de_conhecimento_e_fabricacao">
@@ -3165,8 +3272,11 @@
   </div>
   <div class="tab-content">
     <!-- habilidade conhecimento -->
-    <div role="tabpanel" class="tab-pane active" id="conhecimento">
-  <div>
+    <div role="tabpanel" class="tab-pane active row" id="conhecimento">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Conhecimento (intuição ou lógica)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade arcano -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -3174,11 +3284,15 @@
         Arcano
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_arcano" class="escolha_habilidade espaco_input" data-habilidade="arcano">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_arcano" class="escolha_habilidade espaco_input" data-habilidade="arcano">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_arcano" class="escolha_habilidade espaco_input" data-habilidade="arcano">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_arcano" class="escolha_habilidade espaco_input" data-habilidade="arcano">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3190,11 +3304,15 @@
         Arquitetura
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_arquitetura" class="escolha_habilidade espaco_input" data-habilidade="arquitetura">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_arquitetura" class="escolha_habilidade espaco_input" data-habilidade="arquitetura">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_arquitetura" class="escolha_habilidade espaco_input" data-habilidade="arquitetura">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_arquitetura" class="escolha_habilidade espaco_input" data-habilidade="arquitetura">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3206,11 +3324,15 @@
         Área Local
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_area_local" class="escolha_habilidade espaco_input" data-habilidade="area_local">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_area_local" class="escolha_habilidade espaco_input" data-habilidade="area_local">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_area_local" class="escolha_habilidade espaco_input" data-habilidade="area_local">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_area_local" class="escolha_habilidade espaco_input" data-habilidade="area_local">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3222,11 +3344,15 @@
         Ciências da natureza
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_ciencias_da_natureza" class="escolha_habilidade espaco_input" data-habilidade="ciencias_da_natureza">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_ciencias_da_natureza" class="escolha_habilidade espaco_input" data-habilidade="ciencias_da_natureza">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_ciencias_da_natureza" class="escolha_habilidade espaco_input" data-habilidade="ciencias_da_natureza">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_ciencias_da_natureza" class="escolha_habilidade espaco_input" data-habilidade="ciencias_da_natureza">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3238,11 +3364,15 @@
         Cultura
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_cultura" class="escolha_habilidade espaco_input" data-habilidade="cultura">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_cultura" class="escolha_habilidade espaco_input" data-habilidade="cultura">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_cultura" class="escolha_habilidade espaco_input" data-habilidade="cultura">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_cultura" class="escolha_habilidade espaco_input" data-habilidade="cultura">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3254,15 +3384,21 @@
         Engenharia
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_engenharia" class="escolha_habilidade espaco_input" data-habilidade="engenharia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_engenharia" class="escolha_habilidade espaco_input" data-habilidade="engenharia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_engenharia" class="escolha_habilidade espaco_input" data-habilidade="engenharia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_engenharia" class="escolha_habilidade espaco_input" data-habilidade="engenharia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade geografia -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -3270,11 +3406,15 @@
         Geografia
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_geografia" class="escolha_habilidade espaco_input" data-habilidade="geografia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_geografia" class="escolha_habilidade espaco_input" data-habilidade="geografia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_geografia" class="escolha_habilidade espaco_input" data-habilidade="geografia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_geografia" class="escolha_habilidade espaco_input" data-habilidade="geografia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3286,11 +3426,15 @@
         História
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_historia" class="escolha_habilidade espaco_input" data-habilidade="historia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_historia" class="escolha_habilidade espaco_input" data-habilidade="historia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_historia" class="escolha_habilidade espaco_input" data-habilidade="historia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_historia" class="escolha_habilidade espaco_input" data-habilidade="historia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3302,11 +3446,15 @@
         Matemática e lógica
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_matematica_e_logica" class="escolha_habilidade espaco_input" data-habilidade="matematica_e_logica">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_matematica_e_logica" class="escolha_habilidade espaco_input" data-habilidade="matematica_e_logica">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_matematica_e_logica" class="escolha_habilidade espaco_input" data-habilidade="matematica_e_logica">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_matematica_e_logica" class="escolha_habilidade espaco_input" data-habilidade="matematica_e_logica">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3318,11 +3466,15 @@
         Medicina
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_medicina" class="escolha_habilidade espaco_input" data-habilidade="medicina">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_medicina" class="escolha_habilidade espaco_input" data-habilidade="medicina">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_medicina" class="escolha_habilidade espaco_input" data-habilidade="medicina">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_medicina" class="escolha_habilidade espaco_input" data-habilidade="medicina">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3334,11 +3486,15 @@
         Religioso
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_religioso" class="escolha_habilidade espaco_input" data-habilidade="religioso">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_religioso" class="escolha_habilidade espaco_input" data-habilidade="religioso">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_religioso" class="escolha_habilidade espaco_input" data-habilidade="religioso">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_religioso" class="escolha_habilidade espaco_input" data-habilidade="religioso">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3350,11 +3506,15 @@
         Táticas e estratégia
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_taticas_e_estrategia" class="escolha_habilidade espaco_input" data-habilidade="taticas_e_estrategia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_taticas_e_estrategia" class="escolha_habilidade espaco_input" data-habilidade="taticas_e_estrategia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_taticas_e_estrategia" class="escolha_habilidade espaco_input" data-habilidade="taticas_e_estrategia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_taticas_e_estrategia" class="escolha_habilidade espaco_input" data-habilidade="taticas_e_estrategia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3362,8 +3522,11 @@
   </div>
 </div>
     <!-- habilidade fabricar -->
-    <div role="tabpanel" class="tab-pane active" id="fabricar">
-  <div>
+    <div role="tabpanel" class="tab-pane row" id="fabricar">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Fabricar (lógica ou intuição)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade alquimia -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -3371,11 +3534,15 @@
         Alquimia
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_alquimia" class="escolha_habilidade espaco_input" data-habilidade="alquimia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_alquimia" class="escolha_habilidade espaco_input" data-habilidade="alquimia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_alquimia" class="escolha_habilidade espaco_input" data-habilidade="alquimia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_alquimia" class="escolha_habilidade espaco_input" data-habilidade="alquimia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3387,11 +3554,15 @@
         Apotecária
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_apotecaria" class="escolha_habilidade espaco_input" data-habilidade="apotecaria">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_apotecaria" class="escolha_habilidade espaco_input" data-habilidade="apotecaria">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_apotecaria" class="escolha_habilidade espaco_input" data-habilidade="apotecaria">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_apotecaria" class="escolha_habilidade espaco_input" data-habilidade="apotecaria">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3403,11 +3574,15 @@
         Armearia
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_armearia" class="escolha_habilidade espaco_input" data-habilidade="armearia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_armearia" class="escolha_habilidade espaco_input" data-habilidade="armearia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_armearia" class="escolha_habilidade espaco_input" data-habilidade="armearia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_armearia" class="escolha_habilidade espaco_input" data-habilidade="armearia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3419,11 +3594,15 @@
         Armaria
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_armaria" class="escolha_habilidade espaco_input" data-habilidade="armaria">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_armaria" class="escolha_habilidade espaco_input" data-habilidade="armaria">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_armaria" class="escolha_habilidade espaco_input" data-habilidade="armaria">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_armaria" class="escolha_habilidade espaco_input" data-habilidade="armaria">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3435,11 +3614,15 @@
         Armoraria
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_armoraria" class="escolha_habilidade espaco_input" data-habilidade="armoraria">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_armoraria" class="escolha_habilidade espaco_input" data-habilidade="armoraria">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_armoraria" class="escolha_habilidade espaco_input" data-habilidade="armoraria">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_armoraria" class="escolha_habilidade espaco_input" data-habilidade="armoraria">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3451,11 +3634,15 @@
         Arquearia
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_arquearia" class="escolha_habilidade espaco_input" data-habilidade="arquearia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_arquearia" class="escolha_habilidade espaco_input" data-habilidade="arquearia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_arquearia" class="escolha_habilidade espaco_input" data-habilidade="arquearia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_arquearia" class="escolha_habilidade espaco_input" data-habilidade="arquearia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3467,11 +3654,15 @@
         Carpintaria
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_carpintaria" class="escolha_habilidade espaco_input" data-habilidade="carpintaria">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_carpintaria" class="escolha_habilidade espaco_input" data-habilidade="carpintaria">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_carpintaria" class="escolha_habilidade espaco_input" data-habilidade="carpintaria">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_carpintaria" class="escolha_habilidade espaco_input" data-habilidade="carpintaria">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3483,11 +3674,15 @@
         Cartografia
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_cartografia" class="escolha_habilidade espaco_input" data-habilidade="cartografia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_cartografia" class="escolha_habilidade espaco_input" data-habilidade="cartografia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_cartografia" class="escolha_habilidade espaco_input" data-habilidade="cartografia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_cartografia" class="escolha_habilidade espaco_input" data-habilidade="cartografia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3499,11 +3694,15 @@
         Construção
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_construcao" class="escolha_habilidade espaco_input" data-habilidade="construcao">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_construcao" class="escolha_habilidade espaco_input" data-habilidade="construcao">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_construcao" class="escolha_habilidade espaco_input" data-habilidade="construcao">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_construcao" class="escolha_habilidade espaco_input" data-habilidade="construcao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3515,11 +3714,15 @@
         Culinária
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_culinaria" class="escolha_habilidade espaco_input" data-habilidade="culinaria">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_culinaria" class="escolha_habilidade espaco_input" data-habilidade="culinaria">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_culinaria" class="escolha_habilidade espaco_input" data-habilidade="culinaria">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_culinaria" class="escolha_habilidade espaco_input" data-habilidade="culinaria">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3531,15 +3734,21 @@
         Envenenador
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_envenenador" class="escolha_habilidade espaco_input" data-habilidade="envenenador">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_envenenador" class="escolha_habilidade espaco_input" data-habilidade="envenenador">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_envenenador" class="escolha_habilidade espaco_input" data-habilidade="envenenador">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_envenenador" class="escolha_habilidade espaco_input" data-habilidade="envenenador">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade encantamentos -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -3547,11 +3756,15 @@
         Encantamentos
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_encantamentos" class="escolha_habilidade espaco_input" data-habilidade="encantamentos">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_encantamentos" class="escolha_habilidade espaco_input" data-habilidade="encantamentos">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_encantamentos" class="escolha_habilidade espaco_input" data-habilidade="encantamentos">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_encantamentos" class="escolha_habilidade espaco_input" data-habilidade="encantamentos">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3563,11 +3776,15 @@
         Escultura e Pintura
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_escultura_e_pintura" class="escolha_habilidade espaco_input" data-habilidade="escultura_e_pintura">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_escultura_e_pintura" class="escolha_habilidade espaco_input" data-habilidade="escultura_e_pintura">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_escultura_e_pintura" class="escolha_habilidade espaco_input" data-habilidade="escultura_e_pintura">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_escultura_e_pintura" class="escolha_habilidade espaco_input" data-habilidade="escultura_e_pintura">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3579,11 +3796,15 @@
         Falsificações
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_falsificacoes" class="escolha_habilidade espaco_input" data-habilidade="falsificacoes">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_falsificacoes" class="escolha_habilidade espaco_input" data-habilidade="falsificacoes">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_falsificacoes" class="escolha_habilidade espaco_input" data-habilidade="falsificacoes">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_falsificacoes" class="escolha_habilidade espaco_input" data-habilidade="falsificacoes">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3595,11 +3816,15 @@
         Maquinário
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_maquinario" class="escolha_habilidade espaco_input" data-habilidade="maquinario">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_maquinario" class="escolha_habilidade espaco_input" data-habilidade="maquinario">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_maquinario" class="escolha_habilidade espaco_input" data-habilidade="maquinario">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_maquinario" class="escolha_habilidade espaco_input" data-habilidade="maquinario">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3611,11 +3836,15 @@
         Metalurgia
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_metalurgia" class="escolha_habilidade espaco_input" data-habilidade="metalurgia">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_metalurgia" class="escolha_habilidade espaco_input" data-habilidade="metalurgia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_metalurgia" class="escolha_habilidade espaco_input" data-habilidade="metalurgia">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_metalurgia" class="escolha_habilidade espaco_input" data-habilidade="metalurgia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3627,11 +3856,15 @@
         Mutação
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_mutacao" class="escolha_habilidade espaco_input" data-habilidade="mutacao">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_mutacao" class="escolha_habilidade espaco_input" data-habilidade="mutacao">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_mutacao" class="escolha_habilidade espaco_input" data-habilidade="mutacao">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_mutacao" class="escolha_habilidade espaco_input" data-habilidade="mutacao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3643,11 +3876,15 @@
         Químico
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_quimico" class="escolha_habilidade espaco_input" data-habilidade="quimico">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_quimico" class="escolha_habilidade espaco_input" data-habilidade="quimico">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_quimico" class="escolha_habilidade espaco_input" data-habilidade="quimico">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_quimico" class="escolha_habilidade espaco_input" data-habilidade="quimico">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3659,11 +3896,15 @@
         Relojoaria
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_relojoaria" class="escolha_habilidade espaco_input" data-habilidade="relojoaria">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_relojoaria" class="escolha_habilidade espaco_input" data-habilidade="relojoaria">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_relojoaria" class="escolha_habilidade espaco_input" data-habilidade="relojoaria">
+    </div>    
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_relojoaria" class="escolha_habilidade espaco_input" data-habilidade="relojoaria">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3675,11 +3916,15 @@
         Robótica
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_robotica" class="escolha_habilidade espaco_input" data-habilidade="robotica">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_robotica" class="escolha_habilidade espaco_input" data-habilidade="robotica">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_robotica" class="escolha_habilidade espaco_input" data-habilidade="robotica">
+    </div>
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_robotica" class="escolha_habilidade espaco_input" data-habilidade="robotica">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3692,11 +3937,14 @@
     </h4>
   </div>
   <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_tecelagem" class="escolha_habilidade espaco_input" data-habilidade="tecelagem">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_tecelagem" class="escolha_habilidade espaco_input" data-habilidade="tecelagem">
-  </div>
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_tecelagem" class="escolha_habilidade espaco_input" data-habilidade="tecelagem">
+    </div>
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_tecelagem" class="escolha_habilidade espaco_input" data-habilidade="tecelagem">
+    </div>  </div>
   <div class="del-pop">
   </div>
 </div>
@@ -3707,11 +3955,15 @@
         Texto
     </h4>
   </div>
-  <div>
-  <span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_texto" class="escolha_habilidade espaco_input" data-habilidade="texto">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_texto" class="escolha_habilidade espaco_input" data-habilidade="texto">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_texto" class="escolha_habilidade espaco_input" data-habilidade="texto">
+    </div>
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_texto" class="escolha_habilidade espaco_input" data-habilidade="texto">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3721,133 +3973,164 @@
   </div>
 </div>
 <!-- habilidade habilidades_interpessoais -->
-<div class="tab-pane" id="habilidades_interpessoais">
-  <!-- habilidade adestrar -->
-  <div class="descricao-popover">
+<div class="tab-pane row" id="habilidades_interpessoais">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Habilidades interpessoais (intuição, carisma ou força)</h3>
+  </div>
+  <div class="col-xs-6">
+    <!-- habilidade adestrar -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Adestrar">
-    <h3 class="cor_vermelho">
-        Adestrar (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Adestrar
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_adestrar" class="escolha_habilidade espaco_input" data-habilidade="adestrar">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_adestrar" class="escolha_habilidade espaco_input" data-habilidade="adestrar">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_adestrar" class="escolha_habilidade espaco_input" data-habilidade="adestrar">
+    </div>
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_adestrar" class="escolha_habilidade espaco_input" data-habilidade="adestrar">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade blefar -->
-  <div class="descricao-popover">
+    <!-- habilidade blefar -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Blefar">
-    <h3 class="cor_vermelho">
-        Blefar (carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Blefar
+    </h4>
   </div>
-  <div>
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_blefar" class="escolha_habilidade espaco_input" data-habilidade="blefar">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_blefar" class="escolha_habilidade espaco_input" data-habilidade="blefar">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade diplomacia -->
-  <div class="descricao-popover">
+    <!-- habilidade diplomacia -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Diplomacia">
-    <h3 class="cor_vermelho">
-        Diplomacia (Carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Diplomacia
+    </h4>
   </div>
-  <div>
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_diplomacia" class="escolha_habilidade espaco_input" data-habilidade="diplomacia">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_diplomacia" class="escolha_habilidade espaco_input" data-habilidade="diplomacia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade disfarce -->
-  <div class="descricao-popover">
+    <!-- habilidade disfarce -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Disfarce">
-    <h3 class="cor_vermelho">
-        Disfarce (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Disfarce
+    </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuição_disfarce" class="escolha_habilidade espaco_input" data-habilidade="disfarce">
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_disfarce" class="escolha_habilidade espaco_input" data-habilidade="disfarce">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuição_disfarce" class="escolha_habilidade espaco_input" data-habilidade="disfarce">
+    </div>
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_disfarce" class="escolha_habilidade espaco_input" data-habilidade="disfarce">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade intimidar -->
-  <div class="descricao-popover">
+  </div>
+  <div class="col-xs-6">
+    <!-- habilidade intimidar -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Intimidar">
-    <h3 class="cor_vermelho">
-        Intimidar (carisma ou força)
-    </h3>
+    <h4 class="cor_vermelho">
+        Intimidar
+    </h4>
   </div>
-  <div>
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_intimidar" class="escolha_habilidade espaco_input" data-habilidade="intimidar">
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="força_intimidar" class="escolha_habilidade espaco_input" data-habilidade="intimidar">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_intimidar" class="escolha_habilidade espaco_input" data-habilidade="intimidar">
+    </div>
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="força_intimidar" class="escolha_habilidade espaco_input" data-habilidade="intimidar">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade lideranca -->
-  <div class="descricao-popover">
+    <!-- habilidade lideranca -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Liderança">
-    <h3 class="cor_vermelho">
-        Liderança (Carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Liderança
+    </h4>
   </div>
-  <div>
-    <span> carima: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_lideranca" class="escolha_habilidade espaco_input" data-habilidade="lideranca">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> carima: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_lideranca" class="escolha_habilidade espaco_input" data-habilidade="lideranca">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade performance -->
-  <div class="descricao-popover">
+    <!-- habilidade performance -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Performance">
-    <h3 class="cor_vermelho">
-        Performance (Carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Performance
+    </h4>
   </div>
-  <div>
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_performance" class="escolha_habilidade espaco_input" data-habilidade="performance">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_performance" class="escolha_habilidade espaco_input" data-habilidade="performance">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade sentir_motivacao -->
-  <div class="descricao-popover">
+    <!-- habilidade sentir_motivacao -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Sentir motivação">
-    <h3 class="cor_vermelho">
-        Sentir motivação (Intuição ou carisma)
-    </h3>
+    <h4 class="cor_vermelho">
+        Sentir motivação
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_sentir_motivacao" class="escolha_habilidade espaco_input" data-habilidade="sentir_motivacao">
-    <span> carisma: </span>
-    <input type="number" name="quantity" min="0" max="2" id="carisma_sentir_motivacao" class="escolha_habilidade espaco_input" data-habilidade="sentir_motivacao">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_sentir_motivacao" class="escolha_habilidade espaco_input" data-habilidade="sentir_motivacao">
+    </div>
+    <div class="col-xs-4">
+      <span> carisma: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="carisma_sentir_motivacao" class="escolha_habilidade espaco_input" data-habilidade="sentir_motivacao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
 </div>
 <!-- habilidade habilidades_de_combate -->
 <div class="tab-pane" id="habilidades_de_combate">
   <div clas="row">
     <!-- habilidade habilidades_de_combate -->
-    <ul class="nav nav-tabs row text-center" role="tablist">
+    <ul class="nav nav-tabs row text-center row" role="tablist">
   <li role="presentation" class="active col-xs-4">
     <a href="#arma_corpo-a-corpo" aria-controls="arma_corpo-a-corpo" role="tab" data-toggle="tab">Arma corpo-a-corpo</a>
   </li>
@@ -3855,14 +4138,17 @@
     <a href="#armas_a_distancia" aria-controls="armas_a_distancia" role="tab" data-toggle="tab">Armas à distância</a>
   </li>
   <li role="presentation" class="col-xs-4">
-    <a href="#armas_a_distancia" aria-controls="armas_a_distancia" role="tab" data-toggle="tab">Golpes naturais</a>
+    <a href="#golpes_naturais" aria-controls="golpes_naturais" role="tab" data-toggle="tab">Golpes naturais</a>
   </li>
 </ul>
   </div>
   <div class="tab-content">
   <!-- habilidade arma_corpo-a-corpo -->
-  <div role="tabpanel" class="tab-pane active" id="arma_corpo-a-corpo">
-  <div>
+  <div role="tabpanel" class="tab-pane active row" id="arma_corpo-a-corpo">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Arma corpo-a-corpo (força ou agilidade)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade armas_de_haste -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -3870,11 +4156,15 @@
         Armas de haste
     </h4>
   </div>
-  <div>
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_armas_de_haste" class="escolha_habilidade espaco_input" data-habilidade="armas_de_haste">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_armas_de_haste" class="escolha_habilidade espaco_input" data-habilidade="armas_de_haste">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_armas_de_haste" class="escolha_habilidade espaco_input" data-habilidade="armas_de_haste">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_armas_de_haste" class="escolha_habilidade espaco_input" data-habilidade="armas_de_haste">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3886,11 +4176,15 @@
         Esgrima
     </h4>
   </div>
-  <div>
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_esgrima" class="escolha_habilidade espaco_input" data-habilidade="esgrima">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_esgrima" class="escolha_habilidade espaco_input" data-habilidade="esgrima">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_esgrima" class="escolha_habilidade espaco_input" data-habilidade="esgrima">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_esgrima" class="escolha_habilidade espaco_input" data-habilidade="esgrima">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3902,11 +4196,15 @@
         Laminas curtas
     </h4>
   </div>
-  <div>
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_laminas_curtas" class="escolha_habilidade espaco_input" data-habilidade="laminas_curtas">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_laminas_curtas" class="escolha_habilidade espaco_input" data-habilidade="laminas_curtas">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_laminas_curtas" class="escolha_habilidade espaco_input" data-habilidade="laminas_curtas">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_laminas_curtas" class="escolha_habilidade espaco_input" data-habilidade="laminas_curtas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3918,15 +4216,21 @@
         Laminas longas
     </h4>
   </div>
-  <div>
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_laminas_longas" class="escolha_habilidade espaco_input" data-habilidade="laminas_longas">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_laminas_longas" class="escolha_habilidade espaco_input" data-habilidade="laminas_longas">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_laminas_longas" class="escolha_habilidade espaco_input" data-habilidade="laminas_longas">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_laminas_longas" class="escolha_habilidade espaco_input" data-habilidade="laminas_longas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade lancas_e_cajados -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -3934,11 +4238,15 @@
         Lanças e cajados
     </h4>
   </div>
-  <div>
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_lancas_e_cajados" class="escolha_habilidade espaco_input" data-habilidade="lancas_e_cajados">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_lancas_e_cajados" class="escolha_habilidade espaco_input" data-habilidade="lancas_e_cajados">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_lancas_e_cajados" class="escolha_habilidade espaco_input" data-habilidade="lancas_e_cajados">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_lancas_e_cajados" class="escolha_habilidade espaco_input" data-habilidade="lancas_e_cajados">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3950,11 +4258,15 @@
         Machados e maças
     </h4>
   </div>
-  <div>
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_machados_e_macas" class="escolha_habilidade espaco_input" data-habilidade="machados_e_macas">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_machados_e_macas" class="escolha_habilidade espaco_input" data-habilidade="machados_e_macas">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_machados_e_macas" class="escolha_habilidade espaco_input" data-habilidade="machados_e_macas">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_machados_e_macas" class="escolha_habilidade espaco_input" data-habilidade="machados_e_macas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3966,11 +4278,15 @@
         Manguais
     </h4>
   </div>
-  <div>
-    <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_manguais" class="escolha_habilidade espaco_input" data-habilidade="manguais">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_manguais" class="escolha_habilidade espaco_input" data-habilidade="manguais">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_manguais" class="escolha_habilidade espaco_input" data-habilidade="manguais">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_manguais" class="escolha_habilidade espaco_input" data-habilidade="manguais">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -3978,8 +4294,11 @@
   </div>
 </div>
   <!-- habilidade armas_a_distancia -->
-  <div role="tabpanel" class="tab-pane active" id="armas_a_distancia">
-  <div>
+  <div role="tabpanel" class="tab-pane row" id="armas_a_distancia">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Armas à distância (agilidade)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade arquearia -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -3987,9 +4306,11 @@
         Arquearia
     </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_arquearia" class="escolha_habilidade espaco_input" data-habilidade="arquearia">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_arquearia" class="escolha_habilidade espaco_input" data-habilidade="arquearia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4001,9 +4322,11 @@
         Armas automáticas
     </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_armas_automaticas" class="escolha_habilidade espaco_input" data-habilidade="armas_automaticas">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_armas_automaticas" class="escolha_habilidade espaco_input" data-habilidade="armas_automaticas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4015,9 +4338,11 @@
         Armas longas
     </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_armas_longas" class="escolha_habilidade espaco_input" data-habilidade="armas_longas">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_armas_longas" class="escolha_habilidade espaco_input" data-habilidade="armas_longas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4029,13 +4354,17 @@
         Arremessar armas
     </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_arremessar_armas" class="escolha_habilidade espaco_input" data-habilidade="arremessar_armas">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_arremessar_armas" class="escolha_habilidade espaco_input" data-habilidade="arremessar_armas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade ataque_magico_ou_sopro -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -4043,9 +4372,11 @@
         Ataque mágico ou sopro
     </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_ataque_magico_ou_sopro" class="escolha_habilidade espaco_input" data-habilidade="ataque_magico_ou_sopro">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_ataque_magico_ou_sopro" class="escolha_habilidade espaco_input" data-habilidade="ataque_magico_ou_sopro">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4057,9 +4388,11 @@
         Bestas
     </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_bestas" class="escolha_habilidade espaco_input" data-habilidade="bestas">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_bestas" class="escolha_habilidade espaco_input" data-habilidade="bestas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4071,9 +4404,11 @@
         Pistolas
     </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_pistolas" class="escolha_habilidade espaco_input" data-habilidade="pistolas">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_pistolas" class="escolha_habilidade espaco_input" data-habilidade="pistolas">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4085,9 +4420,11 @@
         Esquiva
     </h4>
   </div>
-  <div>
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_esquiva" class="escolha_habilidade espaco_input" data-habilidade="esquiva">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_esquiva" class="escolha_habilidade espaco_input" data-habilidade="esquiva">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4095,8 +4432,11 @@
   </div>
 </div>
   <!-- habilidade golpes_naturais -->
-  <div role="tabpanel" class="tab-pane active" id="golpes_naturais">
-  <div>
+  <div role="tabpanel" class="tab-pane row" id="golpes_naturais">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Golpes naturais (força ou agilidade)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade cauda -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -4104,11 +4444,15 @@
         Cauda
     </h4>
   </div>
-  <div>
-  <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_cauda" class="escolha_habilidade espaco_input" data-habilidade="cauda">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_cauda" class="escolha_habilidade espaco_input" data-habilidade="cauda">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_cauda" class="escolha_habilidade espaco_input" data-habilidade="cauda">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_cauda" class="escolha_habilidade espaco_input" data-habilidade="cauda">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4120,11 +4464,15 @@
         Garras
     </h4>
   </div>
-  <div>
-  <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_garras" class="escolha_habilidade espaco_input" data-habilidade="garras">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_garras" class="escolha_habilidade espaco_input" data-habilidade="garras">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_garras" class="escolha_habilidade espaco_input" data-habilidade="garras">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_garras" class="escolha_habilidade espaco_input" data-habilidade="garras">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4136,15 +4484,21 @@
         Golpear
     </h4>
   </div>
-  <div>
-  <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_golpear" class="escolha_habilidade espaco_input" data-habilidade="golpear">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_golpear" class="escolha_habilidade espaco_input" data-habilidade="golpear">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_golpear" class="escolha_habilidade espaco_input" data-habilidade="golpear">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_golpear" class="escolha_habilidade espaco_input" data-habilidade="golpear">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade luta -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -4152,11 +4506,15 @@
         Luta
     </h4>
   </div>
-  <div>
-  <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_luta" class="escolha_habilidade espaco_input" data-habilidade="luta">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_luta" class="escolha_habilidade espaco_input" data-habilidade="luta">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_luta" class="escolha_habilidade espaco_input" data-habilidade="luta">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_luta" class="escolha_habilidade espaco_input" data-habilidade="luta">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4168,11 +4526,15 @@
         Mordida
     </h4>
   </div>
-  <div>
-  <span> força: </span>
-    <input type="number" name="quantity" min="0" max="2" id="forca_mordida" class="escolha_habilidade espaco_input" data-habilidade="mordida">
-    <span> agilidade: </span>
-    <input type="number" name="quantity" min="0" max="2" id="agilidade_mordida" class="escolha_habilidade espaco_input" data-habilidade="mordida">
+  <div class="row">    
+    <div class="col-xs-4">
+      <span> força: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_mordida" class="escolha_habilidade espaco_input" data-habilidade="mordida">
+    </div>    
+    <div class="col-xs-4">
+      <span> agilidade: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_mordida" class="escolha_habilidade espaco_input" data-habilidade="mordida">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4202,8 +4564,11 @@
   </div>
   <div class="tab-content">
   <!-- habilidade potentia -->
-  <div role="tabpanel" class="tab-pane active" id="potentia">
-  <div>
+  <div role="tabpanel" class="tab-pane active row" id="potentia">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Potentia (lógica)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade elementalismo -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -4211,9 +4576,11 @@
         Elementalismo
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_elementalismo" class="escolha_habilidade espaco_input" data-habilidade="elementalismo">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_elementalismo" class="escolha_habilidade espaco_input" data-habilidade="elementalismo">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4225,9 +4592,11 @@
         Protegomancia
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_protegomancia" class="escolha_habilidade espaco_input" data-habilidade="protegomancia">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_protegomancia" class="escolha_habilidade espaco_input" data-habilidade="protegomancia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4239,9 +4608,11 @@
         Telecinese
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_telecinese" class="escolha_habilidade espaco_input" data-habilidade="telecinese">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_telecinese" class="escolha_habilidade espaco_input" data-habilidade="telecinese">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4249,8 +4620,11 @@
   </div>
 </div>
   <!-- habilidade misticismo -->
-  <div role="tabpanel" class="tab-pane active" id="misticismo">
-  <div>
+  <div role="tabpanel" class="tab-pane row" id="misticismo">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Misticismo (lógica)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade cronomancia -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -4258,9 +4632,11 @@
         Cronomancia
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_cronomancia" class="escolha_habilidade espaco_input" data-habilidade="cronomancia">
+  <div  class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_cronomancia" class="escolha_habilidade espaco_input" data-habilidade="cronomancia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4272,9 +4648,11 @@
         Teleportação
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_teleportacao" class="escolha_habilidade espaco_input" data-habilidade="teleportacao">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_teleportacao" class="escolha_habilidade espaco_input" data-habilidade="teleportacao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4286,9 +4664,11 @@
         Transmutação
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_transmutacao" class="escolha_habilidade espaco_input" data-habilidade="transmutacao">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_transmutacao" class="escolha_habilidade espaco_input" data-habilidade="transmutacao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4296,8 +4676,11 @@
   </div>
 </div>
   <!-- habilidade mentalismo -->
-  <div role="tabpanel" class="tab-pane active" id="mentalismo">
-  <div>
+  <div role="tabpanel" class="tab-pane row" id="mentalismo">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Mentalismo (lógica)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade hipnose -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -4305,9 +4688,11 @@
         Hipnose
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_hipnose" class="escolha_habilidade espaco_input" data-habilidade="hipnose">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_hipnose" class="escolha_habilidade espaco_input" data-habilidade="hipnose">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4319,9 +4704,11 @@
         Ilusionismo
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_ilusionismo" class="escolha_habilidade espaco_input" data-habilidade="ilusionismo">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_ilusionismo" class="escolha_habilidade espaco_input" data-habilidade="ilusionismo">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4333,9 +4720,11 @@
         Psiomancia
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_psiomancia" class="escolha_habilidade espaco_input" data-habilidade="psiomancia">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_psiomancia" class="escolha_habilidade espaco_input" data-habilidade="psiomancia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4343,8 +4732,11 @@
   </div>
 </div>
   <!-- habilidade maleficorum -->
-  <div role="tabpanel" class="tab-pane active" id="maleficorum">
-  <div>
+  <div role="tabpanel" class="tab-pane row" id="maleficorum">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Maleficorum (lógica)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade -_biomancia -->
     <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Atletismo">
@@ -4352,9 +4744,11 @@
         Biomancia
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_biomancia" class="escolha_habilidade espaco_input" data-habilidade="biomancia">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_biomancia" class="escolha_habilidade espaco_input" data-habilidade="biomancia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4366,9 +4760,11 @@
         Necromancia
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_necromancia" class="escolha_habilidade espaco_input" data-habilidade="necromancia">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_necromancia" class="escolha_habilidade espaco_input" data-habilidade="necromancia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4380,9 +4776,11 @@
         Sanguinomancia
     </h4>
   </div>
-  <div>
-  	<span> lógica: </span>
-    <input type="number" name="quantity" min="0" max="2" id="logica_sanguinomancia" class="escolha_habilidade espaco_input" data-habilidade="sanguinomancia">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> lógica: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_sanguinomancia" class="escolha_habilidade espaco_input" data-habilidade="sanguinomancia">
+    </div>
   </div>
   <div class="del-pop">
   </div>
@@ -4392,49 +4790,60 @@
   </div>
 </div>
 <!-- habilidade habilidades_divinas -->
-<div class="tab-pane" id="habilidades_divinas">
-  <!-- habilidade exorcismo -->
-  <div class="descricao-popover">
+<div class="tab-pane row" id="habilidades_divinas">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Habilidades divinas (intuição)</h3>
+  </div>
+  <div class="col-xs-6">
+    <!-- habilidade exorcismo -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Exorcismo">
-    <h3 class="cor_vermelho">
-        Exorcismo (intuição)
-    </h3>
+    <h4 class="cor_vermelho">
+        Exorcismo
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_exorcismo" class="escolha_habilidade espaco_input" data-habilidade="exorcismo">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_exorcismo" class="escolha_habilidade espaco_input" data-habilidade="exorcismo">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade invocacao -->
-  <div class="descricao-popover">
+    <!-- habilidade invocacao -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Invocação">
-    <h3 class="cor_vermelho">
-        Invocação (intuição)
-    </h3>
+    <h4 class="cor_vermelho">
+        Invocação
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_invocacao" class="escolha_habilidade espaco_input" data-habilidade="invocacao">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_invocacao" class="escolha_habilidade espaco_input" data-habilidade="invocacao">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
-  <!-- habilidade milagre -->
-  <div class="descricao-popover">
+    <!-- habilidade milagre -->
+    <div class="descricao-popover">
   <div data-toggle="popover" data-placement="right" data-container="body" title="Milagre">
-    <h3 class="cor_vermelho">
-        Milagre (intuição)
-    </h3>
+    <h4 class="cor_vermelho">
+        Milagre
+    </h4>
   </div>
-  <div>
-    <span> intuição: </span>
-    <input type="number" name="quantity" min="0" max="2" id="intuicao_milagre" class="escolha_habilidade espaco_input" data-habilidade="milagre">
+  <div class="row">
+    <div class="col-xs-4">
+      <span> intuição: </span>
+      <input type="number" name="quantity" min="0" max="55" value="0" id="intuicao_milagre" class="escolha_habilidade espaco_input" data-habilidade="milagre">
+    </div>
   </div>
   <div class="del-pop">
   </div>
 </div>
+  </div>
 </div>
 </div>
         </div>

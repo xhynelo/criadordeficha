@@ -1,11 +1,16 @@
-<div role="tabpanel" class="tab-pane active" id="golpes_naturais">
-  <div>
+<div role="tabpanel" class="tab-pane row" id="golpes_naturais">
+  <div class="col-xs-12 text-center">
+    <h3 class="cor_vermelho">Golpes naturais (força ou agilidade)</h3>
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade cauda -->
     {% include2 "habilidades/habilidades_de_combate/golpes_naturais/cauda.html" %}
     <!-- habilidade garras -->
     {% include2 "habilidades/habilidades_de_combate/golpes_naturais/garras.html" %}
     <!-- habilidade golpear -->
     {% include2 "habilidades/habilidades_de_combate/golpes_naturais/golpear.html" %}
+  </div>
+  <div class="col-xs-6">
     <!-- habilidade luta -->
     {% include2 "habilidades/habilidades_de_combate/golpes_naturais/luta.html" %}
     <!-- habilidade mordida -->

@@ -105,3 +105,15 @@
 .cor_vermelho {
     color: red;
 }
+
+.espaco_pilotagem {
+    margin-top: 50px;
+}
+
+.espaco_precisao {
+    margin-top: 50px;
+}
+
+.espaco_input {
+    margin-top: 2px;
+}

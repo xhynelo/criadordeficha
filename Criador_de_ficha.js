@@ -14,6 +14,8 @@ CHAR ={
   idade: "jovem_adulto",
   vantagem: {},
   desvantagem: {},
+  habilidade: {},
+  propaga: [],
   derivados: {
     forca: 0,
     agilidade: 0,
@@ -29,7 +31,16 @@ CHAR ={
     phc: 0,
     phi: 0,
     phl: 0,
+    habilidade: {}
   }
+}
+
+PONTOS = {
+  forca: 0,
+  agilidade: 0,
+  carisma: 0,
+  intuicao: 0,
+  logica: 0
 }
 
 BASE ={
@@ -164,6 +175,8 @@ function cria_vantagem(pp, p_nv){
   }
 }
 
+
+
 VANTAGEM = {
   alma_magica: cria_vantagem([5], false),
   ambidestria: cria_vantagem([5], false),
@@ -239,6 +252,164 @@ DESVANTAGEM = {
   obrigacao: cria_desvantagem([0, -15, -10, -5], [0, -5, -5, 5], false)
 }
 
+function cria_habilidade(generalizacao){
+  return {
+    generalizacao: generalizacao
+  }
+}
+
+
+HABILIDADE = {
+   'investigar': {'visao': -2, 'rastrear': -3},
+   'visao': {'rastrear': -1, 'investigar': -2},
+   'ciencia_da_natureza': {'engenharia': -2, 'medicina': -2, 'matematica_e_logica': -2},
+   'alquimia': {'apotecaria': -1},
+   'armearia': {'armaria': -2, 'armoraria': -3, 'metalurgia': -1},
+   'armaria': {'armearia': -2, 'armoraria': -3, 'metalurgia': -1},
+   'armoraria': {'armearia': -2, 'armaria': -3, 'metalurgia': -1},
+   'arquearia': {'esquivar': -2},
+   'carpintaria': {'arquearia': -4, 'esquivar': -6},
+   'maquinario': {'mecanico': -1},
+   'metalurgia': {'armearia': -3, 'armoraria': -3, 'armaria': -3},
+   'tecelagem': {'armoraria': -4, 'armearia': -6, 'armaria': -7, 'metalurgia': -5},
+   'armas_de_haste': {'machados_e_macas': -1, 'golpear': -2, 'esquivar': -2, 'arremessar_armas': -3, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
+   'lancas_e_cajados': {'golpear': -2, 'esquivar': -2, 'machados_e_macas': -1, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2, 'arremessar_armas': -3, 'garras': -2, 'mordida': -2, 'cauda': -2},
+   'esgrima': {'laminas_curtas': -1, 'laminas_longas': -1, 'golpear': -2, 'esquivar': -2, 'arremessar_armas': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
+   'laminas_curtas': {'laminas_longas': -1, 'esgrima': -1, 'arremessar_armas': -1, 'golpear': -2, 'esquivar': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
+   'laminas_longas': {'laminas_curtas': -1, 'esgrima': -1, 'golpear': -2, 'esquivar': -2, 'arremessar_armas': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
+   'machados_e_macas': {'armas_de_haste': -1, 'arremessar_armas': -2, 'golpear': -2, 'esquivar': -2, 'lancas_e_cajados': -1, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
+   'manguais': {'golpear': -2, 'esquivar': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'armas_de_haste': -2, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'garras': -2, 'mordida': -2, 'cauda': -2, 'arremessar_armas': -3},
+   'armas_automaticas': {'esquivar': -2},
+   'armas_longas': {'bestas': -1, 'pistolas': -1, 'armas_automaticas': -1, 'esquivar': -2},
+   'arremessar_armas': {'esquivar': -2},
+   'ataque_magico_ou_sopro': {'esquivar': -2},
+   'bestas': {'armas_longas': -1, 'esquivar': -2, 'pistolas': -2, 'armas_automaticas': -2},
+   'pistolas': {'bestas': -1, 'armas_longas': -1, 'armas_automaticas': -1, 'esquivar': -2},
+   'cauda': {'esquivar': -1},
+   'garras': {'mordida': 0, 'cauda': 0, 'luta': -1, 'ataque_magico_ou_sopro': -1, 'esquivar': -1},
+   'golpear': {'luta': -1, 'esquivar': -1, 'ataque_magico_ou_sopro': -1, 'mordida': 0, 'cauda': 0},
+   'luta': {'golpear': -1, 'garras': -1, 'mordida': -1, 'cauda': -1, 'esquivar': -1, 'ataque_magico_ou_sopro': -2},
+   'mordida': {'esquivar': -1},
+   'invocacao': {'exorcismo': 0},
+   'milagre': {'exorcismo': -1}
+}
+
+HABILIDADE_IGUAL = {
+  'armas_de_haste': 'lancas_e_cajados',
+  'mordida': 'cauda',
+  'garras': 'golpear'
+}
+
+REV_HABILIDADE_IGUAL = {
+  'lancas_e_cajados': 'armas_de_haste',
+  'cauda': 'mordida',
+  'golpear': 'garras'
+}
+
+
+
+function pontos_da_habilidade(habilidade) {
+  p = 0;
+  for (var ponto in CHAR.habilidade[habilidade]){
+    if (CHAR.habilidade[habilidade].hasOwnProperty(ponto)) {
+      p = p + CHAR.habilidade[habilidade][ponto];
+    }
+  }
+  return p;
+}
+
+function nivel_habiliade(p, i) {
+  var up = 0;
+  while (p > 0){
+    i++;
+    p -= i;
+    up += i;
+    //console.log("p3: ",p)
+  }
+  if (p < 0){
+    up -= i
+    i--;
+  }
+  return [i, up];
+}
+
+function padrao(dict, chave, outro) {
+  if (chave in dict) {
+    return dict[chave];
+  }
+  return outro;
+}
+
+function muda_habilidade(habilidade, i) {
+  var atual = padrao(CHAR.derivados.habilidade, habilidade, i - 1);
+  if (i == atual) {
+    return false;
+  }
+  CHAR.derivados.habilidade[habilidade] = i;
+  //if (habilidade in HABILIDADE_IGUAL){
+  //  CHAR.derivados.habilidade[HABILIDADE_IGUAL[habilidade][0]] = i;
+  //}
+  return true;
+}
+
+function calcula_nv_hab(){
+  console.log("loop");
+  for (var habilidade in CHAR.derivados.habilidade){
+    if (CHAR.derivados.habilidade.hasOwnProperty(habilidade)){
+      delete CHAR.derivados.habilidade[habilidade];
+    }
+  }
+  CHAR.derivados.habilidade.usados = 0;
+  var mudou = true;
+  var j = 0;
+  for (; j < 100 && mudou; j++) {
+    mudou = false;
+    for (var habilidade in CHAR.habilidade){
+      if (CHAR.habilidade.hasOwnProperty(habilidade)){
+        var p = pontos_da_habilidade(habilidade);
+        //if (habilidade in HABILIDADE_IGUAL){
+        //  p += pontos_da_habilidade(HABILIDADE_IGUAL[habilidade][0])
+        //}
+        var ip = nivel_habiliade(p - CHAR.derivados.habilidade.usados, padrao(CHAR.derivados.habilidade, habilidade, 0));
+        var i = ip[0], up = ip[1];
+        CHAR.derivados.habilidade.usados += up;
+        console.log("nv: ", i);
+        mudou |= muda_habilidade(habilidade, i)
+      }
+    }
+    for (var habilidade in CHAR.habilidade){
+      if (CHAR.habilidade.hasOwnProperty(habilidade)){
+        if (habilidade in HABILIDADE){
+          if (habilidade in HABILIDADE_IGUAL) {
+            console.log("......." + habilidade)
+          }
+          console.log("true");
+          for (var generalizacao in HABILIDADE[habilidade]){
+            if (generalizacao in HABILIDADE_IGUAL) {
+              generalizacao = HABILIDADE_IGUAL[generalizacao]
+            }
+            var nv = CHAR.derivados.habilidade[habilidade] + HABILIDADE[habilidade][generalizacao];
+            if (nv < 0){
+              nv = 0;
+            }
+            var atual = padrao(CHAR.derivados.habilidade, generalizacao, -1);
+
+            if (nv > atual){
+              mudou |= muda_habilidade(generalizacao, nv);
+            }
+            console.log(generalizacao)
+            console.log("gen nv:", HABILIDADE[habilidade][generalizacao], nv)
+            
+          }
+        }
+      }
+    }
+  }
+  if (j == 100) {
+    console.log("Loop infinito");
+  }
+}
+
 function calcula_pp_desvantagens(){
   var pp = 0;
   for( desvantagem in CHAR.desvantagem){
@@ -284,11 +455,11 @@ function calcula_derivados (){
   CHAR.derivados.saude = RACAS[CHAR.raca].saude;
   CHAR.derivados.sanidade = RACAS[CHAR.raca].sanidade;
   CHAR.derivados.riqueza = RACAS[CHAR.raca].riqueza;
-  CHAR.derivados.phf = IDADE[CHAR.idade].ph;
-  CHAR.derivados.pha = IDADE[CHAR.idade].ph;
-  CHAR.derivados.phc = IDADE[CHAR.idade].ph;
-  CHAR.derivados.phi = IDADE[CHAR.idade].ph;
-  CHAR.derivados.phl = IDADE[CHAR.idade].ph;
+  CHAR.derivados.phf = IDADE[CHAR.idade].ph - PONTOS.forca;
+  CHAR.derivados.pha = IDADE[CHAR.idade].ph - PONTOS.agilidade;
+  CHAR.derivados.phc = IDADE[CHAR.idade].ph - PONTOS.carisma;
+  CHAR.derivados.phi = IDADE[CHAR.idade].ph - PONTOS.intuicao;
+  CHAR.derivados.phl = IDADE[CHAR.idade].ph - PONTOS.logica;
 }
 
 function calcula_pc(){
@@ -299,8 +470,29 @@ function calcula_pc(){
   return pc + pc * 0.25 * CHAR.pc_aumentdo;
 }
 
-function mundanca(){
+function calcula_pontos() {
+  PONTOS = {
+    forca: 0,
+    agilidade: 0,
+    carisma: 0,
+    intuicao: 0,
+    logica: 0
+  }
+  for (var hab in CHAR.habilidade) {
+    if (CHAR.habilidade.hasOwnProperty(hab)) {
+      for (var pot in CHAR.habilidade[hab]) {
+        if (CHAR.habilidade[hab].hasOwnProperty(pot)) {
+          PONTOS[pot] += CHAR.habilidade[hab][pot]; 
+        }
+      }
+    }
+  }
+  return PONTOS;
+}
 
+function mundanca(){
+  calcula_pontos();
+  calcula_nv_hab();
   calcula_derivados();
   $("#pp").text(calcula_pp());
   $("#pc").text(calcula_pc());
@@ -309,6 +501,15 @@ function mundanca(){
   $("#phc").text(CHAR.derivados.phc);
   $("#phi").text(CHAR.derivados.phi);
   $("#phl").text(CHAR.derivados.phl);
+  for (var i in CHAR.derivados.habilidade){
+    if (CHAR.derivados.habilidade.hasOwnProperty(i)){
+      $("#"+i).text(CHAR.derivados.habilidade[i]);
+      if (i in REV_HABILIDADE_IGUAL) {
+        $("#"+REV_HABILIDADE_IGUAL[i]).text(CHAR.derivados.habilidade[i]);
+      }
+    }
+  }
+  
 }
 
 
@@ -392,5 +593,31 @@ $(function () {
     CHAR.desvantagem[$(this).attr('id')] = [num0, num1];
     mundanca();
   })
+  $(".escolha_habilidade").on('click', function(){
+    var hab = $(this).data('habilidade');
+    var pot = $(this).data('ponto');
+    if (hab in HABILIDADE_IGUAL) {
+      hab = HABILIDADE_IGUAL[hab];
+      $("#"+pot+"_"+hab).val($(this).val())
+    }
+    if (hab in REV_HABILIDADE_IGUAL) {
+      $("#"+pot+"_"+REV_HABILIDADE_IGUAL[hab]).val($(this).val())
+    }
+
+    var qtd = parseInt($(this).val());
+    if (CHAR.habilidade[hab] === undefined) {
+      CHAR.habilidade[hab] = {}
+    }
+    CHAR.habilidade[hab][pot] = qtd;
+    
+    mundanca();
+  })
+
+  $(".apaga_texto").html("");
+
+
+  $("a[href='#collapse6']").click();
+  $("a[href='#habilidades_de_combate']").click();
+  mundanca();
 })
 

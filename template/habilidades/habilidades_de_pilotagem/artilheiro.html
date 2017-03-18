@@ -1,15 +1,26 @@
 <div class="descricao-popover espaco_pilotagem">
-  <div data-toggle="popover" data-placement="right" data-container="body" title="Misticismo">
+  <div data-toggle="popover" data-placement="right" data-container="body" title="Artilheiro">
     <h4 class="cor_vermelho">
-        Misticismo
+        Artilheiro
     </h4>
     <span> Nv: </span>
-    <span id="misticismo"> 0 </span>
+    <span id="artilheiro"> 0 </span>
   </div>
   <div class="row">
-    <div class="col-xs-4">
-      <span> logica: </span>
-      <input type="number" name="quantity" min="0" max="55" value="0" id="logica_misticismo" class="escolha_habilidade espaco_input" data-habilidade="misticismo">
+    <div class="col-xs-4 text-center row">
+      <div class="col-xs-12">
+        <span>L:<span id="logica_artilheiro">0</span></span>
+      </div>
+      <div class="col-xs-12">
+        <button class="escolha_habilidade" type="submit" data-habilidade="artilheiro" data-ponto="logica" data-ph="logica_artilheiro" data-operacao="soma">
+          <span class="glyphicon glyphicon-plus apaga_texto">L</span>
+        </button>
+      </div>
+      <div class="col-xs-12">
+        <button class="escolha_habilidade" type="submit" data-habilidade="artilheiro" data-ponto="logica" data-ph="logica_artilheiro" data-operacao="subtracao">
+          <span class="glyphicon glyphicon-minus apaga_texto">L</span>
+        </button>
+      </div>
     </div>
   </div>
   <div class="del-pop">

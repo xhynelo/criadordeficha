@@ -7,13 +7,35 @@
     <span id="cauda"> 0 </span>
   </div>
   <div class="row">    
-    <div class="col-xs-4">
-      <span> força: </span>
-      <input type="number" name="quantity" min="0" max="55" value="0" id="forca_cauda" class="escolha_habilidade espaco_input" data-habilidade="cauda">
+    <div class="col-xs-4 text-center row">
+      <div class="col-xs-12">
+        <span>F:<span id="forca_cauda">0</span></span>
+      </div>
+      <div class="col-xs-12">
+        <button class="escolha_habilidade" type="submit" data-habilidade="cauda" data-ponto="forca" data-ph="forca_cauda" data-operacao="soma">
+          <span class="glyphicon glyphicon-plus apaga_texto">F</span>
+        </button>
+      </div>
+      <div class="col-xs-12">
+        <button class="escolha_habilidade" type="submit" data-habilidade="cauda" data-ponto="forca" data-ph="forca_cauda" data-operacao="subtracao">
+          <span class="glyphicon glyphicon-minus apaga_texto">F</span>
+        </button>
+      </div>
     </div>    
-    <div class="col-xs-4">
-      <span> agilidade: </span>
-      <input type="number" name="quantity" min="0" max="55" value="0" id="agilidade_cauda" class="escolha_habilidade espaco_input" data-habilidade="cauda">
+    <div class="col-xs-4 text-center row">
+      <div class="col-xs-12">
+        <span>A:<span id="agilidade_cauda">0</span></span>
+      </div>
+      <div class="col-xs-12">
+        <button class="escolha_habilidade" type="submit" data-habilidade="cauda" data-ponto="agilidade" data-ph="agilidade_cauda" data-operacao="soma">
+          <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+        </button>
+      </div>
+      <div class="col-xs-12">
+        <button class="escolha_habilidade" type="submit" data-habilidade="cauda" data-ponto="agilidade" data-ph="agilidade_cauda" data-operacao="subtracao">
+          <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+        </button>
+      </div>
     </div>
   </div>
   <div class="del-pop">

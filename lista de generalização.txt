@@ -1,0 +1,63 @@
+   'investigar' --> Generalização: {'visao': -2, 'rastrear': -3},
+
+   'visao' --> Generalização: {'rastrear': -1, 'investigar': -2},
+
+   'ciencia_da_natureza' --> Generalização: {'engenharia': -2, 'medicina': -2, 'matematica_e_logica': -2},
+
+   'alquimia' --> Generalização: {'apotecaria': -1},
+
+   'armearia' --> Generalização: {'armaria': -2, 'armoraria': -3, 'metalurgia': -1},
+
+   'armaria' --> Generalização: {'armearia': -2, 'armoraria': -3, 'metalurgia': -1},
+
+   'armoraria' --> Generalização: {'armearia': -2, 'armaria': -3, 'metalurgia': -1},
+
+   'arquearia' --> Generalização: {'esquivar': -2},
+
+   'carpintaria' --> Generalização: {'arquearia': -4, 'esquivar': -6},
+
+   'maquinario' --> Generalização: {'mecanico': -1},
+
+   'metalurgia' --> Generalização: {'armearia': -3, 'armoraria': -3, 'armaria': -3},
+
+   'tecelagem' --> Generalização: {'armoraria': -4, 'armearia': -6, 'armaria': -7, 'metalurgia': -5},
+
+   'armas_de_haste' --> Generalização: {'machados_e_macas': -1, 'lancas_e_cajados': 0, 'golpear': -2, 'esquivar': -2, 'tem': 0, 'arremessar_armas': -3, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'garras': -2, 'mordida': -2, 'cauda': -2, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2},
+
+   'esgrima' --> Generalização: {'laminas_curtas': -1, 'laminas_longas': -1, 'golpear': -2, 'esquivar': -2, 'tem': 0, 'arremessar_armas': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'garras': -2, 'mordida': -2, 'cauda': -2, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2},
+
+   'laminas_curtas' --> Generalização: {'laminas_longas': -1, 'esgrima': -1, 'arremessar_armas': -1, 'golpear': -2, 'esquivar': -2, 'tem': 0, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'garras': -2, 'mordida': -2, 'cauda': -2, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2},
+
+   'laminas_longas' --> Generalização: {'laminas_curtas': -1, 'esgrima': -1, 'golpear': -2, 'esquivar': -2, 'tem': 0, 'arremessar_armas': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'garras': -2, 'mordida': -2, 'cauda': -2, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2},
+
+   'lancas_e_cajados' --> Generalização: {'armas_de_haste': 0, 'golpear': -2, 'esquivar': -2, 'tem': 0, 'machados_e_macas': -1, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'garras': -2, 'mordida': -2, 'cauda': -2, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2, 'arremessar_armas': -3},
+
+   'machados_e_macas' --> Generalização: {'armas_de_haste': -1, 'arremessar_armas': -2, 'golpear': -2, 'esquivar': -2, 'tem': 0, 'lancas_e_cajados': -1, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'garras': -2, 'mordida': -2, 'cauda': -2, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2},
+
+   'manguais' --> Generalização: {'golpear': -2, 'esquivar': -2, 'tem': 0, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'garras': -2, 'mordida': -2, 'cauda': -2, 'armas_de_haste': -2, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'arremessar_armas': -3},
+
+   'armas_automaticas' --> Generalização: {'esquivar': -2},
+
+   'armas_longas' --> Generalização: {'bestas': -1, 'pistolas': -1, 'armas_automaticas': -1, 'esquivar': -2},
+
+   'arremessar_armas' --> Generalização: {'esquivar': -2},
+
+   'ataque_magico_ou_sopro' --> Generalização: {'esquivar': -2},
+
+   'bestas' --> Generalização: {'armas_longas': -1, 'esquivar': -2, 'pistolas': -2, 'armas_automaticas': -2},
+
+   'pistolas' --> Generalização: {'bestas': -1, 'armas_longas': -1, 'armas_automaticas': -1, 'esquivar': -2},
+
+   'cauda' --> Generalização: {'mordida': 0, 'esquivar': -1},
+
+   'garras' --> Generalização: {'mordida': 0, 'cauda': 0, 'golpear': 0, 'luta': -1, 'ataque_magico_ou_sopro': -1, 'esquivar': -1},
+
+   'golpear' --> Generalização: {'luta': -1, 'esquivar': -1, 'ataque_magico_ou_sopro': -1, 'garras': 0, 'mordida': 0, 'cauda': 0},
+
+   'luta' --> Generalização: {'golpear': -1, 'garras': -1, 'mordida': -1, 'cauda': -1, 'esquivar': -1, 'ataque_magico_ou_sopro': -2},
+
+   'mordida' --> Generalização: {'cauda': 0, 'esquivar': -1},
+
+   'invocacao' --> Generalização: {'exorcismo': 0},
+
+   'milagre' --> Generalização: {'exorcismo': -1},

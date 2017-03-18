@@ -117,3 +117,7 @@
 .espaco_input {
     margin-top: 2px;
 }
+
+.palavra-quebrada {
+    word-break: break-all;
+}

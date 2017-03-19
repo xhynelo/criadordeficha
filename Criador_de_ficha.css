@@ -121,3 +121,23 @@
 .palavra-quebrada {
     word-break: break-all;
 }
+
+#sortable {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+}
+
+#sortable li { 
+    margin: 0 5px 5px 5px; 
+    padding: 5px; 
+    font-size: 1.2em; 
+    height: 1.5em;  
+    height: 1.5em; 
+    line-height: 1.2em;
+}
+
+.some_span {
+    display: none;
+}

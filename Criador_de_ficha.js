@@ -1,3 +1,13 @@
+itera = function(objeto, func){
+  for (var index in objeto){
+    if(objeto.hasOwnProperty(index)){
+      func(index, objeto[index])
+    }
+  }
+}
+
+
+
 CHAR ={
   pp: {
     pp: 0,
@@ -16,6 +26,8 @@ CHAR ={
   desvantagem: {},
   habilidade: {},
   propaga: [],
+  posicao_ordem: 0,
+  ordem_hab: [],
   derivados: {
     forca: 0,
     agilidade: 0,
@@ -260,53 +272,40 @@ function cria_habilidade(generalizacao){
 
 
 HABILIDADE = {
-   'investigar': {'visao': -2, 'rastrear': -3},
-   'visao': {'rastrear': -1, 'investigar': -2},
-   'ciencia_da_natureza': {'engenharia': -2, 'medicina': -2, 'matematica_e_logica': -2},
-   'alquimia': {'apotecaria': -1},
-   'armearia': {'armaria': -2, 'armoraria': -3, 'metalurgia': -1},
-   'armaria': {'armearia': -2, 'armoraria': -3, 'metalurgia': -1},
-   'armoraria': {'armearia': -2, 'armaria': -3, 'metalurgia': -1},
-   'arquearia': {'esquivar': -2},
-   'carpintaria': {'arquearia': -4, 'esquivar': -6},
-   'maquinario': {'mecanico': -1},
-   'metalurgia': {'armearia': -3, 'armoraria': -3, 'armaria': -3},
-   'tecelagem': {'armoraria': -4, 'armearia': -6, 'armaria': -7, 'metalurgia': -5},
-   'armas_de_haste': {'machados_e_macas': -1, 'golpear': -2, 'esquivar': -2, 'arremessar_armas': -3, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
-   'lancas_e_cajados': {'golpear': -2, 'esquivar': -2, 'machados_e_macas': -1, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2, 'arremessar_armas': -3, 'garras': -2, 'mordida': -2, 'cauda': -2},
-   'esgrima': {'laminas_curtas': -1, 'laminas_longas': -1, 'golpear': -2, 'esquivar': -2, 'arremessar_armas': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
-   'laminas_curtas': {'laminas_longas': -1, 'esgrima': -1, 'arremessar_armas': -1, 'golpear': -2, 'esquivar': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
-   'laminas_longas': {'laminas_curtas': -1, 'esgrima': -1, 'golpear': -2, 'esquivar': -2, 'arremessar_armas': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'armas_de_haste': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
-   'machados_e_macas': {'armas_de_haste': -1, 'arremessar_armas': -2, 'golpear': -2, 'esquivar': -2, 'lancas_e_cajados': -1, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'manguais': -2, 'garras': -2, 'mordida': -2, 'cauda': -2},
-   'manguais': {'golpear': -2, 'esquivar': -2, 'luta': -3, 'ataque_magico_ou_sopro': -3, 'armas_de_haste': -2, 'esgrima': -2, 'laminas_curtas': -2, 'laminas_longas': -2, 'lancas_e_cajados': -2, 'machados_e_macas': -2, 'garras': -2, 'mordida': -2, 'cauda': -2, 'arremessar_armas': -3},
-   'armas_automaticas': {'esquivar': -2},
-   'armas_longas': {'bestas': -1, 'pistolas': -1, 'armas_automaticas': -1, 'esquivar': -2},
-   'arremessar_armas': {'esquivar': -2},
-   'ataque_magico_ou_sopro': {'esquivar': -2},
-   'bestas': {'armas_longas': -1, 'esquivar': -2, 'pistolas': -2, 'armas_automaticas': -2},
-   'pistolas': {'bestas': -1, 'armas_longas': -1, 'armas_automaticas': -1, 'esquivar': -2},
-   'cauda': {'esquivar': -1},
-   'garras': {'mordida': 0, 'cauda': 0, 'luta': -1, 'ataque_magico_ou_sopro': -1, 'esquivar': -1},
-   'golpear': {'luta': -1, 'esquivar': -1, 'ataque_magico_ou_sopro': -1, 'mordida': 0, 'cauda': 0},
-   'luta': {'golpear': -1, 'garras': -1, 'mordida': -1, 'cauda': -1, 'esquivar': -1, 'ataque_magico_ou_sopro': -2},
-   'mordida': {'esquivar': -1},
-   'invocacao': {'exorcismo': 0},
-   'milagre': {'exorcismo': -1}
+  "investigar": {"visao": -2},
+  "visao": {"rastrear": -1, "investigar": -2},
+  "ciencia_da_natureza": {"engenharia": -2, "medicina": -2, "matematica_e_logica": -2},
+  "alquimia": {"apotecaria": -1},
+  "armearia": {"armaria": -2,"armoraria": -3,"metalurgia": -1},
+  "armaria": {"armearia": -2, "armoraria": -3, "metalurgia": -1},
+  "armoraria": {"armearia": -2, "armaria": -3, "metalurgia": -1},
+  "arquearia": {"carpintaria": -3},
+  "carpintaria": {"arquearia": -4},
+  "maquinario": {"mecanico": -1},
+  "metalurgia": {"armearia": -3, "armoraria": -3, "armaria": -3},
+  "tecelagem": {"armoraria": -4},
+  "armas_de_haste": {"machados_e_macas": -1, "lancas_e_cajados": 0, "golpear": -2, "esquivar": -2, "esgrima": -2, "laminas_curtas": -2, "laminas_longas": -2, "manguais": -2},
+  "esgrima": {"laminas_curtas": -1, "laminas_longas": -1, "golpear": -2, "esquivar": -2, "armas_de_haste": -2, "lancas_e_cajados": -2, "machados_e_macas": -2, "manguais": -2},
+  "laminas_curtas": {"laminas_longas": -1, "esgrima": -1, "arremessar_armas": -1, "golpear": -2, "esquivar": -2, "armas_de_haste": -2, "lancas_e_cajados": -2, "machados_e_macas": -2, "manguais": -2},
+  "laminas_longas": {"laminas_curtas": -1, "esgrima": -1, "golpear": -2, "esquivar": -2, "armas_de_haste": -2, "lancas_e_cajados": -2, "machados_e_macas": -2, "manguais": -2},
+  "lancas_e_cajados": {"armas_de_haste": 0, "golpear": -2, "esquivar": -2, "esgrima": -2, "laminas_curtas": -2, "laminas_longas": -2, "machados_e_macas": -2, "manguais": -2},
+  "machados_e_macas": {"armas_de_haste": -1, "arremessar_armas": -2, "golpear": -2, "esquivar": -2, "esgrima": -2, "laminas_curtas": -2, "laminas_longas": -2, "lancas_e_cajados": -2, "machados_e_macas": -2},
+  "manguais": {"golpear": -2, "esquivar": -2, "armas_de_haste": -2,"esgrima": -2, "laminas_curtas": -2, "laminas_longas": -2, "lancas_e_cajados": -2, "machados_e_macas": -2},
+  "arquearia": {"esquivar": -2},
+  "armas_automaticas": {"esquivar": -2},
+  "armas_longas": {"bestas": -1, "pistolas": -1, "armas_automaticas": -1, "esquivar": -2},
+  "arremessar_armas": {"esquivar": -2},
+  "ataque_magico_ou_sopro": {"esquivar": -2},
+  "bestas": {"armas_longas": -1, "esquivar": -2},
+  "pistolas": {"bestas": -1,"armas_longas": -1,"armas_automaticas": -1, "esquivar": -2},
+  "cauda": {"mordida": 0, "esquivar": -1},
+  "garras": {"mordida": 0, "cauda": 0, "golpear": 0, "luta": -1, "ataque_magico_ou_sopro": -1, "esquivar": -1},
+  "golpear": {"luta": -1, "esquivar": -1, "ataque_magico_ou_sopro": -1, "garras": 0, "mordida": 0, "cauda": 0},
+  "luta": {"golpear": -1, "garras": -1, "mordida": -1, "cauda": -1, "esquivar": -1},
+  "mordida": {"cauda": 0},
+  "invocacao": {"exorcismo": 0},
+  "milagre": {"exorcismo": -1}
 }
-
-HABILIDADE_IGUAL = {
-  'armas_de_haste': 'lancas_e_cajados',
-  'mordida': 'cauda',
-  'garras': 'golpear'
-}
-
-REV_HABILIDADE_IGUAL = {
-  'lancas_e_cajados': 'armas_de_haste',
-  'cauda': 'mordida',
-  'golpear': 'garras'
-}
-
-
 
 function pontos_da_habilidade(habilidade) {
   p = 0;
@@ -324,7 +323,6 @@ function nivel_habiliade(p, i) {
     i++;
     p -= i;
     up += i;
-    //console.log("p3: ",p)
   }
   if (p < 0){
     up -= i
@@ -346,67 +344,40 @@ function muda_habilidade(habilidade, i) {
     return false;
   }
   CHAR.derivados.habilidade[habilidade] = i;
-  //if (habilidade in HABILIDADE_IGUAL){
-  //  CHAR.derivados.habilidade[HABILIDADE_IGUAL[habilidade][0]] = i;
-  //}
   return true;
 }
 
+function propaga_generalizacao(habilidade, n){
+  if(! habilidade in HABILIDADE){
+    return
+  }
+  itera(HABILIDADE[habilidade], function(generalizacao, soma){
+      var nv_g = n + soma;
+      var atual = padrao(CHAR.derivados.habilidade, generalizacao, 0)
+      if (nv_g > atual && muda_habilidade(generalizacao, nv_g)){
+        propaga_generalizacao(generalizacao, nv_g)
+      }
+  })
+}
+
 function calcula_nv_hab(){
-  console.log("loop");
   for (var habilidade in CHAR.derivados.habilidade){
     if (CHAR.derivados.habilidade.hasOwnProperty(habilidade)){
       delete CHAR.derivados.habilidade[habilidade];
     }
   }
-  CHAR.derivados.habilidade.usados = 0;
-  var mudou = true;
-  var j = 0;
-  for (; j < 100 && mudou; j++) {
-    mudou = false;
-    for (var habilidade in CHAR.habilidade){
-      if (CHAR.habilidade.hasOwnProperty(habilidade)){
-        var p = pontos_da_habilidade(habilidade);
-        //if (habilidade in HABILIDADE_IGUAL){
-        //  p += pontos_da_habilidade(HABILIDADE_IGUAL[habilidade][0])
-        //}
-        var ip = nivel_habiliade(p - CHAR.derivados.habilidade.usados, padrao(CHAR.derivados.habilidade, habilidade, 0));
-        var i = ip[0], up = ip[1];
-        CHAR.derivados.habilidade.usados += up;
-        console.log("nv: ", i);
-        mudou |= muda_habilidade(habilidade, i)
+  CHAR.derivados.habilidade.usados = {};
+  for (var index in CHAR.ordem_hab){
+    var habilidade = CHAR.ordem_hab[index]
+    if (CHAR.habilidade.hasOwnProperty(habilidade)){
+      var p = pontos_da_habilidade(habilidade);
+      var np = nivel_habiliade(p - padrao(CHAR.derivados.habilidade.usados, habilidade, 0), padrao(CHAR.derivados.habilidade, habilidade, 0));
+      var n = np[0], up = np[1];
+      CHAR.derivados.habilidade.usados[habilidade] += up;
+      if(muda_habilidade(habilidade, n)){
+        propaga_generalizacao(habilidade, n);
       }
     }
-    for (var habilidade in CHAR.habilidade){
-      if (CHAR.habilidade.hasOwnProperty(habilidade)){
-        if (habilidade in HABILIDADE){
-          if (habilidade in HABILIDADE_IGUAL) {
-            console.log("......." + habilidade)
-          }
-          console.log("true");
-          for (var generalizacao in HABILIDADE[habilidade]){
-            if (generalizacao in HABILIDADE_IGUAL) {
-              generalizacao = HABILIDADE_IGUAL[generalizacao]
-            }
-            var nv = CHAR.derivados.habilidade[habilidade] + HABILIDADE[habilidade][generalizacao];
-            if (nv < 0){
-              nv = 0;
-            }
-            var atual = padrao(CHAR.derivados.habilidade, generalizacao, -1);
-
-            if (nv > atual){
-              mudou |= muda_habilidade(generalizacao, nv);
-            }
-            console.log(generalizacao)
-            console.log("gen nv:", HABILIDADE[habilidade][generalizacao], nv)
-            
-          }
-        }
-      }
-    }
-  }
-  if (j == 100) {
-    console.log("Loop infinito");
   }
 }
 
@@ -504,14 +475,27 @@ function mundanca(){
   for (var i in CHAR.derivados.habilidade){
     if (CHAR.derivados.habilidade.hasOwnProperty(i)){
       $("#"+i).text(CHAR.derivados.habilidade[i]);
-      if (i in REV_HABILIDADE_IGUAL) {
-        $("#"+REV_HABILIDADE_IGUAL[i]).text(CHAR.derivados.habilidade[i]);
-      }
     }
   }
   
 }
 
+function ordem_habilidades(){
+  $('#sortable').html('')
+  for(var nome=0; nome < CHAR.posicao_ordem; nome++){
+    var nome_hab = $($($('#'+CHAR.ordem_hab[nome]).parent()).children('h4')).text().trim();
+    $('#sortable').append('<li class="ui-state-default">'+nome_hab+'<span class="some_span">'+CHAR.ordem_hab[nome]+'</span></li>');
+  }
+}
+
+function atualiza_ordem(){
+  CHAR.ordem_hab = [];
+  $('#sortable li').each( function(index){
+    var elemento = $($(this)).children('span');
+    CHAR.ordem_hab.push(elemento.text().trim());
+  })
+  mundanca()
+}
 
 $(function () {
   var descrcoes = $(".descricao-popover");
@@ -519,8 +503,15 @@ $(function () {
     var descrcao = $(this);
     var delpop = descrcao.children(".del-pop");
     var title = descrcao.children('[data-toggle="popover"]');
-    title.data("content", delpop.html());
-    
+    title.data("content", delpop.html()); 
+  });
+
+  $( function() {
+    $( "#sortable" ).sortable({
+      placeholder: "ui-state-highlight",
+      update:  atualiza_ordem
+    });
+    $( "#sortable" ).disableSelection();
   });
   $('[data-toggle="popover"]').popover({trigger: "hover", html: true});
   $(".descricao-popover .del-pop").remove();
@@ -596,20 +587,33 @@ $(function () {
   $(".escolha_habilidade").on('click', function(){
     var hab = $(this).data('habilidade');
     var pot = $(this).data('ponto');
-    if (hab in HABILIDADE_IGUAL) {
-      hab = HABILIDADE_IGUAL[hab];
-      $("#"+pot+"_"+hab).val($(this).val())
-    }
-    if (hab in REV_HABILIDADE_IGUAL) {
-      $("#"+pot+"_"+REV_HABILIDADE_IGUAL[hab]).val($(this).val())
-    }
-
-    var qtd = parseInt($(this).val());
+    var ph = $(this).data('ph');
+    var op = $(this).data('operacao');
+    var ph_val = parseInt($('#'+ph).text());
     if (CHAR.habilidade[hab] === undefined) {
       CHAR.habilidade[hab] = {}
     }
-    CHAR.habilidade[hab][pot] = qtd;
-    
+    if( op == "soma"){
+      CHAR.habilidade[hab][pot] = ph_val + 1;
+      $('#'+ph).text(ph_val + 1)
+    }else if( op == "subtracao" && CHAR.habilidade[hab][pot] > 0){
+      CHAR.habilidade[hab][pot] = ph_val - 1;
+      $('#'+ph).text(ph_val - 1)
+    }
+    var qtd = 0;
+    for(var ponto in CHAR.habilidade[hab]){
+      qtd += CHAR.habilidade[hab][ponto];
+    }
+    var index = CHAR.ordem_hab.indexOf(hab);
+    if(!(index > -1)){
+      CHAR.ordem_hab.push(hab);
+      CHAR.posicao_ordem++;
+    }
+    if(qtd <= 0){
+      CHAR.ordem_hab.splice(index, 1);
+      CHAR.posicao_ordem--;
+    }
+    ordem_habilidades()
     mundanca();
   })
 

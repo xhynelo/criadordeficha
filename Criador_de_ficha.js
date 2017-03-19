@@ -15,6 +15,14 @@ CHAR ={
     pp_r: 0,
     pp_d: 0,
   },
+  forca: 0,
+  agilidade: 0,
+  carisma: 0,
+  intuicao: 0,
+  logica: 0,
+  folego: 0,
+  saude: 0,
+  sanidade: 0,
   raca: "humanos",
   riqueza: 3,
   renda: 0,
@@ -406,25 +414,33 @@ function calcula_pp_vantagens(){
   return pp;
 }
 
+function calcula_pp_facil(){
+  var pp = 0;
+  pp += (CHAR.forca + CHAR.agilidade + CHAR.carisma + CHAR.intuicao + CHAR.logica) * 10;
+  pp += (CHAR.saude + CHAR.folego + CHAR.sanidade) * 5;
+  return pp;
+}
+
 function calcula_pp(){
   /*
   var pp = RACAS[CHAR.raca].pp + RIQUEZA_PP[CHAR.riqueza] + (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp + IDADE[CHAR.idade].pp
   */
   var pp = RACAS[CHAR.raca].pp + RIQUEZA[CHAR.riqueza].pp + 
   (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp + 
-  IDADE[CHAR.idade].pp + calcula_pp_vantagens() + calcula_pp_desvantagens();
+  IDADE[CHAR.idade].pp + calcula_pp_vantagens() + calcula_pp_desvantagens() +
+  calcula_pp_facil();
   return BASE.pp - pp;
 }
 
 function calcula_derivados (){
-  CHAR.derivados.forca = RACAS[CHAR.raca].f;
-  CHAR.derivados.agilidade = RACAS[CHAR.raca].a;
-  CHAR.derivados.carisma = RACAS[CHAR.raca].c;
-  CHAR.derivados.intuicao = RACAS[CHAR.raca].i;
-  CHAR.derivados.logica = RACAS[CHAR.raca].l;
-  CHAR.derivados.folego = RACAS[CHAR.raca].folego;
-  CHAR.derivados.saude = RACAS[CHAR.raca].saude;
-  CHAR.derivados.sanidade = RACAS[CHAR.raca].sanidade;
+  CHAR.derivados.forca = RACAS[CHAR.raca].f + CHAR.forca;
+  CHAR.derivados.agilidade = RACAS[CHAR.raca].a + CHAR.agilidade;
+  CHAR.derivados.carisma = RACAS[CHAR.raca].c + CHAR.carisma;
+  CHAR.derivados.intuicao = RACAS[CHAR.raca].i + CHAR.intuicao;
+  CHAR.derivados.logica = RACAS[CHAR.raca].l + CHAR.logica;
+  CHAR.derivados.folego = RACAS[CHAR.raca].folego + CHAR.folego;
+  CHAR.derivados.saude = RACAS[CHAR.raca].saude + CHAR.saude;
+  CHAR.derivados.sanidade = RACAS[CHAR.raca].sanidade + CHAR.sanidade;
   CHAR.derivados.riqueza = RACAS[CHAR.raca].riqueza;
   CHAR.derivados.phf = IDADE[CHAR.idade].ph - PONTOS.forca;
   CHAR.derivados.pha = IDADE[CHAR.idade].ph - PONTOS.agilidade;
@@ -617,11 +633,27 @@ $(function () {
     mundanca();
   })
 
+  $('.escolha_facil').on('click', function(){
+    var facil = $(this).data('facil');
+    var val_facil = parseInt($('#'+facil).text().trim());
+    var op = $(this).data('operacao');
+    if(op == 'soma'){
+      val_facil++;
+      CHAR[facil] = val_facil;
+      $("#"+facil).text(val_facil);
+    }else if(op == 'subtracao'){
+      val_facil--;
+      CHAR[facil] = val_facil;
+      $("#"+facil).text(val_facil);
+    }
+    mundanca();
+  })
+
   $(".apaga_texto").html("");
 
 
-  $("a[href='#collapse6']").click();
-  $("a[href='#habilidades_de_combate']").click();
+  //$("a[href='#facil']").click();
+  //$("a[href='#habilidades_de_combate']").click();
   mundanca();
 })
 

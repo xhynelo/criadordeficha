@@ -529,7 +529,10 @@ $(function () {
     });
     $( "#sortable" ).disableSelection();
   });
-  $('[data-toggle="popover"]').popover({trigger: "hover", html: true});
+
+  //$('[data-toggle="popover"]').popover({trigger: "hover click", html: true});
+  $('.tem_hover_click').popover({trigger: "hover click", html: true});
+  $('.tem_hover').popover({trigger: "hover", html: true})
   $(".descricao-popover .del-pop").remove();
 
   $(".escolha-raca").click(function(){
@@ -649,11 +652,25 @@ $(function () {
     mundanca();
   })
 
+  $('.escolha-generalizacao').on('click', function(){
+    cosole.log("true")
+    var hab = $(this).data('habilidades');
+    var gen = $(this).data('generalizacao');
+    var pen = $('#gen_'+hab+'_'+gen).text().trim()
+    var op = $(this).data('operacao')
+    if(op == "soma"){
+      $('#gen_'+hab+'_'+gen).text(pen + 1);
+    }else if(op == "subtracao"){
+      $('#gen_'+hab+'_'+gen).text(pen - 1);
+    }
+
+  })
+
   $(".apaga_texto").html("");
 
 
-  //$("a[href='#facil']").click();
-  //$("a[href='#habilidades_de_combate']").click();
+  $("a[href='#habilidades']").click();
+  $("a[href='#habilidades_de_combate']").click();
   mundanca();
 })
 

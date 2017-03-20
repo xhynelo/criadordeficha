@@ -36,6 +36,7 @@ CHAR ={
   propaga: [],
   posicao_ordem: 0,
   ordem_hab: [],
+  penalidade_hab: {},
   derivados: {
     forca: 0,
     agilidade: 0,
@@ -360,7 +361,7 @@ function propaga_generalizacao(habilidade, n){
     return
   }
   itera(HABILIDADE[habilidade], function(generalizacao, soma){
-      var nv_g = n + soma;
+      var nv_g = n + soma + padrao(padrao(CHAR.penalidade_hab, habilidade, {}), generalizacao, 0);
       var atual = padrao(CHAR.derivados.habilidade, generalizacao, 0)
       if (nv_g > atual && muda_habilidade(generalizacao, nv_g)){
         propaga_generalizacao(generalizacao, nv_g)
@@ -478,6 +479,11 @@ function calcula_pontos() {
 }
 
 function mundanca(){
+  for (var i in CHAR.derivados.habilidade){
+    if (CHAR.derivados.habilidade.hasOwnProperty(i)){
+      $("#"+i).text(0);
+    }
+  }
   calcula_pontos();
   calcula_nv_hab();
   calcula_derivados();
@@ -513,7 +519,11 @@ function atualiza_ordem(){
   mundanca()
 }
 
+ID_POPOVER = "";
+
 $(function () {
+  $(".apaga_texto").html("");
+
   var descrcoes = $(".descricao-popover");
   descrcoes.each(function(index){
     var descrcao = $(this);
@@ -531,7 +541,26 @@ $(function () {
   });
 
   //$('[data-toggle="popover"]').popover({trigger: "hover click", html: true});
-  $('.tem_hover_click').popover({trigger: "hover click", html: true});
+  $('.tem_hover_click').popover({trigger: "hover click", html: true}).on('shown.bs.popover', function() {
+    $(".penalidade").each(function(index) {
+      var split = $(this).attr("id").split('-')
+      var hab = split[1]
+      var gen = split[2]
+      $('#gen-'+hab+'-'+gen).text(padrao(padrao(CHAR.penalidade_hab, hab, {}), gen, 0) + HABILIDADE[hab][gen]);
+      ID_POPOVER = hab;
+    })
+  });
+  /*
+  $('body').on('click', function (e) {
+        //did not click a popover toggle, or icon in popover toggle, or popover
+        if ($(e.target).data('toggle') !== 'popover'
+            && $(e.target).parents('[data-toggle="popover"]').length === 0
+            && $(e.target).parents('.popover.in').length === 0) {
+
+            $('[data-toggle="popover"]').popover('hide');
+        }
+    });
+  */
   $('.tem_hover').popover({trigger: "hover", html: true})
   $(".descricao-popover .del-pop").remove();
 
@@ -652,21 +681,32 @@ $(function () {
     mundanca();
   })
 
-  $('.escolha-generalizacao').on('click', function(){
-    cosole.log("true")
-    var hab = $(this).data('habilidades');
+  $(document).on('click', '.escolha-generalizacao' ,function(){
+    console.log("true")
+    var hab = $(this).data('habilidade');
     var gen = $(this).data('generalizacao');
-    var pen = $('#gen_'+hab+'_'+gen).text().trim()
-    var op = $(this).data('operacao')
-    if(op == "soma"){
-      $('#gen_'+hab+'_'+gen).text(pen + 1);
-    }else if(op == "subtracao"){
-      $('#gen_'+hab+'_'+gen).text(pen - 1);
+    console.log(hab, "---", gen)
+    if (CHAR.penalidade_hab[hab] == undefined) {
+      CHAR.penalidade_hab[hab] = {}
     }
+    var pen = padrao(CHAR.penalidade_hab[hab], gen, 0)
+    //parseInt($('#gen_'+hab+'_'+gen).text().trim())
+    var valor;
+    var op = $(this).data('operacao')
+    
+    if(op == "soma"){
+      valor = pen + 1;
+    }else if(op == "subtracao"){
+      valor = pen - 1;
+    }
+    valor = Math.max(valor, 0)
+    valor = Math.min(valor, -HABILIDADE[hab][gen])
+    CHAR.penalidade_hab[hab][gen] = valor
+    $('#gen-'+hab+'-'+gen).text(valor + HABILIDADE[hab][gen]);
+    mundanca();
 
   })
-
-  $(".apaga_texto").html("");
+  
 
 
   $("a[href='#habilidades']").click();

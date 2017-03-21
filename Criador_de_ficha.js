@@ -56,14 +56,6 @@ CHAR ={
   }
 }
 
-PONTOS = {
-  forca: 0,
-  agilidade: 0,
-  carisma: 0,
-  intuicao: 0,
-  logica: 0
-}
-
 BASE ={
   pp: 100,
   f: 0,
@@ -361,7 +353,11 @@ function propaga_generalizacao(habilidade, n){
     return
   }
   itera(HABILIDADE[habilidade], function(generalizacao, soma){
-      var nv_g = n + soma + padrao(padrao(CHAR.penalidade_hab, habilidade, {}), generalizacao, 0);
+      var pen = 0;
+      itera(padrao(padrao(CHAR.penalidade_hab, habilidade, {}), generalizacao, {}), function(pont, valor_ponto){
+          pen += valor_ponto;
+      })
+      var nv_g = n + soma + pen;
       var atual = padrao(CHAR.derivados.habilidade, generalizacao, 0)
       if (nv_g > atual && muda_habilidade(generalizacao, nv_g)){
         propaga_generalizacao(generalizacao, nv_g)
@@ -433,7 +429,21 @@ function calcula_pp(){
   return BASE.pp - pp;
 }
 
+
+
 function calcula_derivados (){
+  itera(["forca","agilidade","carisma","intuicao","logica"], function(index, atributo){
+    var ph = IDADE[CHAR.idade].ph;
+    itera(CHAR.habilidade, function(hab, pontos){
+      ph -= padrao(pontos, atributo, 0)
+    })
+    itera(CHAR.penalidade_hab, function(hab, generalizacoes){
+      itera(generalizacoes, function(gen, pontos){
+        ph -= 2 * padrao(pontos, atributo, 0)
+      })
+    })
+    CHAR.derivados['ph'+atributo[0]] = ph
+  })
   CHAR.derivados.forca = RACAS[CHAR.raca].f + CHAR.forca;
   CHAR.derivados.agilidade = RACAS[CHAR.raca].a + CHAR.agilidade;
   CHAR.derivados.carisma = RACAS[CHAR.raca].c + CHAR.carisma;
@@ -443,11 +453,6 @@ function calcula_derivados (){
   CHAR.derivados.saude = RACAS[CHAR.raca].saude + CHAR.saude;
   CHAR.derivados.sanidade = RACAS[CHAR.raca].sanidade + CHAR.sanidade;
   CHAR.derivados.riqueza = RACAS[CHAR.raca].riqueza;
-  CHAR.derivados.phf = IDADE[CHAR.idade].ph - PONTOS.forca;
-  CHAR.derivados.pha = IDADE[CHAR.idade].ph - PONTOS.agilidade;
-  CHAR.derivados.phc = IDADE[CHAR.idade].ph - PONTOS.carisma;
-  CHAR.derivados.phi = IDADE[CHAR.idade].ph - PONTOS.intuicao;
-  CHAR.derivados.phl = IDADE[CHAR.idade].ph - PONTOS.logica;
 }
 
 function calcula_pc(){
@@ -458,25 +463,7 @@ function calcula_pc(){
   return pc + pc * 0.25 * CHAR.pc_aumentdo;
 }
 
-function calcula_pontos() {
-  PONTOS = {
-    forca: 0,
-    agilidade: 0,
-    carisma: 0,
-    intuicao: 0,
-    logica: 0
-  }
-  for (var hab in CHAR.habilidade) {
-    if (CHAR.habilidade.hasOwnProperty(hab)) {
-      for (var pot in CHAR.habilidade[hab]) {
-        if (CHAR.habilidade[hab].hasOwnProperty(pot)) {
-          PONTOS[pot] += CHAR.habilidade[hab][pot]; 
-        }
-      }
-    }
-  }
-  return PONTOS;
-}
+
 
 function mundanca(){
   for (var i in CHAR.derivados.habilidade){
@@ -484,7 +471,6 @@ function mundanca(){
       $("#"+i).text(0);
     }
   }
-  calcula_pontos();
   calcula_nv_hab();
   calcula_derivados();
   $("#pp").text(calcula_pp());
@@ -546,7 +532,11 @@ $(function () {
       var split = $(this).attr("id").split('-')
       var hab = split[1]
       var gen = split[2]
-      $('#gen-'+hab+'-'+gen).text(padrao(padrao(CHAR.penalidade_hab, hab, {}), gen, 0) + HABILIDADE[hab][gen]);
+      var pen = 0;
+      itera(padrao(padrao(CHAR.penalidade_hab, hab, {}), gen, {}), function(pont, valor_ponto){
+          pen += valor_ponto;
+      })
+      $('#gen-'+hab+'-'+gen).text(pen + HABILIDADE[hab][gen]);
       ID_POPOVER = hab;
     })
   });
@@ -685,24 +675,35 @@ $(function () {
     console.log("true")
     var hab = $(this).data('habilidade');
     var gen = $(this).data('generalizacao');
+    var ponto = $(this).data('ponto')
     console.log(hab, "---", gen)
     if (CHAR.penalidade_hab[hab] == undefined) {
       CHAR.penalidade_hab[hab] = {}
     }
-    var pen = padrao(CHAR.penalidade_hab[hab], gen, 0)
+    if (CHAR.penalidade_hab[hab][gen] == undefined) {
+      CHAR.penalidade_hab[hab][gen] = {}
+    }
+    var pen = 0
+    var pen_ponto = padrao(CHAR.penalidade_hab[hab][gen], ponto, 0)
     //parseInt($('#gen_'+hab+'_'+gen).text().trim())
     var valor;
     var op = $(this).data('operacao')
     
     if(op == "soma"){
-      valor = pen + 1;
+      valor = pen_ponto + 1;
     }else if(op == "subtracao"){
-      valor = pen - 1;
+      valor = pen_ponto - 1;
     }
+    itera(CHAR.penalidade_hab[hab][gen], function(pont, valor_ponto){
+      if(pont != ponto){
+        pen += valor_ponto;
+      }
+    }) 
     valor = Math.max(valor, 0)
-    valor = Math.min(valor, -HABILIDADE[hab][gen])
-    CHAR.penalidade_hab[hab][gen] = valor
-    $('#gen-'+hab+'-'+gen).text(valor + HABILIDADE[hab][gen]);
+    valor = Math.min(valor, -HABILIDADE[hab][gen] - pen)
+
+    CHAR.penalidade_hab[hab][gen][ponto] = valor
+    $('#gen-'+hab+'-'+gen).text(valor + pen + HABILIDADE[hab][gen]);
     mundanca();
 
   })

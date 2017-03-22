@@ -33,6 +33,7 @@ CHAR ={
   vantagem: {},
   desvantagem: {},
   habilidade: {},
+  escola: [],
   propaga: [],
   posicao_ordem: 0,
   ordem_hab: [],
@@ -305,7 +306,11 @@ HABILIDADE = {
   "luta": {"golpear": -1, "garras": -1, "mordida": -1, "cauda": -1, "esquivar": -1},
   "mordida": {"cauda": 0},
   "invocacao": {"exorcismo": 0},
-  "milagre": {"exorcismo": -1}
+  "milagre": {"exorcismo": -1},
+  "potentia": {"elementalismo": 0, "protegomancia": 0, "telecinese": 0},
+  "misticismo": {"cronomancia": 0, "teleportacao": 0, "transmutacao": 0},
+  "mentalismo": {"hipnose": 0, "ilusionismo": 0, "psiomancia": 0},
+  "maleficorum": {"biomancia": 0, "necromancia": 0, "sanguinomancia": 0}
 }
 
 function pontos_da_habilidade(habilidade) {
@@ -372,8 +377,9 @@ function calcula_nv_hab(){
     }
   }
   CHAR.derivados.habilidade.usados = {};
-  for (var index in CHAR.ordem_hab){
-    var habilidade = CHAR.ordem_hab[index]
+  lista_habilidades = CHAR.escola.concat(CHAR.ordem_hab)
+  for (var index in lista_habilidades){
+    var habilidade = lista_habilidades[index]
     if (CHAR.habilidade.hasOwnProperty(habilidade)){
       var p = pontos_da_habilidade(habilidade);
       var np = nivel_habiliade(p - padrao(CHAR.derivados.habilidade.usados, habilidade, 0), padrao(CHAR.derivados.habilidade, habilidade, 0));
@@ -433,9 +439,14 @@ function calcula_pp(){
 
 function calcula_derivados (){
   itera(["forca","agilidade","carisma","intuicao","logica"], function(index, atributo){
-    var ph = IDADE[CHAR.idade].ph;
+    var ph = IDADE[CHAR.idade].ph + CHAR[atributo];
     itera(CHAR.habilidade, function(hab, pontos){
-      ph -= padrao(pontos, atributo, 0)
+      var index = CHAR.escola.indexOf(hab)
+      if(index != -1){
+        ph -= padrao(pontos, atributo, 0) * 2;
+      }else{
+        ph -= padrao(pontos, atributo, 0)
+      }
     })
     itera(CHAR.penalidade_hab, function(hab, generalizacoes){
       itera(generalizacoes, function(gen, pontos){
@@ -671,12 +682,42 @@ $(function () {
     mundanca();
   })
 
+  $('.escolha-escola').on('click', function(){
+    var escola = $(this).data('escola');
+    var ph = $(this).data('ph');
+    var val = parseInt($('#'+ph).text().trim());
+    var op = $(this).data('operacao');
+    var pot = $(this).data('ponto');
+    if (CHAR.habilidade[escola] === undefined) {
+      CHAR.habilidade[escola] = {};
+    }
+    var valor = val
+    if(op == 'soma'){
+      valor += 2;
+      $('#'+ph).text(val + 2);
+    }else if(op == 'subtracao' && CHAR.habilidade[escola][pot] > 0){
+      valor -= 2;
+      $('#'+ph).text(val - 2);
+    }
+    CHAR.habilidade[escola][pot] = valor/2;
+    var qtd = 0;
+    for(var ponto in CHAR.habilidade[escola]){
+      qtd += CHAR.habilidade[escola][ponto];
+    }
+    var index = CHAR.escola.indexOf(escola);
+    if(!(index > -1)){
+      CHAR.escola.push(escola);
+    }
+    if(qtd <= 0){
+      CHAR.escola.splice(index, 1);
+    }
+    mundanca();
+  })
+
   $(document).on('click', '.escolha-generalizacao' ,function(){
-    console.log("true")
     var hab = $(this).data('habilidade');
     var gen = $(this).data('generalizacao');
     var ponto = $(this).data('ponto')
-    console.log(hab, "---", gen)
     if (CHAR.penalidade_hab[hab] == undefined) {
       CHAR.penalidade_hab[hab] = {}
     }

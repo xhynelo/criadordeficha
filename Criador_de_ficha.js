@@ -480,7 +480,7 @@ function cria_cookie(){
 }
 
 function le_cookie(){
-  var cookie = Cookies.get("char")
+  var cookie = Cookies.getJSON("char")
   if (cookie != undefined) {
     CHAR = cookie
   }

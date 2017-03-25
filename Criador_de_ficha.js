@@ -291,7 +291,7 @@ HABILIDADE = {
   "laminas_curtas": {"laminas_longas": -1, "esgrima": -1, "arremessar_armas": -1, "golpear": -2, "esquivar": -2, "armas_de_haste": -2, "lancas_e_cajados": -2, "machados_e_macas": -2, "manguais": -2},
   "laminas_longas": {"laminas_curtas": -1, "esgrima": -1, "golpear": -2, "esquivar": -2, "armas_de_haste": -2, "lancas_e_cajados": -2, "machados_e_macas": -2, "manguais": -2},
   "lancas_e_cajados": {"armas_de_haste": 0, "golpear": -2, "esquivar": -2, "esgrima": -2, "laminas_curtas": -2, "laminas_longas": -2, "machados_e_macas": -2, "manguais": -2},
-  "machados_e_macas": {"armas_de_haste": -1, "arremessar_armas": -2, "golpear": -2, "esquivar": -2, "esgrima": -2, "laminas_curtas": -2, "laminas_longas": -2, "lancas_e_cajados": -2, "machados_e_macas": -2},
+  "machados_e_macas": {"armas_de_haste": -1, "arremessar_armas": -2, "golpear": -2, "esquivar": -2, "esgrima": -2, "laminas_curtas": -2, "laminas_longas": -2, "lancas_e_cajados": -2, "machados_e_macas": -2, "manguais": -2},
   "manguais": {"golpear": -2, "esquivar": -2, "armas_de_haste": -2,"esgrima": -2, "laminas_curtas": -2, "laminas_longas": -2, "lancas_e_cajados": -2, "machados_e_macas": -2},
   "arquearia": {"esquivar": -2},
   "armas_automaticas": {"esquivar": -2},
@@ -475,6 +475,18 @@ function calcula_pc(){
 }
 
 
+function cria_cookie(){
+  Cookies.set("char", CHAR)
+}
+
+function le_cookie(){
+  var cookie = Cookies.get("char")
+  if (cookie != undefined) {
+    CHAR = cookie
+  }
+  return cookie
+}
+
 
 function mundanca(){
   for (var i in CHAR.derivados.habilidade){
@@ -496,7 +508,7 @@ function mundanca(){
       $("#"+i).text(CHAR.derivados.habilidade[i]);
     }
   }
-  
+  cria_cookie();
 }
 
 function ordem_habilidades(){
@@ -753,6 +765,7 @@ $(function () {
 
   $("a[href='#habilidades']").click();
   $("a[href='#habilidades_de_combate']").click();
+  le_cookie();
   mundanca();
 })
 

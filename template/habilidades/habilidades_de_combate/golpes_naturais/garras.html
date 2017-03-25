@@ -39,5 +39,152 @@
     </div>
   </div>
   <div class="del-pop">
+    <p>Em um ataque rápido, o usuário pode realizar um golpe adicional antes de receber -1 de penalidade.</p>
+    <p>Em um ataque poderoso, o usuário aumenta em 1/3 o seu dano, arredondado para baixo.</p>
+    <p>Em um ataque preciso, o usuário não recebe penalidade.</p>
+    <ul>
+      <li>
+        <span class="cor_vermelho">Mordida: 0 atual: </span><span id="gen-garras-mordida" class="penalidade">0</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="mordida" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="mordida" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="mordida" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="mordida" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Cauda: 0 atual: </span><span id="gen-garras-cauda" class="penalidade">0</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="cauda" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="cauda" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="cauda" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="cauda" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Golpear: 0 atual: </span><span id="gen-garras-golpear" class="penalidade">0</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="golpear" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="golpear" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="golpear" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="golpear" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Luta: -1 atual: </span><span id="gen-garras-luta" class="penalidade">-1</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="luta" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="luta" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="luta" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="luta" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Ataque mágico ou Sopro: -1 atual: </span><span id="gen-garras-ataque_magico_ou_sopro" class="penalidade">-1</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="ataque_magico_ou_sopro" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="garras" data-generalizacao="ataque_magico_ou_sopro" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

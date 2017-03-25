@@ -39,5 +39,246 @@
     </div>    
   </div>
   <div class="del-pop">
+    <p>Esta habilidade pode ser aplicada para todas rodadas de ataque utilizando Manguais</p>
+    <p>Em um ataque rápido, o usuário pode realizar um golpe extra antes de receber -1 de penalidade.</p>
+    <p>Em um ataque poderoso, o usuário aumenta em 2/3 o seu dano, arredondado para baixo.</p>
+    <p>Em um ataque preciso, o usuário recebe -3 de penalidade.</p>
+    <ul>
+      <li>
+        <span class="cor_vermelho">Golpear:: -2 atual: </span><span id="gen-manguais-golpear" class="penalidade">-2</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="golpear" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="golpear" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="golpear" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="golpear" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Esquiva: -2 atual: </span><span id="gen-manguais-esquivar" class="penalidade">-2</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="esquivar" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="esquivar" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Armas de haste:: -2 atual: </span><span id="gen-manguais-armas_de_haste" class="penalidade">-2</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="armas_de_haste" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="armas_de_haste" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="armas_de_haste" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="armas_de_haste" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Esgrima:: -2 atual: </span><span id="gen-manguais-esgrima" class="penalidade">-2</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="esgrima" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="esgrima" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="esgrima" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="esgrima" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Laminas curtas:: -2 atual: </span><span id="gen-manguais-laminas_curtas" class="penalidade">-2</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="laminas_curtas" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="laminas_curtas" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="laminas_curtas" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="laminas_curtas" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Laminas longas:: -2 atual: </span><span id="gen-manguais-laminas_longas" class="penalidade">-2</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="laminas_longas" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="laminas_longas" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="laminas_longas" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="laminas_longas" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Lanças e cajados:: -2 atual: </span><span id="gen-manguais-lancas_e_cajados" class="penalidade">-2</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="lancas_e_cajados" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="lancas_e_cajados" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="lancas_e_cajados" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="lancas_e_cajados" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="cor_vermelho">Machados e maças:: -2 atual: </span><span id="gen-manguais-machados_e_macas" class="penalidade">-2</span>
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="machados_e_macas" data-operacao="soma" data-ponto="forca">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>F</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="machados_e_macas" data-operacao="subtracao" data-ponto="forca">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="machados_e_macas" data-operacao="soma" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-plus apaga_texto">A</span>
+            </button>
+          </div>
+          <div class="col-xs-4 text-center">
+            <span>A</span>
+          </div>
+          <div class="col-xs-4 text-center">
+            <button class="escolha-generalizacao" type="submit" data-habilidade="manguais" data-generalizacao="machados_e_macas" data-operacao="subtracao" data-ponto="agilidade">
+              <span class="glyphicon glyphicon-minus apaga_texto">A</span>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

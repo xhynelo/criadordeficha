@@ -800,8 +800,8 @@ $(function () {
   
 
 
-  $("a[href='#habilidades']").click();
-  $("a[href='#habilidades_de_combate']").click();
+  //$("a[href='#habilidades']").click();
+  //$("a[href='#habilidades_de_combate']").click();
   le_cookie();
   mundanca();
 })

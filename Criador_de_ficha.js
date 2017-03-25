@@ -6,56 +6,58 @@ itera = function(objeto, func){
   }
 }
 
-
-
-CHAR ={
-  pp: {
-    pp: 0,
-    pp_t: 0,
-    pp_r: 0,
-    pp_d: 0,
-  },
-  forca: 0,
-  agilidade: 0,
-  carisma: 0,
-  intuicao: 0,
-  logica: 0,
-  folego: 0,
-  saude: 0,
-  sanidade: 0,
-  raca: "humanos",
-  riqueza: 3,
-  renda: 0,
-  divida: 0,
-  pc_aumentdo: 0,
-  aparencia: "mediano",
-  idade: "jovem_adulto",
-  vantagem: {},
-  desvantagem: {},
-  habilidade: {},
-  escola: [],
-  propaga: [],
-  posicao_ordem: 0,
-  ordem_hab: [],
-  penalidade_hab: {},
-  derivados: {
+CHAR = {}
+function reseta_char() {
+  CHAR = {
+    pp: {
+      pp: 0,
+      pp_t: 0,
+      pp_r: 0,
+      pp_d: 0,
+    },
     forca: 0,
     agilidade: 0,
     carisma: 0,
     intuicao: 0,
     logica: 0,
-    folego: 10,
-    saude: 10,
-    sanidade: 10,
-    riqueza: 0,
-    phf: 0,
-    pha: 0,
-    phc: 0,
-    phi: 0,
-    phl: 0,
-    habilidade: {}
+    folego: 0,
+    saude: 0,
+    sanidade: 0,
+    raca: "humanos",
+    riqueza: 3,
+    renda: 0,
+    divida: 0,
+    pc_aumentdo: 0,
+    aparencia: "mediano",
+    idade: "jovem_adulto",
+    vantagem: {},
+    desvantagem: {},
+    habilidade: {},
+    escola: [],
+    propaga: [],
+    posicao_ordem: 0,
+    ordem_hab: [],
+    penalidade_hab: {},
+    derivados: {
+      forca: 0,
+      agilidade: 0,
+      carisma: 0,
+      intuicao: 0,
+      logica: 0,
+      folego: 10,
+      saude: 10,
+      sanidade: 10,
+      riqueza: 0,
+      phf: 0,
+      pha: 0,
+      phc: 0,
+      phi: 0,
+      phl: 0,
+      habilidade: {}
+    }
   }
 }
+reseta_char();
 
 BASE ={
   pp: 100,
@@ -439,7 +441,7 @@ function calcula_pp(){
 
 function calcula_derivados (){
   itera(["forca","agilidade","carisma","intuicao","logica"], function(index, atributo){
-    var ph = IDADE[CHAR.idade].ph + CHAR[atributo];
+    var ph = IDADE[CHAR.idade].ph; //+ CHAR[atributo];
     itera(CHAR.habilidade, function(hab, pontos){
       var index = CHAR.escola.indexOf(hab)
       if(index != -1){
@@ -482,11 +484,46 @@ function cria_cookie(){
 function le_cookie(){
   var cookie = Cookies.getJSON("char")
   if (cookie != undefined) {
-    CHAR = cookie
+    CHAR = cookie;
+    char_to_display();
   }
   return cookie
 }
 
+function char_to_display(){
+  $(".escolha-raca[data-raca='"+ CHAR.raca +"']").tab('show');
+  $(".escolha-riqueza[data-riqueza='"+ CHAR.riqueza +"']").click()
+  $(".escolha-aparencia[data-aparencia='"+ CHAR.aparencia +"']").click()
+  $(".escolha-idade[data-idade='"+ CHAR.idade +"']").click()
+  $("#renda-independente").val(CHAR.renda);
+  $("#trocar_pontos_por_dinheiro").val(CHAR.pc_aumentdo);
+  $("#divida").val(CHAR.divida);
+  itera(CHAR.vantagem, function(vantagem, nivel) {
+    var elemento = $(".escolha-vantagem[data-vantagem='"+ vantagem +"']");
+    if (elemento.hasClass("nivel")) {
+      var pai = elemento.parent();
+      pai.find(".escondido").val(nivel);
+    }
+    elemento.click();
+  });
+  itera(CHAR.desvantagem, function(desvantagem, niveis) {
+    var elemento = $(".escolha-desvantagem[data-desvantagem='"+ desvantagem +"']");
+    var pai = elemento.parent();
+    var div = $(pai).children('div');
+    $($(div).children('input')[0]).val(niveis[0]);
+    $($(div).children('input')[1]).val(niveis[1]);
+    elemento.click();
+  });
+  $('.escolha_facil').each(function(key) {
+    var facil = $(this).data('facil');
+    $('#'+facil).text(CHAR[facil]);
+  });
+  itera(CHAR.habilidade, function(habilidade, pontos) {
+    itera(pontos, function(facil, ponto) {
+      $("#" + facil + "_" + habilidade).text(ponto);
+    });
+  });
+}
 
 function mundanca(){
   for (var i in CHAR.derivados.habilidade){

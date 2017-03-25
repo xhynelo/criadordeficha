@@ -137,3 +137,20 @@
 .popover {
     max-width: 350px;
 }
+
+.json-upload > input
+{
+    display: none;
+}
+
+.tamanho_icone {
+    font-size: 40px;
+}
+
+.distancia_icone {
+    margin-top: 20px;
+}
+
+.icone_texto {
+    display: block;
+}

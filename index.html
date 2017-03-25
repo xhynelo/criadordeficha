@@ -7,8 +7,10 @@
   <title>Criador de ficha</title>
   <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
   <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="bootstrap.vertical-tabs.css">
   <link rel="stylesheet" type="text/css" href="Criador_de_ficha.css">
+
 </head>
 <body>
   <div class="row">
@@ -27,9 +29,54 @@
 
       <div class="panel panel-default mudanca-panel-default mudanca-panel">
         <div class="panel-heading mudanca-panel-heading text-center">
+          <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#definicao">Raças</a></h4>
+        </div>
+        <div id="definicao" class="panel-collapse collapse in mudanca-colapse panel-body mudanca-panel-body">
+          <!-- PARTE DE definicao-->
+          <div class="row">
+	<div class="col-sm-12 text-center">
+		<div class="col-sm-12">
+			<span>PP inicial</span>
+		</div>
+		<div class="col-sm-12">
+			<input type="number" name="quantity" value="100" id="pp_inicial" class="text-center">
+		</div>
+	</div>
+	<div class="col-sm-12 distancia_icone text-center">
+		<div class="col-sm-4">
+			<a id="download" href="#" download="char.json" class="btn btn-large btn-primary">
+				<i class="fa fa-floppy-o tamanho_icone" aria-hidden="true"></i>
+				<span class="icone_texto">Salvar JSON</span>
+			</a>
+		</div>
+		<div class="col-sm-4">
+			<div class="json-upload">
+			    <label for="json-input" class="btn btn-large btn-primary">
+			        <i class="fa fa-upload tamanho_icone" aria-hidden="true"></i>
+			        <span class="icone_texto">Carregar JSON</span>
+			    </label>
+
+			    <input id="json-input" type="file"/>
+			</div>
+			
+		</div>
+		<div class="col-sm-4">
+			<a id="novo" href="#" data-toggle="confirmation" data-title="Você tem certeza que deseja criar um novo?" class="btn btn-large btn-primary">
+				<i class="fa fa-user-times tamanho_icone" aria-hidden="true"></i>
+				<span class="icone_texto">Resetar Personagem</span>
+			</a>
+		</div>
+
+	</div>
+</div>
+        </div>
+      </div>
+
+      <div class="panel panel-default mudanca-panel-default mudanca-panel">
+        <div class="panel-heading mudanca-panel-heading text-center">
           <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#racas">Raças</a></h4>
         </div>
-        <div id="racas" class="panel-collapse collapse in mudanca-colapse panel-body mudanca-panel-body">
+        <div id="racas" class="panel-collapse collapse mudanca-colapse panel-body mudanca-panel-body">
           <!-- PARTE DE Racas-->
           <!--racas-->
 <div class="col-xs-6 text-center">
@@ -10888,6 +10935,7 @@
   </div>
   <script src="jquery-3.1.1.js"></script> 
   <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="bootstrap-confirmation.min.js"></script>
   <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
   <script src="Criador_de_ficha.js"></script>
   <script src="js.cookie.js"></script>

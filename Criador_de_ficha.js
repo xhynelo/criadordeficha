@@ -9,12 +9,7 @@ itera = function(objeto, func){
 CHAR = {}
 function reseta_char() {
   CHAR = {
-    pp: {
-      pp: 0,
-      pp_t: 0,
-      pp_r: 0,
-      pp_d: 0,
-    },
+    pp: 100,
     forca: 0,
     agilidade: 0,
     carisma: 0,
@@ -58,7 +53,7 @@ function reseta_char() {
   }
 }
 reseta_char();
-
+/*
 BASE ={
   pp: 100,
   f: 0,
@@ -72,7 +67,7 @@ BASE ={
   riqueza: 3,
   pc: 10000
 };
-
+*/
 function cria_raca(pp, f, a, c, i, l, folego, saude, sanidade, riqueza){
   return {
     pp: pp,
@@ -434,7 +429,7 @@ function calcula_pp(){
   (CHAR.renda + CHAR.divida + CHAR.pc_aumentdo) * 5 + APARENCIA[CHAR.aparencia].pp + 
   IDADE[CHAR.idade].pp + calcula_pp_vantagens() + calcula_pp_desvantagens() +
   calcula_pp_facil();
-  return BASE.pp - pp;
+  return CHAR.pp - pp;
 }
 
 
@@ -491,6 +486,7 @@ function le_cookie(){
 }
 
 function char_to_display(){
+  $("#pp_inicial").val(CHAR.pp);
   $(".escolha-raca[data-raca='"+ CHAR.raca +"']").tab('show');
   $(".escolha-riqueza[data-riqueza='"+ CHAR.riqueza +"']").click()
   $(".escolha-aparencia[data-aparencia='"+ CHAR.aparencia +"']").click()
@@ -546,6 +542,8 @@ function mundanca(){
     }
   }
   cria_cookie();
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(CHAR));
+  $("#download").attr("href", dataStr);
 }
 
 function ordem_habilidades(){
@@ -614,6 +612,10 @@ $(function () {
   $('.tem_hover').popover({trigger: "hover", html: true})
   $(".descricao-popover .del-pop").remove();
 
+  $("#pp_inicial").on("change", function() {
+    CHAR.pp = parseInt($(this).val());
+    mundanca();
+  })
   $(".escolha-raca").click(function(){
     CHAR.raca = ($(this).data("raca"));
     mundanca();
@@ -797,7 +799,31 @@ $(function () {
     mundanca();
 
   })
-  
+
+  $("#json-input").on("change", function(e) {
+    var file = e.target.files[0];
+    if (!file) {
+      return;
+    }
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var contents = e.target.result;
+      CHAR = JSON.parse(contents);
+      char_to_display();
+      cria_cookie();
+    };
+    reader.readAsText(file);
+  });
+  $('[data-toggle=confirmation]').confirmation({
+    rootSelector: '[data-toggle=confirmation]',
+    // other options
+  });
+  $("#novo").on("confirmed.bs.confirmation", function(){
+    reseta_char();
+    char_to_display();
+    cria_cookie();
+  })
+
 
 
   //$("a[href='#habilidades']").click();

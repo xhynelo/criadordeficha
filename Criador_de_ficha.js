@@ -168,6 +168,8 @@ RIQUEZA_PP = [-40, -20, -10, 0, 10, 30, 60, 120, 180]
 RIQUEZA = [100, 2000, 5000, 10000, 20000, 50000, 200000, 1000000, 10000000]
 */
 RIQUEZA = {
+  '-2': cria_riqueza(0, 100, "pobre_de_doer"),
+  '-1': cria_riqueza(0, 100, "pobre_de_doer"),
   0: cria_riqueza(-40, 100, "pobre_de_doer"),
   1: cria_riqueza(-20, 2000, "pobre"),
   2: cria_riqueza(-10, 5000, "em_dificuldades"),
@@ -467,7 +469,7 @@ function calcula_pc(){
   /* 
   var pc = RIQUEZA[CHAR.riqueza + CHAR.derivados.riqueza];
   */
-  var pc = RIQUEZA[CHAR.riqueza + CHAR.derivados.riqueza].pc; 
+  var pc = RIQUEZA[CHAR.riqueza + parseInt(CHAR.derivados.riqueza)].pc; 
   return pc + pc * 0.25 * CHAR.pc_aumentdo;
 }
 
@@ -521,6 +523,25 @@ function char_to_display(){
   });
 }
 
+function atualiza_char_site(){
+  var raca = $("[data-raca='"+CHAR.raca+"']").text().trim();
+  $("#char_racas").text(raca);
+  $("#char_forca").text(CHAR.derivados.forca)
+  $("#char_agilidade").text(CHAR.derivados.agilidade)
+  $("#char_carisma").text(CHAR.derivados.carisma)
+  $("#char_intuicao").text(CHAR.derivados.intuicao)
+  $("#char_logica").text(CHAR.derivados.logica)
+  $("#char_saude").text(CHAR.derivados.saude)
+  $("#char_folego").text(CHAR.derivados.folego)
+  $("#char_sanidade").text(CHAR.derivados.sanidade)
+  var riqueza = $("[data-riqueza='"+CHAR.riqueza+"']").children("span").text().trim();
+  $("#char_riqueza").text(riqueza);
+  var aparencia = $("[data-aparencia='"+CHAR.aparencia+"']").children("span").text().trim();
+  $("#char_aparencia").text(aparencia);
+  var idade = $("[data-idade='"+CHAR.idade+"']").children("span").text().trim();
+  $("#char_idade").text(idade);
+}
+
 function mundanca(){
   for (var i in CHAR.derivados.habilidade){
     if (CHAR.derivados.habilidade.hasOwnProperty(i)){
@@ -529,6 +550,7 @@ function mundanca(){
   }
   calcula_nv_hab();
   calcula_derivados();
+  atualiza_char_site();
   $("#pp").text(calcula_pp());
   $("#pc").text(calcula_pc());
   $("#phf").text(CHAR.derivados.phf);
@@ -541,6 +563,7 @@ function mundanca(){
       $("#"+i).text(CHAR.derivados.habilidade[i]);
     }
   }
+
   cria_cookie();
   var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(CHAR));
   $("#download").attr("href", dataStr);
@@ -564,6 +587,14 @@ function atualiza_ordem(){
 }
 
 ID_POPOVER = "";
+
+
+
+
+
+
+
+
 
 $(function () {
   $(".apaga_texto").html("");

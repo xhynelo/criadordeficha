@@ -288,8 +288,8 @@ BONUS_VANTAGEM = {
 
 function cria_bonus_desvantagem(primeira, segunda, terceira){
   return{
-    '1': primeira
-    '2': segunda
+    '1': primeira,
+    '2': segunda,
     '3': terceira
   }
 }

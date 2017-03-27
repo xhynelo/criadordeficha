@@ -49,6 +49,20 @@ function reseta_char() {
       phi: 0,
       phl: 0,
       habilidade: {}
+    },
+    bonus: {
+      facil: {
+        forca: 0,
+        agilidade: 0,
+        carisma: 0,
+        intuicao: 0,
+        logica: 0,
+        sanidade: 0,
+        saude: 0,
+        folego: 0
+      },
+      habilidade: {},
+      velocidade: {}
     }
   }
 }
@@ -99,27 +113,28 @@ RACAS = {
     dragoes: cria_raca(115, 6, 3, 0, 3, 2, 10, 10, 10, -2)
 }
 
-function cria_aparencia(pp, facil, habilidade){
+function cria_aparencia(pp, facil, habilidade, tem_hablidade){
   return {
     pp: pp,
     facil: facil,
-    habilidade: habilidade
+    habilidade: habilidade,
+    tem_hablidade: tem_hablidade
   }
 }
 
 APARENCIA = {
-  magrelo: cria_aparencia(-5, {}, {}),
-  gordo: cria_aparencia(-5, {}, {}),
-  obeso_morbido: cria_aparencia(-10, {}, {}),
-  gigante: cria_aparencia(10, {forca: 2}, {}),
-  nanismo: cria_aparencia(-10, {forca: -4}, {}),
-  horrendo: cria_aparencia(-20, {carisma: -2}, {diplomacia: -2,intimidar: 2}),
-  feio: cria_aparencia(-10, {carisma: -1}, {}),
-  pouco_atraente: cria_aparencia(-5, {carisma: -1}, {}),
-  mediano: cria_aparencia(0, {}, {}),
-  atraente: cria_aparencia(5, {carisma: 1}, {}),
-  bonito: cria_aparencia(10, {carisma: 1}, {adestrar: 1,blefar: 1,diplomacia: 1,disfarce: 1,lideranca: 1,performance: 1,sentir_motivacao: 1}),
-  esbelto: cria_aparencia(15, {carisma: 2}, {adestrar: 2,adestrar: 2,blefar: 2,diplomacia: 2,disfarce: 2,lideranca: 2,performance: 2,sentir_motivacao: 2})
+  magrelo: cria_aparencia(-5, {forca: 0, carisma: 0}, {}, false),
+  gordo: cria_aparencia(-5, {forca: 0, carisma: 0}, {}, false),
+  obeso_morbido: cria_aparencia(-10, {forca: 0, carisma: 0}, {}, false),
+  gigante: cria_aparencia(10, {forca: 2, carisma: 0}, {}, false),
+  nanismo: cria_aparencia(-10, {forca: -4, carisma: 0}, {}, false),
+  horrendo: cria_aparencia(-20, {carisma: -2}, {diplomacia: -2,intimidar: 2}, true),
+  feio: cria_aparencia(-10, {forca: 0, carisma: -1}, {}, false),
+  pouco_atraente: cria_aparencia(-5, {forca: 0, carisma: -1}, {}, false),
+  mediano: cria_aparencia(0, {forca: 0, carisma: 0}, {}, false),
+  atraente: cria_aparencia(5, {forca: 0, carisma: 1}, {}, false),
+  bonito: cria_aparencia(10, {forca: 0, carisma: 1}, {adestrar: 1,blefar: 1,diplomacia: 1,disfarce: 1,lideranca: 1,performance: 1,sentir_motivacao: 1}, true),
+  esbelto: cria_aparencia(15, {forca: 0, carisma: 2}, {adestrar: 2,adestrar: 2,blefar: 2,diplomacia: 2,disfarce: 2,lideranca: 2,performance: 2,sentir_motivacao: 2}, true)
 }
 
 function cria_idade(pp, forca, agilidade, saude, folego, velocidade, ph, hab_1_mais, hab_2_mais) {
@@ -251,6 +266,48 @@ VANTAGEM = {
   trauma: cria_vantagem([-5, -10], true),
   voto: cria_vantagem([-5, -10], true)
 }
+
+function cria_bonus_vantagem(facil, habilidade){
+  return{
+    facil: facil,
+    habilidade: habilidade
+  }
+}
+
+BONUS_VANTAGEM = {
+  'charme': cria_bonus_vantagem({carisma: 1}, {blefar: 1, diplomacia: 1}),
+  'dessensibilizado': cria_bonus_vantagem({sanidade: -1}, {}),
+  'foco': cria_bonus_vantagem({intuicao: 1, sanidade: 1}, {forca_de_vontade: 1, concentracao: 1}),
+  'fortaleza_mental': cria_bonus_vantagem({sanidade: 2}, {}),
+  'flexivel': cria_bonus_vantagem({}, {escapismo: 1}),
+  'genialidade': cria_bonus_vantagem({logica: 1}, {}),
+  'reflexos_de_guerreiro': cria_bonus_vantagem({agilidade}, {esquiva: 1}),
+  'treinamento_em_armadura': cria_bonus_vantagem({forca: 1}, {}),
+  'voz_magnifica': cria_bonus_vantagem({carisma: 1}, {performance: 1}),
+}
+
+function cria_bonus_desvantagem(facil, habilidade){
+  return{
+    facil: facil,
+    habilidade: habilidade
+  }
+}
+
+BONUS_DESVANTAGEM = {
+  'barulhento': cria_bonus_desvantagem({}, {surdina: -1}),
+  'condutor_arcano': cria_bonus_desvantagem({}, {forca_de_vontade: -2, banimento: -2}),
+  'estigma_social': cria_bonus_desvantagem({}, {adestrar: -1, intimidar: -1, blefar: -1, diplomacia: -1, disfarce: -1, intimidar: -1, liderança: -1, performance: -1, sentir_motivacao: -1}),
+  'lingua_presa': cria_bonus_desvantagem({carisma: -1}, {adestrar: -1, intimidar: -1, blefar: -1, diplomacia: -1, disfarce: -1, intimidar: -1, liderança: -1, performance: -1, sentir_motivacao: -1}),
+  'incapaz_de_mentir': cria_bonus_desvantagem({}, {blefar: -4}),
+  'piromania': cria_bonus_desvantagem({sanidade: -2}, {}),
+  'psicopatia': cria_bonus_desvantagem({sanidade: -3}, {}),
+  'sadico': cria_bonus_desvantagem({sanidade: -2}, {adestrar: -2, intimidar: -2, blefar: -2, diplomacia: -2, disfarce: -2, intimidar: -2, liderança: -2, performance: -2, sentir_motivacao: -2}),
+  'sede_de_sangue': cria_bonus_desvantagem({sanidade: -2}, {}),
+  'teimoso': cria_bonus_desvantagem({carisma: -1}, {}),
+  'tolo': cria_bonus_desvantagem({}, {sentir_motivacao: -5}),
+  'trauma': cria_bonus_desvantagem({sanidade: -2}, {}),
+}
+
 
 function cria_desvantagem(pp1, pp2, p_nv){
   return {
@@ -454,15 +511,47 @@ function calcula_derivados (){
     })
     CHAR.derivados['ph'+atributo[0]] = ph
   })
-  CHAR.derivados.forca = RACAS[CHAR.raca].f + CHAR.forca;
-  CHAR.derivados.agilidade = RACAS[CHAR.raca].a + CHAR.agilidade;
-  CHAR.derivados.carisma = RACAS[CHAR.raca].c + CHAR.carisma;
+  CHAR.derivados.forca = RACAS[CHAR.raca].f + CHAR.forca + IDADE[CHAR.idade].forca + APARENCIA[CHAR.aparencia].facil.forca;
+  CHAR.derivados.agilidade = RACAS[CHAR.raca].a + CHAR.agilidade + IDADE[CHAR.idade].agilidade;
+  CHAR.derivados.carisma = RACAS[CHAR.raca].c + CHAR.carisma + APARENCIA[CHAR.aparencia].facil.carisma;
   CHAR.derivados.intuicao = RACAS[CHAR.raca].i + CHAR.intuicao;
   CHAR.derivados.logica = RACAS[CHAR.raca].l + CHAR.logica;
-  CHAR.derivados.folego = RACAS[CHAR.raca].folego + CHAR.folego;
-  CHAR.derivados.saude = RACAS[CHAR.raca].saude + CHAR.saude;
+  CHAR.derivados.folego = RACAS[CHAR.raca].folego + CHAR.folego + IDADE[CHAR.idade].folego;
+  CHAR.derivados.saude = RACAS[CHAR.raca].saude + CHAR.saude + IDADE[CHAR.idade].saude;
   CHAR.derivados.sanidade = RACAS[CHAR.raca].sanidade + CHAR.sanidade;
   CHAR.derivados.riqueza = RACAS[CHAR.raca].riqueza;
+}
+
+function calcula_bonus(){
+  CHAR.bonus = {
+      facil: {
+        forca: 0,
+        agilidade: 0,
+        carisma: 0,
+        intuicao: 0,
+        logica: 0,
+        sanidade: 0,
+        saude: 0,
+        folego: 0
+      },
+      habilidade: {},
+      velocidade: {}
+    }
+  itera(APARENCIA[CHAR.aparencia].habilidade, function(habilidade, bonus){
+    CHAR.bonus.habilidade[habilidade] = padrao(CHAR.bonus.habilidade, habilidade, 0) + bonus;
+  })
+  itera(CHAR.vantagem, function(vantagem, valor){
+    itera(padrao(BONUS_VANTAGEM, vantagem, {facil: {}}).facil, function(facil, bonus){
+      if(vantagem != dessensibilizado){
+        CHAR.bonus[facil] += bonus * valor; 
+      }else{
+        CHAR.bonus[facil] += bonus;
+      }
+    })
+    itera(padrao(BONUS_VANTAGEM, vantagem, {habilidade: {}}).habilidade, function(hab, bonus){
+      CHAR.bonus.habilidade[hab] = padrao(CHAR.bonus.habilidade, hab, 0) + bonus * bonus;
+    })
+  })
 }
 
 function calcula_pc(){
@@ -496,6 +585,26 @@ function char_to_display(){
   $("#renda-independente").val(CHAR.renda);
   $("#trocar_pontos_por_dinheiro").val(CHAR.pc_aumentdo);
   $("#divida").val(CHAR.divida);
+  $('.escolha-vantagem').each(function(key) {
+    if ($(this).hasClass("nivel")) {
+      var pai = $(this).parent();
+      var input = pai.find(".escondido");
+      input.val(1);
+      input.toggle(false);
+    }
+    $(this).removeClass("active")
+  });
+  $('.escolha-desvantagem').each(function(key) {
+    var pai = $(this).parent();
+    var div = $(pai).children('div');
+    var input = pai.find(".escondido");
+    var input0 = $($(div).children('input')[0]);
+    var input1 = $($(div).children('input')[1]);
+    input0.val(1);
+    input1.val(1);
+    div.toggle(false);
+    $(this).removeClass("active")
+  });
   itera(CHAR.vantagem, function(vantagem, nivel) {
     var elemento = $(".escolha-vantagem[data-vantagem='"+ vantagem +"']");
     if (elemento.hasClass("nivel")) {
@@ -540,6 +649,15 @@ function atualiza_char_site(){
   $("#char_aparencia").text(aparencia);
   var idade = $("[data-idade='"+CHAR.idade+"']").children("span").text().trim();
   $("#char_idade").text(idade);
+  $("#char_vantagem").html("")
+  itera(CHAR.vantagem, function(vantagem, valor){
+    var van = $("[data-vantagem='"+ vantagem +"']").children("span").text().trim();
+    if( valor > 1){
+      $("#char_vantagem").append('<span class="baixo">'+van+' ('+valor+')</span>');
+    }else{
+      $("#char_vantagem").append('<span class="baixo">'+van+'</span>');
+    }
+  })
 }
 
 function mundanca(){

@@ -286,26 +286,28 @@ BONUS_VANTAGEM = {
   'voz_magnifica': cria_bonus_vantagem({carisma: 1}, {performance: 1}),
 }
 
-function cria_bonus_desvantagem(facil, habilidade){
+function cria_bonus_desvantagem(primeira, segunda, terceira){
   return{
-    facil: facil,
-    habilidade: habilidade
+    '1': primeira
+    '2': segunda
+    '3': terceira
   }
 }
 
+
 BONUS_DESVANTAGEM = {
-  'barulhento': cria_bonus_desvantagem({}, {surdina: -1}),
-  'condutor_arcano': cria_bonus_desvantagem({}, {forca_de_vontade: -2, banimento: -2}),
-  'estigma_social': cria_bonus_desvantagem({}, {adestrar: -1, intimidar: -1, blefar: -1, diplomacia: -1, disfarce: -1, intimidar: -1, liderança: -1, performance: -1, sentir_motivacao: -1}),
-  'lingua_presa': cria_bonus_desvantagem({carisma: -1}, {adestrar: -1, intimidar: -1, blefar: -1, diplomacia: -1, disfarce: -1, intimidar: -1, liderança: -1, performance: -1, sentir_motivacao: -1}),
-  'incapaz_de_mentir': cria_bonus_desvantagem({}, {blefar: -4}),
-  'piromania': cria_bonus_desvantagem({sanidade: -2}, {}),
-  'psicopatia': cria_bonus_desvantagem({sanidade: -3}, {}),
-  'sadico': cria_bonus_desvantagem({sanidade: -2}, {adestrar: -2, intimidar: -2, blefar: -2, diplomacia: -2, disfarce: -2, intimidar: -2, liderança: -2, performance: -2, sentir_motivacao: -2}),
-  'sede_de_sangue': cria_bonus_desvantagem({sanidade: -2}, {}),
-  'teimoso': cria_bonus_desvantagem({carisma: -1}, {}),
-  'tolo': cria_bonus_desvantagem({}, {sentir_motivacao: -5}),
-  'trauma': cria_bonus_desvantagem({sanidade: -2}, {}),
+  'barulhento': cria_bonus_desvantagem({facil:{}, habilidade:{surdina: -1}}, {facil:{}, habilidade:{surdina:-3}}, {}),
+  'condutor_arcano': cria_bonus_desvantagem({facil:{}, habilidade:{forca_de_vontade: -2, banimento: -2}}, {}, {}),
+  'estigma_social': cria_bonus_desvantagem({facil:{}, habilidade:{adestrar: -1, intimidar: -1, blefar: -1, diplomacia: -1, disfarce: -1, intimidar: -1, liderança: -1, performance: -1, sentir_motivacao: -1}}, {facil:{}, habilidade:{adestrar: -2, intimidar: -2, blefar: -2, diplomacia: -2, disfarce: -2, intimidar: -2, liderança: -2, performance: -2, sentir_motivacao: -2}}, {facil:{}, habilidade:{adestrar: -3, intimidar: -3, blefar: -3, diplomacia: -3, disfarce: -3, intimidar: -3, liderança: -3, performance: -3, sentir_motivacao: -3}}),
+  'lingua_presa': cria_bonus_desvantagem({facil:{carisma: -1}, habilidade:{adestrar: -1, intimidar: -1, blefar: -1, diplomacia: -1, disfarce: -1, intimidar: -1, liderança: -1, performance: -1, sentir_motivacao: -1}}, {}, {}),
+  'incapaz_de_mentir': cria_bonus_desvantagem({facil:{}, habilidade:{blefar: -4}}, {}, {}),
+  'piromania': cria_bonus_desvantagem({facil:{sanidade: -2}, habilidade:{}}, {}, {}),
+  'psicopatia': cria_bonus_desvantagem({facil:{sanidade: -3}, habilidade:{}}, {facil:{sanidade: -7}, habilidade:{}}, {}),
+  'sadico': cria_bonus_desvantagem({facil:{sanidade: -2}, habilidade:{adestrar: -2, intimidar: -2, blefar: -2, diplomacia: -2, disfarce: -2, intimidar: -2, liderança: -2, performance: -2, sentir_motivacao: -2}}, {}, {}),
+  'sede_de_sangue': cria_bonus_desvantagem({facil:{sanidade: -2}, habilidade:{}}, {}, {}),
+  'teimoso': cria_bonus_desvantagem({facil:{carisma: -1}, habilidade:{}}, {}, {}),
+  'tolo': cria_bonus_desvantagem({facil:{}, habilidade:{sentir_motivacao: -5}}, {}, {}),
+  'trauma': cria_bonus_desvantagem({facil:{sanidade: -2}, habilidade:{}}, {facil:{sanidade: -1}, habilidade:{}}),
 }
 
 
@@ -550,6 +552,12 @@ function calcula_bonus(){
     })
     itera(padrao(BONUS_VANTAGEM, vantagem, {habilidade: {}}).habilidade, function(hab, bonus){
       CHAR.bonus.habilidade[hab] = padrao(CHAR.bonus.habilidade, hab, 0) + bonus * bonus;
+    })
+    itera(padrao(BONUS_DESVANTAGEM, vantagem, {})[bonus].facil, function(facil, bonus){
+      CHAR.bonus[facil] += bonus;
+    })
+    itera(padrao(BONUS_DESVANTAGEM, vantagem, {})[bonus].habilidade, function(hab, bonus){
+      CHAR.bonus.habilidade[hab] = padrao(CHAR.bonus.habilidade, hab, 0) + bonus;
     })
   })
 }
